@@ -16,7 +16,7 @@ ms.collection:
 ms.custom:
 search.appverid:
 ms.assetid: 0ecb2cf5-8882-42b3-a6e9-be6bda30899c
-description: Learn how admins can use OneDrive policies to configure the OneDrive sync app settings by using Group Policy.
+description: Learn how to create a SharePoint site ownership policy to manage site lifecycle.
 ---
 
 # Create SharePoint site ownership policy
@@ -89,7 +89,7 @@ In the **Site ownership policies** page, select the desired policy from the list
 
 The report outlines the number of sites identified as not meeting the ownership criteria, along with the number of sites that didn't have anyone to notify.
 
-:::image type="content" source="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png" alt-text="screenshot of ownership policy being created in sharepoint admin center dashboard." lightbox="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png":::
+:::image type="content" source="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png" alt-text="screenshot of ownership policy report." lightbox="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png":::
 
 Select **Download report** to download the detailed report in a .csv format. This report contains the following fields:
 
