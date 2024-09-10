@@ -47,9 +47,9 @@ You can choose the sites to be scoped under the policy based on site templates, 
 
 Different organizations have different needs. Site ownership policies allow you to customize how ownership is determined by allowing you to:
 
-Choose who is considered responsible for managing a site in your organization - site owners or site admins or both.  
+- Choose who is considered responsible for managing a site in your organization - site owners or site admins or both.  
 
-Define the minimum number of owners or admins a site should have, currently up to 2.
+- Define the minimum number of owners or admins a site should have, currently up to 2.
 
 The policy identifies all sites that aren't compliant with the configured ownership criteria and generate the report. If your policy is active, email notifications would then be sent for identified sites.  
 
@@ -120,20 +120,20 @@ Each policy runs every month to identify noncompliant sites. Email notifications
 
 The potential recipients of these email notifications, if configured in the policy, are:
 
-**Current site owners:** If the minimum owner or admin count is set to 2 and the site has an existing site owner, they receive an email notification asking them to add another owner.  
+- **Current site owners:** If the minimum owner or admin count is set to 2 and the site has an existing site owner, they receive an email notification asking them to add another owner.  
 
-**Current site admins:** If the minimum owner or admin count is set to 2 and the site has an existing site admin, they receive an email notification asking them to add another owner.  
+- **Current site admins:** If the minimum owner or admin count is set to 2 and the site has an existing site admin, they receive an email notification asking them to add another owner.  
 
-**Managers of previous owners or admins:** If an owner or admin of a site leaves the organization, their managers are informed that the site needs an owner for effective management. If managers are members of a site, they can accept ownership. If they're visitors or don't have access to the site, they can coordinate with SharePoint admins to find the next best owner.  
+- **Managers of previous owners or admins:** If an owner or admin of a site leaves the organization, their managers are informed that the site needs an owner for effective management. If managers are members of a site, they can accept ownership. If they're visitors or don't have access to the site, they can coordinate with SharePoint admins to find the next best owner.  
 
-As a user's details are deleted from the system 30 days after leaving the organization, managers might get only one notification about the site.
+  - As a user's details are deleted from the system 30 days after leaving the organization, managers might get only one notification about the site.
 
-If the policy runs after 30 days of a user's leaving the organization, manager information won't be available, and notifications can't be sent.  
+  - If the policy runs after 30 days of a user's leaving the organization, manager information won't be available, and notifications can't be sent.  
 
-**Active site members:** Based on policy configuration, emails are sent to the most active members of a site to accept ownership. Activity is determined based on the number of modifications, additions, and deletions the site members make to the documents located in a site.  
+- **Active site members:** Based on policy configuration, emails are sent to the most active members of a site to accept ownership. Activity is determined based on the number of modifications, additions, and deletions the site members make to the documents located in a site.  
 
-> [!NOTE]
-> If a site has no one to be notified as per the email recipients provided during policy configuration, the count is provided in the summary. You can triage the sites and determine the next course of action.  
+  > [!NOTE]
+  > If a site has no one to be notified as per the email recipients provided during policy configuration, the count is provided in the summary. You can triage the sites and determine the next course of action.  
 
 ## Actions
 
