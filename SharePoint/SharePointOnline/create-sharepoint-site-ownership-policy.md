@@ -1,5 +1,5 @@
 ---
-ms.date: 09/09/2024
+ms.date: 10/09/2024
 title: Create SharePoint site ownership policy
 ms.reviewer: anupam.francis
 ms.author: mactra
