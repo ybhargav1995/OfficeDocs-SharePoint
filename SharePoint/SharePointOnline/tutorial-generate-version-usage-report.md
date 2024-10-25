@@ -353,7 +353,7 @@ Write-Host
 . “<path to AnalyzeReportFile.ps1>” –ReportLocalFilePath “<path to the file version expiration What-If report .csv file>”
 ```
 
-    :::image type="content" source="media/version-history/analyze-report-powershell-command.png" lightbox="media/version-history/analyze-report-powershell-command.png" alt-text="Screenshot of analyze report powershell command.":::
+  :::image type="content" source="media/version-history/analyze-report-powershell-command.png" lightbox="media/version-history/analyze-report-powershell-command.png" alt-text="Screenshot of analyze report powershell command.":::
 
 3. The output displays four tables:
 
