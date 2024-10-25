@@ -18,6 +18,7 @@ search.appverid:
 - MET150
 description: "This article provides guidance on how version history limits are applied at organization, site, library or OneDrive user account level."
 
+
 ---
 
 # Overview of version history limits for document libraries and OneDrive
@@ -100,7 +101,8 @@ Audit events are available on the Microsoft Purview compliance portal to help yo
 - Changes made to organization version history limits.
 - Changes made to site version history limits.
 - Changes made to library version history limits.
+- User queues a job to generate a version storage usage report.
+- User queues a job to update the version history limits on all libraries of a site.
+- User queues a job to bulk delete version history of files on a library or site.
 - User deletes versions from the version history of a file.
-
-
-
+- Versions deleted when expired or bulk deleted.

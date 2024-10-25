@@ -110,18 +110,23 @@ Let’s go through the first file version displayed in this report.
 
 - Expiration schedule identifiers:`CurrentExpirationDate` indicates that this version is currently set to never expire. `AutomaticPolicyExpirationDate` shows that under the automatically expire policy, this version is also set to never expire. `TargetExpirationDate` indicates that if we follow this schedule for trimming, we would set this version to never expire.  
 
+>[!NOTE]
+> File versions stored in the preservation hold library will be included in this report as well. 
+
 Let’s look at the third version.  
 
 The `WebId` and `DocId` values are empty because these columns are compact columns, denoted by *.Compact* post-fix, it means they should have values. If we look for the last nonempty above that row, we find `WebId` as `4c7a58c1-01f2-4fa3-a730-44081a44f689`, and `DocId` as `18c3e09c-b5be-48e7-a754-7a2ce53e0999`.
 
-We can also see that the `TargetExpirationDate` is set for April 19, 2023, at 18:08:53 UTC. It means if we trim based on this schedule, we would be setting the expiration date for this version to that time. However, at the time this documentation was written, it passed April 19, 2023. Instead of setting the version to expire, the document is deleted immediately.
+We can also see that the `TargetExpirationDate` is set for April 19, 2023, at 18:08:53 UTC. It means if we trim based on this schedule, we would be setting the expiration date for this version to that time. 
 
 > [!NOTE]
 > All date times are represented in the round-trip format. For more information, see [Standard date and time format strings - .NET | Microsoft Learn](/dotnet/standard/base-types/standard-date-and-time-format-strings)
 
 ## Analyze version storage for sites
 
-After configuring the `TargetExpirationDate` values for your report, you can choose to perform deeper analysis to see the impact of the trimming before running an actual trim. You can perform this analysis independently, or alternatively, we provide two recommended options for your analysis.  
+Before you start your analysis, you should update the `TargetExpirationDate` column in your report file to the dates that you want, like the versions to be expired. Again, if you choose a date that is in the past for a version, then that version will be treated as "version that had already expired" and will be deleted right away after you start the trim.  
+
+You can manually update the dates in `TargetExpirationDate` by editing the csv file. However, you may have too many rows to update by hand. To bulk update the column, you can use Excel formulas, or you can also use one of the PowerShell scripts we have provided in [Tutorial: Run 'What-If' analysis](tutorial-run-what-if-analysis.md). Specifically, you may choose a trimming mode, run the corresponding script to get a updated csv file with `TargetExpirationDate` filled out based on that trimming mode, and continue from there.
 
 ### Option one: Analyze the report using Excel
 
