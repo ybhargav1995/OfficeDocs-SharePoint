@@ -1,5 +1,5 @@
 ---
-ms.date: 10/09/2024
+ms.date: 10/28/2024
 title: Create SharePoint site ownership policy
 ms.reviewer: anupam.francis
 ms.author: mactra
@@ -13,6 +13,7 @@ ms.service: one-drive
 ms.localizationpriority: medium
 ms.collection: 
 - M365-collaboration
+- M365-sam
 ms.custom:
 search.appverid:
 ms.assetid: 0ecb2cf5-8882-42b3-a6e9-be6bda30899c
