@@ -18,6 +18,7 @@ search.appverid:
 - MET150
 description: "This article provides guidance on how version history limits are applied at organization, site, library or OneDrive user account level."
 
+
 ---
 
 # Overview of version history limits for document libraries and OneDrive
@@ -67,7 +68,7 @@ The manual setting allows admins to set count limits on the number of major vers
 
 - **Major version limits with no expiration period**: Versions are deleted after they exceed the set number of major versions. For example, if a library is configured to store 500 major versions, no more than 500 versions is stored for each file or item.
 
-For more information, see [determining the right count or expiration version limits](plan-version-storage.md#determine-right-count-or-expiration-version-limits). 
+   For more information, see [determining the right count or expiration version limits](plan-version-storage.md#determine-right-count-or-expiration-version-limits). 
 
 > [!NOTE]
 > - The UI doesn't allow a value less than 100 major versions or less than 30 days expiration time limits to be set, but it's possible to set the system to store fewer versions using public APIs. For reliability, any value less than 100 versions or less than 30 days expiration time limit isn't recommended and can result in the user activity causing an inadvertent data loss.
@@ -100,7 +101,8 @@ Audit events are available on the Microsoft Purview compliance portal to help yo
 - Changes made to organization version history limits.
 - Changes made to site version history limits.
 - Changes made to library version history limits.
+- User queues a job to generate a version storage usage report.
+- User queues a job to update the version history limits on all libraries of a site.
+- User queues a job to bulk delete version history of files on a library or site.
 - User deletes versions from the version history of a file.
-
-
-
+- Versions deleted when expired or bulk deleted.

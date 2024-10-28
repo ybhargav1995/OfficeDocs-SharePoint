@@ -27,6 +27,8 @@ items:
     - name: Plan for SharePoint and OneDrive
       href: plan-for-sharepoint-onedrive.md
       items:
+      - name: SharePoint storage
+        href: sharepoint-storage-planning.md
       - name: Business requirements
         href: business-requirements.md
       - name: Hybrid
@@ -660,3 +662,5 @@ items:
       href: /sharepointmigration/migrate-to-sharepoint-online
     - name: Multi-Geo
       href: /Office365/Enterprise/multi-geo-capabilities-in-onedrive-and-sharepoint-online-in-office-365
+    - name: SharePoint Embedded
+      href: /sharepoint/dev/embedded/overview
