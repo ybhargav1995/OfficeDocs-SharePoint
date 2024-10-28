@@ -2,9 +2,9 @@
 ms.date: 10/22/2024
 title: "Domain restrictions when sharing SharePoint & OneDrive content"
 ms.reviewer: srice
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: End User
 f1.keywords:
