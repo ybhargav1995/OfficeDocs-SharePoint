@@ -29,6 +29,9 @@ description: Learn how global and SharePoint admins can change the URL of a Shar
 
 # Change a site address
 
+> [!IMPORTANT]
+> There is currently a known issue caused by the retirement of BCS that is affecting changing of site addresses. The fix is currently being worked on. Currently, if you are facing issues, please try changing the site address using the PowerShell cmdlet while using the -SuppressBcsCheck parameter.
+
 > [!NOTE]
 > This feature isn't supported for Microsoft 365 GCC High or DoD customers.
 
