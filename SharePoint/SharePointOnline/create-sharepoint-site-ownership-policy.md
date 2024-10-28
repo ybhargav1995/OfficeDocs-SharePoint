@@ -62,23 +62,23 @@ To create a site ownership policy, go to the SharePoint admin center.
 
 1. Expand **Policies** and select **Site lifecycle management**.
 
-    :::image type="content" source="media/site-ownership-policy/1-create-site-ownership-policy.png" alt-text="screenshot of ownership policy being created in sharepoint admin center dashboard." lightbox="media/site-ownership-policy/1-create-site-ownership-policy.png":::
+    :::image type="content" source="media/site-ownership-policy/1-create-site-ownership-policy.png" alt-text="Screenshot of ownership policy being created in SharePoint admin center dashboard." lightbox="media/site-ownership-policy/1-create-site-ownership-policy.png":::
 
 2. Select **+ Create policy** and select **Next**.
 
-    :::image type="content" source="media/site-ownership-policy/2-create-site-ownership-policy.png" alt-text="screenshot of ownership policy created in sharepoint admin center dashboard." lightbox="media/site-ownership-policy/2-create-site-ownership-policy.png":::
+    :::image type="content" source="media/site-ownership-policy/2-create-site-ownership-policy.png" alt-text="Screenshot of ownership policy created in SharePoint admin center dashboard." lightbox="media/site-ownership-policy/2-create-site-ownership-policy.png":::
 
 3. Enter your policy scope parameters that determine which sites the policy would act on and select **Next**.
 
-    :::image type="content" source="media/site-ownership-policy/3-create-site-ownership-policy.png" alt-text="screenshot of site ownership policy with set policy scope in sharepoint admin center dashboard." lightbox="media/site-ownership-policy/3-create-site-ownership-policy.png":::
+    :::image type="content" source="media/site-ownership-policy/3-create-site-ownership-policy.png" alt-text="Screenshot of site ownership policy with set policy scope in SharePoint admin center dashboard." lightbox="media/site-ownership-policy/3-create-site-ownership-policy.png":::
 
 4. Define the ownership criteria, who should be notified if a site doesn't meet these criteria and what action to take if the site fails to meet these criteria for three months. Select **Next**.
 
-    :::image type="content" source="media/site-ownership-policy/4-create-site-ownership-policy.png" alt-text="screenshot of ownership policy configuration page in sharepoint admin center dashboard." lightbox="media/site-ownership-policy/4-create-site-ownership-policy.png":::
+    :::image type="content" source="media/site-ownership-policy/4-create-site-ownership-policy.png" alt-text="Screenshot of ownership policy configuration page in SharePoint admin center dashboard." lightbox="media/site-ownership-policy/4-create-site-ownership-policy.png":::
 
 5. Name your policy, add a description (optional) and select a policy mode. Select **Finish**.
 
-    :::image type="content" source="media/site-ownership-policy/5-create-site-ownership-policy.png" alt-text="screenshot of ownership policy with notifications options selected." lightbox="media/site-ownership-policy/5-create-site-ownership-policy.png":::
+    :::image type="content" source="media/site-ownership-policy/5-create-site-ownership-policy.png" alt-text="Screenshot of ownership policy with notifications options selected." lightbox="media/site-ownership-policy/5-create-site-ownership-policy.png":::
 
 6. Select **Done**. Your policy is now created and can be viewed and managed by selecting Site ownership policies in the Site lifecycle management dashboard.
 
@@ -90,7 +90,7 @@ In the **Site ownership policies** page, select the desired policy from the list
 
 The report outlines the number of sites identified as not meeting the ownership criteria, along with the number of sites that didn't have anyone to notify.
 
-:::image type="content" source="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png" alt-text="screenshot of ownership policy report." lightbox="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png":::
+:::image type="content" source="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png" alt-text="Screenshot of ownership policy report." lightbox="media/site-ownership-policy/6-create-site-ownership-policy-reporting.png":::
 
 Select **Download report** to download the detailed report in a .csv format. This report contains the following fields:
 
