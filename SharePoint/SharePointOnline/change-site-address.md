@@ -29,6 +29,9 @@ description: Learn how global and SharePoint admins can change the URL of a Shar
 
 # Change a site address
 
+> [!IMPORTANT]
+> There is currently a known issue caused by the retirement of BCS that is affecting changing of site addresses. The fix is currently being worked on. Currently, if you are facing issues, please try changing the site address using the PowerShell cmdlet while using the -SuppressBcsCheck parameter.
+
 > [!NOTE]
 > This feature isn't supported for Microsoft 365 GCC High or DoD customers.
 
@@ -110,7 +113,7 @@ Before you change the address of a site, it's important to communicate the chang
    Start-SPOSiteRename -Identity https://contoso.sharepoint.com/sites/project-x -NewSiteUrl https://contoso.sharepoint.com/sites/project-y
    ```
 
-   For more info about this cmdlet, see [Start-SPOSiteRename](/powershell/module/sharepoint-online/start-spositerename?view=sharepoint-ps&preserve-view=true).
+   For more information about this cmdlet, see [Start-SPOSiteRename](/powershell/module/sharepoint-online/start-spositerename?view=sharepoint-ps&preserve-view=true).
 
 ## Effects of changing a site address
 
@@ -194,4 +197,4 @@ For a case where you changed https://<i></i>contoso.sharepoint.<i></i>com/sites/
 2. Initiate a new site address change from *project-y* to *project-x*.
 3. Delete the redirect from *project-y* to *project-x* by using the [Remove-SPOSite cmdlet](/powershell/module/sharepoint-online/remove-sposite) on the *project-y* address.
 
-After following these steps, you should be back to the original state before the site address change.
+   After following these steps, you should be back to the original state before the site address change.
