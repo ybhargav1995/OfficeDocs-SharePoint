@@ -182,5 +182,5 @@ The following table describes the information included in the policy execution r
 
 - [Microsoft 365 group expiration policy](/microsoft-365/solutions/microsoft-365-groups-expiration-policy)
 - [Restore deleted sites](restore-deleted-site-collection.md)
-- [Overview of SharePoint Premium - SharePoint Advanced Management](/SharePoint/SharePointOnline/advanced-management.md)
+- [Overview of SharePoint Premium - SharePoint Advanced Management](advanced-management.md)
 - [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup)
