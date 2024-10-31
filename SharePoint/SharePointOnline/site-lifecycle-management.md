@@ -26,7 +26,7 @@ description: "Learn how to manage inactive site policies for SharePoint sites us
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
-The site lifecycle management feature in Microsoft SharePoint Premium - SharePoint Advanced Management allows you to manage inactive sites across your tenant from the [SharePoint admin center](get-started-new-admin-center.md).
+The Site lifecycle management feature in Microsoft SharePoint Premium - SharePoint Advanced Management allows you to manage inactive sites across your tenant from the [SharePoint admin center](get-started-new-admin-center.md).
 
 ## Types of inactive site policies
 
@@ -34,7 +34,7 @@ You can set up an inactive site policy to automatically detect inactive sites an
 
 The active policy runs monthly, generating reports and sending notifications to site owners to confirm the site's status. If it fails during a particular month, it will run again on the next schedule. The active policy enforces actions on inactive sites that haven't been certified by the site owner or admin, provided you've configured it to take enforcement actions.
 
-:::image type="content" source="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png" alt-text="screenshot of site lifecycle management dashboard" lightbox="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png":::
+:::image type="content" source="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png" alt-text="screenshot of Site lifecycle management dashboard." lightbox="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png":::
 
 ## Requirements
 
@@ -44,17 +44,17 @@ Site lifecycle management requires a [Microsoft SharePoint Premium - SharePoint 
 
 To create an inactive site policy, follow these steps:
 
-1. Go to the SharePoint admin center.
+1. Go to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219).
 
 1. Expand **Policies** and select **Site lifecycle management**.
 
 1. Select **+ Create policy** and then select **Next**.
 
-1. Enter your policy scope parameters and select **Next**. :::image type="content" source="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png" alt-text="screenshot of site lifecycle management set policy scope." lightbox="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png":::
+1. Enter your policy scope parameters and select **Next**. :::image type="content" source="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png" alt-text="screenshot of Site lifecycle management set policy scope." lightbox="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png":::
 
 1. Name the policy, add a description (optional), and select a policy mode. Select **Next**.
 
-    :::image type="content" source="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png" alt-text="screenshot of site lifecycle management name policy." lightbox="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png":::
+    :::image type="content" source="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png" alt-text="screenshot of Site lifecycle management name policy." lightbox="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png":::
 
     > **October 2024 Parameters Update** - During this step, you can now:
     >
@@ -63,13 +63,13 @@ To create an inactive site policy, follow these steps:
         >     - Mark the inactive site as read-only.
         >     - Mark the inactive site as read-only for a configurable duration (3, 6, 9, or 12 months) followed by archiving using Microsoft 365.
             >
-            >     See the [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup) for more details on this storage solution for inactive SharePoint content.
+            >     See [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup) for more details on this storage solution for inactive SharePoint content.
 
 1. Select **Done**. Your policy is now created and can be viewed and managed from the Site lifecycle management dashboard.
 
 ## Site owner notifications
 
-Notifications inform SharePoint site owners when a site has been inactive for a specified number of months. To keep the site, the owner should select the **Certify site** button in the notification email. Once certified, site lifecycle management won't check the site's activity for one year.
+Notifications inform SharePoint site owners when a site has been inactive for a specified number of months. To keep the site, the owner should select the **Certify site** button in the notification email. Once certified, Site lifecycle management won't check the site's activity for one year.
 
 Site owners receive monthly notifications for three months. After this period, no notifications are sent for the next three months. If the site remains inactive after six months, monthly notifications resume. The policy execution report lists inactive sites as unactioned by the site owner. You can download this report and filter out sites marked as unactioned.
 
@@ -82,15 +82,15 @@ If the tenant admin configures the policy to take automated enforcement action w
 
 A notification is sent when the site goes into read-only mode.
 
-:::image type="content" source="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png" alt-text="screenshot of site lifecycle management read-only mode notification." lightbox="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png":::
+:::image type="content" source="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png" alt-text="screenshot of Site lifecycle management read-only mode notification." lightbox="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png":::
 
 Once the site is in read-only mode, the following banner is added to the site:
 
-:::image type="content" source="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png" alt-text="screenshot of site lifecycle management read-only mode banner at the top of a SharePoint site." lightbox="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png":::
+:::image type="content" source="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png" alt-text="screenshot of Site lifecycle management read-only mode banner at the top of a SharePoint site." lightbox="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png":::
 
 ### Remove read-only banner from a site
 
-As a SharePoint administrator, you can remove the read-only mode for a site from the SharePoint admin center.
+As a SharePoint administrator, you can remove the read-only mode for a site from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219).
 
 To remove a site from read-only mode:
 
@@ -101,7 +101,7 @@ Site owners can't remove a site from read-only mode and must contact you to unar
 
 ### Unarchive a site
 
-To unarchive a site, follow these steps in SharePoint admin center:
+To unarchive a site, follow these steps in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219):
 
 1. Expand sites and select **Archived sites**.
 1. Select the site you want to unarchive and select **Unarchive site**.
