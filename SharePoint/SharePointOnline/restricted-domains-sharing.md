@@ -80,7 +80,7 @@ You can also limit domains at the site level. Note the following considerations:
     
 4. Under **Advanced settings for external sharing**, select the **Limit external sharing by domain** check box, and then select **Add domains**.
     
-5. Select **Allow only specific domains** to create an allowlist (must be a subset of the organization's allowlist), or to block only the domains you specify, select **Block specific domains**. You won't be able to use the **Block specific domains** feature if your oranization already set up a allowlist.
+5. Select **Allow only specific domains** to create an allowlist (must be a subset of the organization's allowlist), or to block only the domains you specify, select **Block specific domains**. You won't be able to use the **Block specific domains** feature if your organization already set up an allowlist.
     
 6. List the domains (maximum of 500) in the box provided, using the format  *domain.com.* If listing more than one domain, enter each domain on a new line.
     
