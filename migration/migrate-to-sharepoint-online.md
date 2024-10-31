@@ -50,8 +50,13 @@ Learn more:  [**Migration Admin role**](mm-migration-admin-role.md)
 
 **Mover is now retired for all Admin led migrations**. The ability to migrate from Google Drive, Box, Dropbox, and Egnyte is fully integrated into Migration Manager. All FastTrack-led migrations have transitioned to Migration Manager. Migration Manager doesn't support the migration of Amazon S3 or Azure blob storage.
 
-**Individuals or students**: You can continue to use Mover. Learn more: [Move your school files when you graduate](https://support.microsoft.com/en-us/office/move-your-school-files-when-you-graduate-7dbda93c-71e6-483f-8914-ad445554cd31)
+**Mover will be retired and not available for individual and students use after October 31, 2024.**
 
+- For migrating from Google Drive and Dropbox to your OneDrive (personal) account, please download the OneDrive mobile app from [here](https://www.microsoft.com/microsoft-365/onedrive/download) and follow the [guidance](https://support.microsoft.com/office/import-other-cloud-files-using-the-onedrive-mobile-app-0e769bf6-934f-46f5-b57e-032d41210343).
+
+- For migrating from OneDrive (work or school) to your OneDrive (personal) account, please follow the [guidance](https://support.microsoft.com/office/copy-transfer-or-import-files-to-your-personal-onedrive-7dbda93c-71e6-483f-8914-ad445554cd31).
+
+- For other migration scenarios to migrate your content to Microsoft 365, please check Migration Manager [learn more](/sharepointmigration/migrate-to-sharepoint-online).
 
 ### Cross-tenant migration
 
