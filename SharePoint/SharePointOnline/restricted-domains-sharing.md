@@ -96,17 +96,17 @@ You can also limit domains at the site level. Note the following considerations:
 
 After you limit sharing by domain, here's what you'll see when you share a document:
   
-- **Sharing content with email domains that are not allowed.** If you attempt to share content with a guest whose email address domain isn't allowed, an error message will display and sharing will not be allowed.
+- **Sharing content with email domains that are not allowed.** If you attempt to share content with a guest whose email address domain isn't allowed, an error message displays and sharing isn't allowed.
 
     (If the user is already in your directory, you won't see the error, but they will be blocked if they attempt to access the site.)
     
     ![Screenshot of sharing error message when sharing with blocked user.](media/fb280460-388d-4596-9938-6b69101d11fb.png)
 
-- **Sharing OneDrive files with guests on domains that aren't allowed.** If a user tries to share a OneDrive file with a guest whose email domain isn't allowed, an error message will display and sharing will not be allowed.
+- **Sharing OneDrive files with guests on domains that aren't allowed.** If a user tries to share a OneDrive file with a guest whose email domain isn't allowed, an error message displays and sharing isn't allowed.
 
     ![Screenshot of error message when sharing OneDrive files with blocked users.](media/992f367d-1caa-4019-8fd8-af84c172319c.png)
   
-- **Sharing content with email domains that are allowed.** Users will be able to successfully share the content with the guest. A tooltip will appear to let them know that the guest is outside of their organization.
+- **Sharing content with email domains that are allowed.** Users are able to successfully share the content with the guest. A tooltip appears to let them know that the guest is outside of their organization.
     
     ![Screenshot of successfully sharing content with restricted users.](media/4e5ff064-a1d4-4a7d-bc7b-0541312e9383.png)
   
