@@ -112,7 +112,7 @@ After you limit sharing by domain, here's what you'll see when you share a docum
   
 ## User auditing and lifecycle management
 
-As with any extranet sharing scenario it's important to consider the lifecycle of your guests, how to audit their activity, and eventually how to archive the site. See [Planning SharePoint business-to-business (B2B) extranet sites](./create-b2b-extranet.md) for more information.
+As with any extranet sharing scenario it's important to consider the lifecycle of your guests, how to audit their activity, and eventually how to archive the site. As a site owner or above, you can [create a CSV file](/sharepoint/sharing-reports) of every unique file, user, permission and link on a given SharePoint site or OneDrive. As a SharePoint admin or above, with [SharePoint advanced management](/sharepoint/advanced-management), you can run [Data access governance reports](/sharepoint/advanced-management#data-access-governance-insights) to audi shared links. See [Planning SharePoint business-to-business (B2B) extranet sites](./create-b2b-extranet.md) for more information.
   
 ## See also
 
