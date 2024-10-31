@@ -32,7 +32,7 @@ The site lifecycle management feature in Microsoft SharePoint Premium - SharePoi
 
 You can set up an inactive site policy to automatically detect inactive sites and notify site owners via email. Owners can then confirm if the site is still active. When setting up a site lifecycle policy, you can choose between a simulation policy and an active policy. The simulation policy runs once and generates a report based on the set parameters. If it fails, you need to delete it and create a new one. You can also convert a simulation policy to an active policy.
 
-The active policy runs monthly, generating reports and sending notifications to site owners to confirm the site's status. If it fails during a particular month, it will run again on the next schedule. The active policy will enforce actions on inactive sites that have not been certified by the site owner or admin, provided you have configured it to take enforcement actions.
+The active policy runs monthly, generating reports and sending notifications to site owners to confirm the site's status. If it fails during a particular month, it will run again on the next schedule. The active policy enforces actions on inactive sites that haven't been certified by the site owner or admin, provided you've configured it to take enforcement actions.
 
 :::image type="content" source="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png" alt-text="screenshot of site lifecycle management dashboard" lightbox="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png":::
 
@@ -69,7 +69,7 @@ To create an inactive site policy, follow these steps:
 
 ## Site owner notifications
 
-Notifications inform SharePoint site owners when a site has been inactive for a specified number of months. To keep the site, the owner should select the **Certify site** button in the notification email. Once certified, site lifecycle management will not check the site's activity for one year.
+Notifications inform SharePoint site owners when a site has been inactive for a specified number of months. To keep the site, the owner should select the **Certify site** button in the notification email. Once certified, site lifecycle management won't check the site's activity for one year.
 
 Site owners receive monthly notifications for three months. After this period, no notifications are sent for the next three months. If the site remains inactive after six months, monthly notifications resume. The policy execution report lists inactive sites as unactioned by the site owner. You can download this report and filter out sites marked as unactioned.
 
@@ -78,13 +78,13 @@ Site owners receive monthly notifications for three months. After this period, n
 
 ## Read-only mode
 
-If the tenant admin configures the policy to take automated enforcement action when there is no response from the notification recipients, additional notifications will be sent to inform the site owners or admins.
+If the tenant admin configures the policy to take automated enforcement action when there's no response from the notification recipients, additional notifications are sent to inform the site owners or admins.
 
-A notification will be sent when the site goes into read-only mode.
+A notification is sent when the site goes into read-only mode.
 
 :::image type="content" source="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png" alt-text="screenshot of site lifecycle management read-only mode notification." lightbox="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png":::
 
-Once the site is in read-only mode, the following banner will be added to the site:
+Once the site is in read-only mode, the following banner is added to the site:
 
 :::image type="content" source="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png" alt-text="screenshot of site lifecycle management read-only mode banner at the top of a SharePoint site." lightbox="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png":::
 
@@ -182,5 +182,5 @@ The following table describes the information included in the policy execution r
 
 - [Microsoft 365 group expiration policy](/microsoft-365/solutions/microsoft-365-groups-expiration-policy)
 - [Restore deleted sites](restore-deleted-site-collection.md)
-- [Overview of SharePoint Premium - SharePoint Advanced Management](advanced-management)
-- [Overview of Microsoft 365 Archive](microsoft-365/archive/archive-setup)
+- [Overview of SharePoint Premium - SharePoint Advanced Management](/SharePoint/SharePointOnline/advanced-management.md)
+- [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup)
