@@ -33,7 +33,7 @@ As a SharePoint admin in Microsoft 365, you can request an inventory of the vers
 > [!NOTE]
 > Additional reporting options are available with [Microsoft Graph Data Connect](/graph/data-connect-datasets#onedrive-and-sharepoint-online).
 
-When you run the report, a background timer job is scheduled to generate a CSV file of every file version on a given SharePoint site. The CSV file is saved to the location of your choice on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
+When you run the report, a background timer job is queued to generate a CSV file of every file version on a given SharePoint site. The CSV file is saved to the location of your choice on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
 
 > [!IMPORTANT]
 > The file version report generation job completes asynchronously over the next few days. The time it takes for the report to complete depends on the size of your library or site. For smaller sites or libraries, it takes over 24 hours to complete. For larger ones, it takes a few days to complete. 

@@ -1,10 +1,10 @@
 ---
-ms.date: 10/22/2024
+ms.date: 10/31/2024
 title: "Domain restrictions when sharing SharePoint & OneDrive content"
 ms.reviewer: srice
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: End User
 f1.keywords:
@@ -76,11 +76,11 @@ You can also limit domains at the site level. Note the following considerations:
     
 2. Select the site name that you want to restrict domains to open the details panel.
  
-3. On the panel, select the **Settings** tab and select **More sharing settings** under **External file sharing**.
+3. On the panel, select the **Settings** tab and select **More sharing settings** under **External sharing**.
     
 4. Under **Advanced settings for external sharing**, select the **Limit external sharing by domain** check box, and then select **Add domains**.
     
-5. Select **Allow only specific domains** to create an allowlist (most restrictive), or to block only the domains you specify, select **Block specific domains**.
+5. Select **Allow only specific domains** to create an allowlist (must be a subset of the organization's allowlist), or to block only the domains you specify, select **Block specific domains**. You won't be able to use the **Block specific domains** feature if your organization already set up an allowlist.
     
 6. List the domains (maximum of 500) in the box provided, using the format  *domain.com.* If listing more than one domain, enter each domain on a new line.
     
@@ -96,23 +96,23 @@ You can also limit domains at the site level. Note the following considerations:
 
 After you limit sharing by domain, here's what you'll see when you share a document:
   
-- **Sharing content with email domains that are not allowed.** If you attempt to share content with a guest whose email address domain isn't allowed, an error message will display and sharing will not be allowed.
+- **Sharing content with email domains that are not allowed.** If you attempt to share content with a guest whose email address domain isn't allowed, an error message displays and sharing isn't allowed.
 
     (If the user is already in your directory, you won't see the error, but they will be blocked if they attempt to access the site.)
     
     ![Screenshot of sharing error message when sharing with blocked user.](media/fb280460-388d-4596-9938-6b69101d11fb.png)
 
-- **Sharing OneDrive files with guests on domains that aren't allowed.** If a user tries to share a OneDrive file with a guest whose email domain isn't allowed, an error message will display and sharing will not be allowed.
+- **Sharing OneDrive files with guests on domains that aren't allowed.** If a user tries to share a OneDrive file with a guest whose email domain isn't allowed, an error message displays and sharing isn't allowed.
 
     ![Screenshot of error message when sharing OneDrive files with blocked users.](media/992f367d-1caa-4019-8fd8-af84c172319c.png)
   
-- **Sharing content with email domains that are allowed.** Users will be able to successfully share the content with the guest. A tooltip will appear to let them know that the guest is outside of their organization.
+- **Sharing content with email domains that are allowed.** Users are able to successfully share the content with the guest. A tooltip appears to let them know that the guest is outside of their organization.
     
     ![Screenshot of successfully sharing content with restricted users.](media/4e5ff064-a1d4-4a7d-bc7b-0541312e9383.png)
   
 ## User auditing and lifecycle management
 
-As with any extranet sharing scenario it's important to consider the lifecycle of your guests, how to audit their activity, and eventually how to archive the site. See [Planning SharePoint business-to-business (B2B) extranet sites](./create-b2b-extranet.md) for more information.
+As with any extranet sharing scenario it's important to consider the lifecycle of your guests, how to audit their activity, and eventually how to archive the site. As a site owner or above, you can [create a CSV file](/sharepoint/sharing-reports) of every unique file, user, permission and link on a given SharePoint site or OneDrive. As a SharePoint admin or above, with [SharePoint advanced management](/sharepoint/advanced-management), you can run [Data access governance reports](/sharepoint/advanced-management#data-access-governance-insights) to audit shared links. See [Planning SharePoint business-to-business (B2B) extranet sites](./create-b2b-extranet.md) for more information.
   
 ## See also
 
