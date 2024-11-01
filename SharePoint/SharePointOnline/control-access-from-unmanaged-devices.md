@@ -42,10 +42,10 @@ Limiting access allows users to remain productive while addressing the risk of a
 ![The experience when web access is limited](media/unmanaged-device-limited-web-access.png)
 
 > [!NOTE]
-> Blocking or limiting access on unmanaged devices relies on Microsoft Entra Conditional Access policies. [Learn about Microsoft Entra ID licensing](https://azure.microsoft.com/pricing/details/active-directory/) For an overview of conditional access in Microsoft Entra ID, see [Conditional access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview). 
-> For info about recommended SharePoint access policies, see [Policy recommendations for securing SharePoint sites and files](/microsoft-365/enterprise/sharepoint-file-access-policies). 
-> If you limit access on unmanaged devices, users on managed devices must use one of the [supported OS and browser combinations](/azure/active-directory/conditional-access/technical-reference#client-apps-condition), or they will also have limited access.
-> Because Microsoft Entra ID does not offer [Muit-Geo Capabilities](https://www.microsoft.com/en-us/microsoft-365/business/multi-geo-capabilities), blocking or limiting unmanaged devices will impact all Geos within the Microsoft 365 tenant.
+> - Blocking or limiting access on unmanaged devices relies on Microsoft Entra Conditional Access policies. [Learn about Microsoft Entra ID licensing](https://azure.microsoft.com/pricing/details/active-directory/) For an overview of conditional access in Microsoft Entra ID, see [Conditional access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview). 
+> - For info about recommended SharePoint access policies, see [Policy recommendations for securing SharePoint sites and files](/microsoft-365/enterprise/sharepoint-file-access-policies). 
+> - If you limit access on unmanaged devices, users on managed devices must use one of the [supported OS and browser combinations](/azure/active-directory/conditional-access/technical-reference#client-apps-condition), or they will also have limited access.
+> - Because Microsoft Entra ID does not offer [Multi-Geo Capabilities](https://www.microsoft.com/en-us/microsoft-365/business/multi-geo-capabilities), blocking or limiting unmanaged devices will impact all Geos within the Microsoft 365 tenant.
 
 ## Control device access across Microsoft 365
 
