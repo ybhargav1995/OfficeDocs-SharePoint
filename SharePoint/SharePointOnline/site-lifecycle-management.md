@@ -98,7 +98,7 @@ To remove a site from read-only mode in [SharePoint admin center](https://go.mic
 
 Site owners can't remove a site from read-only mode and must contact the tenant admin to unarchive the site.
 
-:::image type="content" source="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png" alt-text="screenshot of Site lifecycle management read-only mode banner at the top of a SharePoint site." lightbox="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png":::
+:::image type="content" source="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png" alt-text="screenshot of Site lifecycle management site page in SharePoint admin center." lightbox="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png":::
 
 ### Unarchive a site
 
