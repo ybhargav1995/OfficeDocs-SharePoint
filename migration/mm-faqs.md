@@ -27,7 +27,7 @@ description: Migration Manager FAQs
 
 **Question:** Does the file share I'm migrating need to be on a Windows computer?
 
-Answer: No.  As long as you can access the file share from the migration agent, you can migrate it.
+Answer: No. As long as you can access the file share from the migration agent, you can migrate it.
 
 **Question:** Can I manually assign a task to a migration agent I set up?
 
@@ -53,23 +53,23 @@ Answer: Rerun the Migration Manager agent installer and select the **Uninstall**
 
 Answer: The agent is set to automatically update to the latest version by default.
 
-**Question:**  Does adding more agents linearly increase the throughput? Is there a cap on the max number of agents?
+**Question:** Does adding more agents linearly increase the throughput? Is there a cap on the max number of agents?
 
-Answer: Based on our current data, the average speed of migration scales linearly to the number of agents, unless the overall throughput hits the upper limit of your network bandwidth. If multiple agents read from the same source file share path, that can also impact throughput. There’s no limit on how many agents you can install. We have many customers who perform migrations using 20+ agents.  **Note:** A single agent can process up to 10 tasks at a given time.
+Answer: Based on our current data, the average speed of migration scales linearly to the number of agents, unless the overall throughput hits the upper limit of your network bandwidth. Multiple agents reading from the same source file share path can also impact throughput. There’s no limit on how many agents you can install. We have many customers who perform migrations using 20+ agents. **Note:** A single agent can process up to 10 tasks at a given time.
 
 **Question:** Where are local Migration Manager logs stored?
 
-Answer: The logs are stored here:  `C:\Users\<Username>\AppData\Roaming\Microsoft\SPMigration`.
+Answer: The logs are stored here: `C:\Users\<Username>\AppData\Roaming\Microsoft\SPMigration`.
 
 **Question:** Can I rename my temporary working folder?
 
 Answer: Yes. By default the name of the folder is `%appdata%\Microsoft\SPMigration`. Through the Migration Manager UI, you can configure the physical location of the folder where logs and reports are stored on the agent's machine including renaming your working folder. 
 
-**Question:**  What should I do if I don't have enough storage space? 
+**Question:** What should I do if I don't have enough storage space? 
 
 Answer: When you are in Manager Manager, you can see the available disc space. Choose a drive that has enough storage before starting your migration.
 
-**Question:**  What happen during incremental migration if I rename, move or delete a destination file or folder? 
+**Question:** What happen during incremental migration if I rename, move or delete a destination file or folder? 
 
 Answer: After a file or fold is migrated to destination, user **renames or moves** the file or folder, then remigrate, 
 
@@ -81,62 +81,59 @@ After a file or folder is migrated to destination, user **deletes** the file or 
 
 - The source file or folder is migrated to the destination
 
-- There is no need to empty the recycle bin
-
-**Question:**  In file share migrations, what is the content type of a migrated document? 
+**Question:** In file share migrations, what is the content type of a migrated document? 
 
 Answer: In file share migrations, files are transferred to the SharePoint document library with the default "Document" content type. This process doesn't take into account any content type configurations that may be set on the library.
 
 ### General questions on Migration Manager
 
 **Question:** Is there a Tenant to Tenant (T2T) migration solution?
-Answer:  Yes. Cross-tenant OneDrive migration is now available outside of Migration Manager. A cross tenant migration solution for **SharePoint** is currently available.</br>[Learn more about the Cross-tenant OneDrive migration](/microsoft-365/enterprise/cross-tenant-onedrive-migration)
+Answer: Yes. Cross-tenant OneDrive migration is now available outside of Migration Manager. A cross tenant migration solution for **SharePoint** is currently available.</br>[Learn more about the Cross-tenant OneDrive migration](/microsoft-365/enterprise/cross-tenant-onedrive-migration)
 
-**Question:** Can I migrate content from SharePoint Server? </br>
-Answer:   At this time, Migration Manager supports the migration of file shares and cloud sources including Google, Dropbox, and Box. It doesn't support the migration of content from SharePoint Server.  See SPMT (SharePoint Migration Tool) for SharePoint Server migration.
+**Question:** Can I migrate content from SharePoint Server?</br>
+Answer: At this time, Migration Manager supports the migration of file shares and cloud sources including Google, Dropbox, and Box. It doesn't support the migration of content from SharePoint Server. See SPMT (SharePoint Migration Tool) for SharePoint Server migration.
 
 **Question:** Can I run the SharePoint Migration Tool (SPMT) on the same computer that I have the Migration Manager agent installed?</br>
-Answer:   Yes.
+Answer: Yes.
 
 **Question:** Is multi-factor authentication supported by Migration Manager?</br>
-Answer:    Microsoft multi-factor authentication is supported; however third party multi-factor authentication isn't.
+Answer: Microsoft multi-factor authentication is supported; however third party multi-factor authentication isn't.
 
 **Question:** Can Migration Manager migrate content to non-English SharePoint sites?</br>
 Answer: Yes, Migration Manager can migrate content to non-English sites as long as the site title doesn’t include non-EN characters.
 
-**Question:**  Is Migration Manager available for Government clouds?</br>
-Answer:  Yes. Here's how you configure it: [Government cloud settings](./mm-gov-cloud.md)
+**Question:** Is Migration Manager available for Government clouds?</br>
+Answer: Yes. Here's how you configure it: [Government cloud settings](./mm-gov-cloud.md)
 
-**Question:**   What’s the retention policy for the blog storage?</br>
-Answer:  When using the Migration API, customers and ISVs use the [SPO-provided blob containers/queues](/sharepoint/dev/apis/migration-api-azure-container-and-queue). [SAS URIs](/azure/storage/common/storage-sas-overview) are provided to access those containers/queues. The SAS URIs are valid for three days from creation for containers and 21 days for queues. After the SAS expires, the content in the blob containers/queues won't be accessible. SPO (SharePoint Online) backend jobs delete the content in the container/queues within 30 to 90 days of the creation.
+**Question:** What’s the retention policy for the blog storage?</br>
+Answer: When using the Migration API, customers and ISVs use the [SPO-provided blob containers/queues](/sharepoint/dev/apis/migration-api-azure-container-and-queue). [SAS URIs](/azure/storage/common/storage-sas-overview) are provided to access those containers/queues. The SAS URIs are valid for three days from creation for containers and 21 days for queues. After the SAS expires, the content in the blob containers/queues won't be accessible. SPO (SharePoint Online) backend jobs delete the content in the container/queues within 30 to 90 days of the creation.
  
-**Question:**  Is the data in the SPO provided containers encrypted?</br>
+**Question:** Is the data in the SPO provided containers encrypted?</br>
 Answer: Yes. We mandate that the data uploaded to SPO provided containers must be encrypted using AES CBC to ensure the data is secure. To learn more, see: [OneDrive for Business and SharePoint Online Migration API encryption](/sharepoint/dev/apis/migration-api-encryption).
 
-**Question:**  Can my migration succeed if the temporary storage expires before content migration is complete?</br>
+**Question:** Can my migration succeed if the temporary storage expires before content migration is complete?</br>
 Answer: Yes. If your migration task was successful, your data is migrated to SPO even if the temporary storage expired.
 
-**Question:**  Does running a migration slowdown the tenant or impact SharePoint site performance while migrating? </br> 
-Answer:  In general, site performance shouldn't be impacted by running a migration.  There are many factors that prevent migration impacting site performancefsu:
+**Question:** Does running a migration slowdown the tenant or impact SharePoint site performance while migrating? </br> 
+Answer: In general, site performance shouldn't be impacted by running a migration. There are many factors that prevent migration impacting site performance:
 - Migration runs as a background activity and doesn't compete with end-user traffic
-- SharePoint and OneDrive infrastructure has built-in throttling rules that project the reliability and availability of the system. To learn more about migration throughput and factors that affect migration speed, learn more at:  [General migration performance guidance](./sharepoint-online-and-onedrive-migration-speed.md)
+- SharePoint and OneDrive infrastructure has built-in throttling rules that project the reliability and availability of the system. To learn more about migration throughput and factors that affect migration speed, learn more at: [General migration performance guidance](./sharepoint-online-and-onedrive-migration-speed.md)
 
 **Question:** Does Migration Manager do incremental migrations? </br>
-Answer:  Yes.  The jobs created in Migration Manager do perform incremental migrations when run subsequently. 
+Answer: Yes. The jobs created in Migration Manager do perform incremental migrations when run subsequently. 
 
-**Question:**  The date and time in Migration Manager isn't my local time. How can I change the setting to my local time zone?
-Answer:  Migration Manager uses the time zone setting in the SharePoint Admin center to convert to your time zone. To update the timezone of the SharePoint Admin Center, browse to `https://<your host url>-admin.sharepoint.com/_layouts/15/regionalsetng.aspx` to change the setting.
+**Question:** The date and time in Migration Manager isn't my local time. How can I change the setting to my local time zone?
+Answer: Migration Manager uses the time zone setting in the SharePoint Admin center to convert to your time zone. To update the timezone of the SharePoint Admin Center, browse to `https://<your host url>-admin.sharepoint.com/_layouts/15/regionalsetng.aspx` to change the setting.
 
-**Question:**  What does **% complete** mean?
-Answer:  The % complete indicates the progress of the overall task migration, including the number of files migrated and the preparation work required for the remaining files to be migrated. *Note:* The **%** isn't linearly proportional to the number of files remaining to be migrated.
+**Question:** What does **% complete** mean?
+Answer: The % complete indicates the progress of the overall task migration, including the number of files migrated and the preparation work required for the remaining files to be migrated. *Note:* The **%** isn't linearly proportional to the number of files remaining to be migrated.
 
-**Question:**  What is the maximum file size that can be migrated?
+**Question:** What is the maximum file size that can be migrated?
 Answer: For file share and cloud migrations, a file size of 250 GB is supported. 
 
-**Question**:  How many task rows can I run at once when migrating content from a cloud provider?
-Answer:  At a maximum, only 50 task rows can run simultaneously. This total includes both scanning and migrating. This limit does not apply to file share migration.
+**Question**: How many task rows can I run at once when migrating content from a cloud provider?
+Answer: At a maximum, only 50 task rows can run simultaneously. This total includes both scanning and migrating. This limit does not apply to file share migration.
 
-**Question:** When using the Migration Manager tool, is there a limit to the number of path characters you can enter?
-
-Answer: Yes. When entering the **source path** into the text box, you're allowed a maximum of 255 characters.  However, during migration the **file path** can be up to 32,767 characters in length.  After it's migrated into SPO, the path is limited to 400 characters.
+**Question:** In the Migration Manager tool, is there a limit to the number of path characters you can enter?
+Answer: Yes. When entering the **source path** into the text box, you're allowed a maximum of 255 characters. However, during migration the **file path** can be up to 32,767 characters in length. After it's migrated into SPO, the path is limited to 400 characters.
 
