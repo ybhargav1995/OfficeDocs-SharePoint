@@ -71,6 +71,8 @@ To create an inactive site policy, expand **Policies** and select **Site lifecyc
 
 Notifications inform SharePoint site owners or site admins when a site is inactive for a specified number of months. To keep the site, the notification recipients should select the **Certify site** button in the notification email. Once certified, Site lifecycle management doesn't check the site's activity for one year.
 
+See the table below to learn more about how the inactive site policy behaves based on the selected enforcment action:
+
 |Enforcement action|Policy behavior|
 |---|---|
 |**Do nothing**|Site owners or site admins receive monthly notifications for three months. After this period, no notifications are sent for the next three months. If the site remains inactive after six months, monthly notifications resume. The policy execution report lists inactive sites as unactioned by the site owner. You can download this report and filter out sites marked as unactioned.|
