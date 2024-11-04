@@ -1,6 +1,6 @@
 ---
-ms.date: 11/02/2024
-title: "Manage inactive site policies with Site lifecycle management"
+ms.date: 11/04/2024
+title: "Manage inactive sites using Site lifecycle management"
 ms.reviewer: nvasudevan
 manager: jtremper
 recommendations: true 
@@ -19,10 +19,10 @@ ms.collection:
 - M365-collaboration
 - essentials-manage
 search.appverid:
-description: "Learn how to manage inactive site policies for SharePoint sites using Site lifecycle management."
+description: "Learn how to manage inactive SharePoint sites using Site lifecycle management."
 ---
 
-# Manage inactive site policies with Site lifecycle management
+# Manage inactive sites using Site lifecycle management
 
 The Site lifecycle management feature in Microsoft SharePoint Premium - SharePoint Advanced Management allows you to manage inactive sites across your tenant from the [SharePoint admin center](get-started-new-admin-center.md).
 
@@ -48,7 +48,7 @@ To create an inactive site policy, expand **Policies** and select **Site lifecyc
 
     **November 2024 policy scope update**
 
-    - During the "Set policy scope" step, you can now select **Include sites with retention policies and retention holds**
+    - During the "Set policy scope" step, you can now select **Include sites with retention policies and retention holds**.
     - Before this update, inactive sites in read-only state or locked states were excluded from the scope of the policy. Now, all read-only sites and locked sites are automatically included in the scope of the policy.
     - Before this update, ownerless inactive sites were excluded from the scope of the policy. As of November 2024, all inactive ownerless sites are automatically included in the scope of the policy.
 
@@ -71,7 +71,7 @@ To create an inactive site policy, expand **Policies** and select **Site lifecyc
 
 Notifications inform SharePoint site owners or site admins when a site is inactive for a specified number of months. To keep the site, the notification recipients should select the **Certify site** button in the notification email. Once certified, Site lifecycle management doesn't check the site's activity for one year.
 
-See the table below to learn more about how the inactive site policy behaves based on the selected enforcment action:
+See the following table to learn more about how the inactive site policy behaves based on the selected enforcement action:
 
 |Enforcement action|Policy behavior|
 |---|---|
