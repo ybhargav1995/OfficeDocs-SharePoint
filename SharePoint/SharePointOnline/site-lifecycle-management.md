@@ -11,7 +11,8 @@ f1.keywords:
 - NOCSH 
 ms.topic: how-to
 ms.service: sharepoint-online
-ms.localizationpriority:
+ms.localizationpriority: medium
+ms.collection:
 - Highpri
 - Tier2
 - M365-sam
