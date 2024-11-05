@@ -1,5 +1,5 @@
 ---
-ms.date: 11/04/2024
+ms.date: 11/05/2024
 title: "Manage inactive sites using Site lifecycle management"
 ms.reviewer: nvasudevan
 manager: jtremper
@@ -11,9 +11,9 @@ f1.keywords:
 - NOCSH 
 ms.topic: how-to
 ms.service: sharepoint-online
-ms.localizationpriority: medium
-ms.collection: 
-- Highpri
+ms.localizationpriority: =
+]\
+\ Highpri
 - Tier2
 - M365-sam
 - M365-collaboration
@@ -98,13 +98,16 @@ Once the site is in read-only mode, the following banner is added to the site:
 
 To remove a site from read-only mode in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), go to the **Active sites** page, select the site, and then select **Unlock** from the site page panel.
 
-Site owners can't remove a site from read-only mode and must contact the tenant admin to unarchive the site.
+Site owners can't remove a site from read-only mode and must contact the tenant admin to remove read-only mode.
 
 :::image type="content" source="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png" alt-text="screenshot of Site lifecycle management site page in SharePoint admin center." lightbox="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png":::
 
 ### Unarchive a site
 
-To unarchive a site in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), select the site you want to unarchive and select **Unarchive site**.
+To unarchive a site in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), expand **Sites** and select **Archived sites**. Select the site you want to unarchive and select **Reactivate**.
+
+> [!NOTE]
+> Only tenant admins can reactivate an archived site.
 
 ## Sites managed by multiple inactive site policies
 
