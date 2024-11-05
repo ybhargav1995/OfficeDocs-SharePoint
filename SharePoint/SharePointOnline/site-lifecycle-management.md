@@ -1,6 +1,6 @@
 ---
-ms.date: 05/21/2024
-title: "Manage site lifecycle policies"
+ms.date: 11/05/2024
+title: "Manage inactive sites using Site lifecycle management"
 ms.reviewer: nvasudevan
 manager: jtremper
 recommendations: true 
@@ -12,66 +12,112 @@ f1.keywords:
 ms.topic: how-to
 ms.service: sharepoint-online
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Highpri
 - Tier2
 - M365-sam
 - M365-collaboration
 - essentials-manage
 search.appverid:
-description: "Learn how to manage site lifecycle policies for SharePoint sites."
+description: "Learn how to manage inactive SharePoint sites using Site lifecycle management."
 ---
 
-# Manage site lifecycle policies
+# Manage inactive sites using Site lifecycle management
 
-[!INCLUDE[Advanced Management](includes/advanced-management.md)]
+The Site lifecycle management feature in Microsoft SharePoint Premium - SharePoint Advanced Management allows you to manage inactive sites across your tenant from the [SharePoint admin center](get-started-new-admin-center.md).
 
-## Site lifecycle management
+## Types of inactive site policies
 
-The site lifecycle management feature from Microsoft SharePoint Premium - SharePoint Advanced Management lets you manage inactive sites across your tenant from the [SharePoint admin center](get-started-new-admin-center.md).
+You can set up an inactive site policy to automatically detect inactive sites and notify site owners via email. Owners can then confirm if the site is still active. When setting up a site lifecycle policy, you can choose between a simulation policy and an active policy. The simulation policy runs once and generates a report based on the set parameters. If it fails, you need to delete it and create a new one. You can also convert a simulation policy to an active policy.
 
-You can set up an inactive site policy to automatically detect inactive sites and send notifications to site owners via email. The owners can then confirm whether the site is still active. When you're setting up a site lifecycle policy, you can choose between a simulation policy and an active policy. The simulation policy runs once and generates a report based on the set parameters. If the policy fails, you need to delete it and create a new simulation policy. You can also convert a simulation policy to an active policy.
+The active policy runs monthly, generating reports and sending notifications to site owners to confirm the site's status. If it fails during a particular month, it will run again on the next schedule. The active policy enforces actions on inactive sites that remain uncertified by the site owner or admin, provided you configured it to take enforcement actions.
 
-The active policy runs monthly and generates reports, sending notifications to the respective site owners to confirm the inactive site's status. If the active policy fails during a particular month, it will run again on the next schedule.
+:::image type="content" source="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png" alt-text="Screenshot of Site lifecycle management dashboard." lightbox="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png":::
 
-:::image type="content" source="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png" alt-text="screenshot of site lifecycle management dashboard" lightbox="media/site-lifecycle-management/1-inactive-site-policy-dashboard.png":::
+## Requirements
 
-### Site owner notifications
+Site lifecycle management requires a [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md) subscription.
 
-The notifications inform SharePoint site owners that a site is inactive for X months. To keep the site, the owner should select the **Certify site** button in the notification email. Once the owner certifies the site as active, site lifecycle management doesn't check the activity of the confirmed site for one year.
+## Create an inactive site policy
 
-Site owners are notified monthly for three months and then no notifications are sent for the next three months. After six months, monthly notifications resume if the site is inactive. The policy execution report lists the inactive site as unactioned by site owner. You can download the policy execution report and filter out sites that are marked as "no owner action."
+To create an inactive site policy, expand **Policies** and select **Site lifecycle management** in the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219):
+
+1. Select **+ Create policy** and then select **Next**. :::image type="content" source="media/site-lifecycle-management/2-inactive-site-policy-create-policy.png" alt-text="Screenshot of Site lifecycle management create policy." lightbox="media/site-lifecycle-management/2-inactive-site-policy-create-policy.png":::
+
+2. Enter your policy scope parameters and select **Next**.
+
+    **November 2024 policy scope update**
+
+    - During the "Set policy scope" step, you can now select **Include sites with retention policies and retention holds**.
+    - Before this update, inactive sites in read-only state or locked states were excluded from the scope of the policy. Now, all read-only sites and locked sites are automatically included in the scope of the policy.
+    - Before this update, ownerless inactive sites were excluded from the scope of the policy. As of November 2024, all inactive ownerless sites are automatically included in the scope of the policy.
+
+    :::image type="content" source="media/site-lifecycle-management/3-inactive-site-policy-create-policy-set-scope.png" alt-text="Screenshot of Site lifecycle management set policy scope." lightbox="media/site-lifecycle-management/3-inactive-site-policy-create-policy-set-scope.png":::
+
+3. Name the policy, add a description (optional), and select a policy mode. Select **Next**.
+
+    **November 2024 parameters update** - During this step, you can now:
+
+    - Choose to send emails to site owners or site admins.
+    - Choose enforcement actions if there's no response from site owners or admins after three notifications:
+        - Mark the inactive site as read-only.
+        - Mark the inactive site as read-only for a configurable duration (3, 6, 9, or 12 months) followed by archiving using Microsoft 365 Archive. For more information about storage solutions for inactive SharePoint content, see [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup).
+
+    :::image type="content" source="media/site-lifecycle-management/4-inactive-site-policy-create-policy-enforcement-archive.png" alt-text="Screenshot of Site lifecycle management enforcement options." lightbox="media/site-lifecycle-management/4-inactive-site-policy-create-policy-enforcement-archive.png":::
+
+4. Select **Done**. Your policy is now created and can be viewed and managed from the Site lifecycle management dashboard. :::image type="content" source="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png" alt-text="Screenshot of Site lifecycle management name policy." lightbox="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png":::
+
+## Inactive site notifications to site owners or site admins
+
+Notifications inform SharePoint site owners or site admins when a site is inactive for a specified number of months. To keep the site, the notification recipients should select the **Certify site** button in the notification email. Once certified, Site lifecycle management doesn't check the site's activity for one year.
+
+See the following table to learn more about how the inactive site policy behaves based on the selected enforcement action:
+
+|Enforcement action|Policy behavior|
+|---|---|
+|**Do nothing**|Site owners or site admins receive monthly notifications for three months. After this period, no notifications are sent for the next three months. If the site remains inactive after six months, monthly notifications resume. The policy execution report lists inactive sites as unactioned by the site owner. You can download this report and filter out sites marked as unactioned.|
+|**Read-only access**|Site owners or site admins receive monthly notifications for three months. If the notification recipients don't mark the site as certified during this period, the site goes into read-only mode.|
+|**Archive sites after mandatory read-only period**|Site owners or site admins receive monthly notifications for three months. If the notification recipients don't mark the site as certified during this period, then the site goes into a read-only mode for the configured number of months. After the configured number of months, the site gets archived through Microsoft 365 Archive. Archival is subject to the tenant enabling Microsoft 365 Archive on the Microsoft Admin center.|
 
 > [!TIP]
 > Before creating an inactive site policy, check for any site access restriction policies that could disrupt site attestation by the respective site owner.
 
-### Sites managed by multiple inactive site policies
+## Read-only mode
 
-If a site falls under multiple inactive site policies, notification emails aren't repeated. If a notification was sent within the last 30 days from any inactive site policy, the site remains inactive, and no more notifications are sent. The policy execution report shows the site's status as "Notified by another policy."
+An inactive site policy configured with the read-only enforcement action sends additional notifications to inform site owners or site admins when there's no response.
 
-## Requirements
+A notification is sent when the site goes into read-only mode.
 
-Site lifecycle management requires [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md).
+:::image type="content" source="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png" alt-text="Screenshot of Site lifecycle management read-only mode notification." lightbox="media/site-lifecycle-management/9-inactive-site-policy-read-only-mode.png":::
 
-## Create an inactive site policy
+Once the site is in read-only mode, the following banner is added to the site:
 
-1. To create an inactive site policy, go to the SharePoint admin center.
+:::image type="content" source="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png" alt-text="Screenshot of Site lifecycle management read-only mode banner at the top of a SharePoint site." lightbox="media/site-lifecycle-management/10-inactive-site-policy-read-only-mode-banner.png":::
 
-1. Expand **Policies** and select **Site lifecycle management**.
+### Remove site from read-only mode
 
-1. Select **+ Create policy** and select **Next**.
+To remove a site from read-only mode in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), go to the **Active sites** page, select the site, and then select **Unlock** from the site page panel.
 
-1. Enter your policy scope parameters and select **Next**. :::image type="content" source="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png" alt-text="screenshot of site lifecycle management set policy scope." lightbox="media/site-lifecycle-management/4-inactive-site-policy-create-policy-set-scope-filled.png":::
+Site owners can't remove a site from read-only mode and must contact the tenant admin to remove read-only mode.
 
-1. Name your policy, add a description (optional) and select a policy mode. Select **Next**.:::image type="content" source="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png" alt-text="screenshot of site lifecycle management name policy." lightbox="media/site-lifecycle-management/5-inactive-site-policy-name-policy.png":::
+:::image type="content" source="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png" alt-text="Screenshot of Site lifecycle management site page in SharePoint admin center." lightbox="media/site-lifecycle-management/11-inactive-site-policy-read-only-mode-site-page.png":::
 
-1. Select **Done**. Your policy is now created and can be viewed and managed from the **Site lifecycle management** dashboard.
+### Unarchive a site
+
+To unarchive a site in [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), expand **Sites** and select **Archived sites**. Select the site you want to unarchive and select **Reactivate**.
+
+> [!NOTE]
+> Only tenant admins can reactivate an archived site.
+
+## Sites managed by multiple inactive site policies
+
+If a site falls under multiple inactive site policies, notification emails aren't repeated. If a notification was sent within the last 30 days from any inactive site policy, the site remains inactive, and no further notifications are sent. The policy execution report shows the site's status as "Notified by another policy."
 
 ## Scope of inactive site policies
 
 You can configure parameters for an inactive site policy like inactive time period, template type, site creation source, sensitivity labels, and exclusion of up to 100 sites.
 
-### Site activities
+### In-scope site activities
 
 Inactive site policies analyze activity across SharePoint and connected platforms like Teams, Viva Engage (formerly Yammer), and Exchange to detect a site's last activity.
 
@@ -82,9 +128,9 @@ Inactive site policies analyze activity across SharePoint and connected platform
 |**Teams**     |Posted channel messages in a team across all channels, posted messages in Teams and all channels, replied to messages, mentioned in messages, reacted to messages, sent urgent messages, conducted meetings (recurring, ad hoc, one-time)          |
 |**Exchange**     | Received emails in the Exchange mailbox       |
 
-### Site templates
+### In-scope site templates
 
-Site lifecycle management also reviews activity of communication sites, classic sites, Teams-connected sites, and group-connected sites with the following site template types:
+Site lifecycle management reviews the activity of communication sites, classic sites, Teams-connected sites, and group-connected sites with the following site template types:
 
 |Site type|Template type|
 |---|---|
@@ -93,15 +139,11 @@ Site lifecycle management also reviews activity of communication sites, classic 
 |Teams-connected site|STS#3 or Group#0|
 |Group-connected site|STS#3 or Group#0|
 
-### Excluded sites
+### Out-of-scope sites
 
-The following sites are excluded from site activity detection:
+The following sites are considered out-of-scope and excluded from site activity detection:
 
-- Ownerless sites
 - OneDrive sites
-- Sites with retention policies applied
-- Sites with other compliance policies applied
-- Locked sites
 - Sites created by system users
 - App catalog sites
 - Root sites
@@ -110,7 +152,9 @@ The following sites are excluded from site activity detection:
 
 ## Reporting
 
-Sites with inactivity for six months are listed in the policy execution report. The report is available for download as a .csv file and lets you filter out sites that are considered unactioned by site owners. :::image type="content" source="media/site-lifecycle-management/8-inactive-site-policy-downloaded-csv-report.png" alt-text="screenshot of inactive site policy downloaded csv report." lightbox="media/site-lifecycle-management/8-inactive-site-policy-downloaded-csv-report.png":::
+Sites with inactivity for six months are listed in the policy execution report. The report is available for download as a .csv file and lets you filter out sites that are considered unactioned by site owners.
+
+:::image type="content" source="media/site-lifecycle-management/8-inactive-site-policy-downloaded-csv-report.png" alt-text="Screenshot of inactive site policy downloaded csv report." lightbox="media/site-lifecycle-management/8-inactive-site-policy-downloaded-csv-report.png":::
 
 The following table describes the information included in the policy execution report:
 
@@ -124,17 +168,17 @@ The following table describes the information included in the policy execution r
 |**Last site activity**     |Date of last activity detected by inactive site policy across SharePoint site and connected workloads (Exchange, Viva Engage (formerly Yammer), or Teams)         |
 |**Date created**     |Date when the inactive site was created         |
 |**Storage used**     |Storage consumed by inactive site    |
-|**Inactive site status**     |Stage of the policy with the inactive site. There are four possible stages:|
-| |**First notification**: The first notification was shared with the site owner of the inactive site.|
-| |**30 days since first notification**: The second notification was shared with the site owner of the inactive site.|
-| |**60 days since first notification**: The third notification was shared with the site owner of the inactive site.|
-| |**No owner action**: No action the site owner after three consecutive notifications.|
-|**Action status**     |Status of the notification to the site owner:         |
-| |**Success** denotes the notification was delivered to the site owner.|
-| |**Failure** denotes the notification to the site owner failed to send.|
+|**Action status**     |Status of the site (First/second/third notification sent, Site in read-only mode, Site archived)|
+|**Retention policy applied**|Whether a retention policy is applied to the site or not|
+|**Number of Site owners**|Number of site owners for a site|
+|**Number of Site admins**|Number of site admins for a site|
+|**Total notifications count**|Total number of notifications sent to site owners or site admins|
+|**Enforced on**|Date on which the enforcement action was taken (date when site was archived or put in read-only mode)|
+|**Duration in read-only mode**|Number of months the site is in the enforced read-only state|
 
 ## Related articles
 
-[Microsoft 365 group expiration policy](/microsoft-365/solutions/microsoft-365-groups-expiration-policy)
-
-[Restore deleted sites](restore-deleted-site-collection.md)
+- [Microsoft 365 group expiration policy](/microsoft-365/solutions/microsoft-365-groups-expiration-policy)
+- [Restore deleted sites](restore-deleted-site-collection.md)
+- [Overview of SharePoint Premium - SharePoint Advanced Management](advanced-management.md)
+- [Overview of Microsoft 365 Archive](/microsoft-365/archive/archive-setup)
