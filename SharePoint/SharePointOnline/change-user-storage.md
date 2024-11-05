@@ -61,10 +61,12 @@ When users need more storage beyond the initial 5 TB, Microsoft increases their 
 
 - When a user reaches 90% of their 5 TB capacity, Microsoft increases their storage to up to 25 TB. Admins can set a lower limit if desired.
 - If usage drops below 90%, storage limit resets to 5 TB.
-- For users reaching 90% of their 25 TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.
+- For users reaching 90% of their 25 TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.<sup>1</sup>    
 
     > [!NOTE]
     > For Office 365 A1 users, storage is limited to 100 GB. For more information, see [Office 365 Education service descriptions](/office365/servicedescriptions/office-365-platform-service-description/office-365-education).
+
+<sup>1</sup> The maximum amount of OneDrive storage provided to any single Education user with OneDrive for Business Plan 2 is 25 TB. Pooled storage limits still apply at the tenant level.
 
 ## Change storage space using PowerShell
 
