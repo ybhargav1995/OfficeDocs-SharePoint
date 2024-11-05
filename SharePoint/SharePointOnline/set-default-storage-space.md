@@ -59,12 +59,12 @@ This storage space setting applies to all new and existing users who are license
 
 ## Check if a user has the default storage limit or a specific limit
 
-1. Sign in to <https://admin.microsoft.com> as a global or SharePoint admin. (If you see a message that you don't have permission to access the page, you don't have Microsoft 365 admin permissions in your organization.)
+1. Sign in to <https://admin.microsoft.com> as an IT administrator. (If you see a message that you don't have permission to access the page, you don't have Microsoft 365 admin permissions in your organization.)
 
     > [!NOTE]
     > If you have Office 365 operated by 21Vianet (China), sign in at <https://login.partner.microsoftonline.cn/>. Then select the Admin tile to open the admin center.
 
-2. In the left pane, select **Users** \> **Active users**.
+2. In the left pane, select **Users**, and then select **Active users**.
 
 3. Select the user.
 
@@ -77,7 +77,7 @@ This storage space setting applies to all new and existing users who are license
 1. [Download the latest SharePoint Online Management Shell](https://go.microsoft.com/fwlink/p/?LinkId=255251).
 
     > [!NOTE]
-    > If you installed a previous version of the SharePoint Online Management Shell, go to Add or remove programs and uninstall "SharePoint Online Management Shell."
+    > If you installed a previous version of the SharePoint Online Management Shell, go to **Installed apps** and uninstall "SharePoint Online Management Shell."
 
 2. Connect to SharePoint as a [SharePoint Administrator](/sharepoint/sharepoint-admin-role) or [above](/microsoft-365/admin/add-users/about-admin-roles) in Microsoft 365. To learn how, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
