@@ -40,7 +40,7 @@ Content in Microsoft Graph includes emails, files, meetings, chats, calendars, a
 - **Prevent content oversharing and control content access**: Use tools available to SharePoint admins and site owners to prevent users from oversharing content. Limit content access by Copilot with user group settings, and other tools. 
 - **Manage content lifecycle**: Remove inactive and outdated content and sites. Make sure the information Copilot access is accurate and up to date. 
 
-## Use SharePoint Advanced Management(SAM) to get your organization ready for Copilot
+## Use SharePoint Advanced Management (SAM) to get your organization ready for Copilot
 
 [Microsoft SharePoint Premium – SharePoint Advanced Management (SAM)](/sharepoint/advanced-management) is an essential Microsoft 365 add-on that helps you, as the SharePoint admin to address these three pillars around content governance. To get ready for your organization’s Microsoft 365 Copilot adoption, there are a few highly recommended steps you can take, primarily using SharePoint Advanced Management tools. These steps reduce accidental oversharing, minimize your content governance footprint, improve Copilot response quality, control content access by Copilot, and ensure data safety specifically for business-critical sites. Let's delve into the specific steps you can take:
 
