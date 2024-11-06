@@ -266,6 +266,8 @@ items:
       href: create-sharepoint-site-ownership-policy.md
     - name: Manage site creation
       href: manage-site-creation.md
+    - name: Restrict site creation
+      href: restricted-site-creation.md
     - name: Manage site storage limits
       href: manage-site-collection-storage-limits.md
     - name: Change site addresses
