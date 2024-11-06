@@ -35,7 +35,7 @@ Moving to Microsoft 365? **Migration Manager** helps you migrate your content ea
 >[!Note]
 >This feature is currently in public preview, with full availability by June 2024.
 
-A Microsoft 365 Migration Administrator role is now available to provide access to Migration Manager within the Microsoft 365 Admin Center. Currently, your migration team s must be assigned the SharePoint admin role, giving more access than needed. With this new role, you limit usage to only what is required to migrate your content, reserving SharePoint Admin access to only users who need it.
+A Microsoft 365 Migration Administrator role is now available to provide access to Migration Manager within the Microsoft 365 Admin Center. Currently, your migration teams must be assigned the SharePoint admin role, giving more access than needed. With this new role, you limit usage to only what's required to migrate your content, reserving SharePoint Admin access to only users who need it.
 
 Learn more:  [**Migration Admin role**](mm-migration-admin-role.md)
 
@@ -52,11 +52,11 @@ Learn more:  [**Migration Admin role**](mm-migration-admin-role.md)
 
 **Mover will be retired and not available for individual and students use after October 31, 2024.**
 
-- For migrating from Google Drive and Dropbox to your OneDrive (personal) account, please download the OneDrive mobile app from [here](https://www.microsoft.com/microsoft-365/onedrive/download) and follow the [guidance](https://support.microsoft.com/office/import-other-cloud-files-using-the-onedrive-mobile-app-0e769bf6-934f-46f5-b57e-032d41210343).
+- For migrating from Google Drive and Dropbox to your OneDrive (personal) account, download the OneDrive mobile app from [here](https://www.microsoft.com/microsoft-365/onedrive/download) and follow the [guidance](https://support.microsoft.com/office/import-other-cloud-files-using-the-onedrive-mobile-app-0e769bf6-934f-46f5-b57e-032d41210343).
 
-- For migrating from OneDrive (work or school) to your OneDrive (personal) account, please follow the [guidance](https://support.microsoft.com/office/copy-transfer-or-import-files-to-your-personal-onedrive-7dbda93c-71e6-483f-8914-ad445554cd31).
+- For migrating from OneDrive (work or school) to your OneDrive (personal) account, follow the [guidance](https://support.microsoft.com/office/copy-transfer-or-import-files-to-your-personal-onedrive-7dbda93c-71e6-483f-8914-ad445554cd31).
 
-- For other migration scenarios to migrate your content to Microsoft 365, please check Migration Manager [learn more](/sharepointmigration/migrate-to-sharepoint-online).
+- For other migration scenarios to migrate your content to Microsoft 365, check Migration Manager [learn more](/sharepointmigration/migrate-to-sharepoint-online).
 
 ### Cross-tenant migration
 
@@ -92,7 +92,7 @@ If you're onboarding your classic on-premises SharePoint Server pages to SharePo
 
 - **Microsoft FastTrack**.  Microsoft FastTrack services can help you get started with your migration to the cloud.|When you need assistance to help you get started on your migration project.</br>
 
-- **Azure Data Box**. Want to remove the dependency on your WAN link to transfer data?  The Microsoft Azure Data Box is a service that lets you order a device from the Microsoft Azure portal. You can then copy TBs of data from your servers to the device, ship it back to Microsoft, and your data is copied into Azure. Once your data is in Azure, use SPMT to migrate content to SharePoint. To learn more, see [Migrate using the Azure Data Box](how-to-migrate-file-share-content-to-SPO-using-AzureDataBox.md).</br>
+- **Azure Data Box**. Want to remove the dependency on your WAN link to transfer data?  The Microsoft Azure Data Box is a service that lets you order a device from the Microsoft Azure portal. You can then copy TBs of data from your servers to the device, ship it back to Microsoft, and your data is copied into Azure. Once your data's in Azure, use SPMT to migrate content to SharePoint. To learn more, see [Migrate using the Azure Data Box](how-to-migrate-file-share-content-to-SPO-using-AzureDataBox.md).</br>
 
 - **OneDrive sync app**  To migrate users' Windows known folders (Desktop, Documents, Pictures, Screenshots, and Camera Roll) to OneDrive, you can use [Known Folder Move](/onedrive/redirect-known-folders). If users want to move other files from their local computer or a network file share to OneDrive or SharePoint, it's often easiest for them to use the OneDrive sync app. Users drag their files or folders to a folder they're syncing.  
 
