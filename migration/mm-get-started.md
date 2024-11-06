@@ -1,5 +1,5 @@
 ---
-ms.date: 08/11/2023
+ms.date: 10/30/2024
 title: "Migrate your file shares to Microsoft 365 with Migration Manager"
 ms.reviewer: 
 ms.author: heidip
