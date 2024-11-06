@@ -256,6 +256,8 @@ items:
       href: delete-site-collection.md
     - name: Restore deleted sites
       href: restore-deleted-site-collection.md
+    - name: Manage inactive sites
+      href: site-lifecycle-management.md
     - name: Manage site admins
       href: manage-site-collection-administrators.md
     - name: Review recent site actions
@@ -274,8 +276,6 @@ items:
       href: manage-lock-status.md
     - name: Create change history reports
       href: change-history-report.md
-    - name: Create inactive site policy
-      href: site-lifecycle-management.md
     - name: Root site
       href: modern-root-site.md
     - name: Plan, build, and launch a home site
