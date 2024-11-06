@@ -231,6 +231,8 @@ Items:
         href: how-to-format-your-csv-file-for-data-content-migration.md
       - name: Create user mapping files
         href: create-a-user-mapping-file-for-data-content-migration.md
+      - name: Migrate with Certificate Based Authentication
+        href: migration-with-cba.md
       - name: How the SharePoint Migration Tool works
         href: how-the-sharepoint-migration-tool-works.md
     - name: Reports
