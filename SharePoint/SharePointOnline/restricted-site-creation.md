@@ -28,10 +28,12 @@ description: "Learn how to restrict users from creation SharePoint sites using R
 
 The Restricted site creation feature lets IT administrators use SharePoint Online PowerShell to designate which Microsoft Entra groups in their tenant can create SharePoint sites.
 
-Users who aren't in the group aren't able to create a SharePoint site. Restricted site creation policy only controls the provisioning capability and not the site access permissions.
+You can choose between two ways to manage site creation within your tenant: deny mode (specified groups are unable to create sites) and allow mode (only the specified groups are allowed to create sites). Once enabled for your tenant, Restricted site creation is set to deny mode by default.
+
+Restricted site creation policy only controls the provisioning capability and not the site access permissions.
 
 > [!NOTE]
-> The sites in scope for preview are SharePoint team sites (group-connected and classic), communication sites, OneDrive, and All sites.
+> The sites in scope for this feature are SharePoint team sites (group-connected and classic), communication sites, OneDrive, and all sites.
 
 ## Prerequisites
 
@@ -40,12 +42,12 @@ Users who aren't in the group aren't able to create a SharePoint site. Restricte
 
 ## Current limitations
 
-- Only Microsoft Entra security groups (mail enabled or non-mail-enabled) are supported at this time.
+- Only Microsoft Entra security groups (mail-enabled or non-mail-enabled) are supported at this time.
 - You can configure up to 10 groups per site type.
 
 ## Template exceptions
 
-Choosing the All Sites option includes all sites except for any template listed in the following table. This capability supersedes all others.
+The all sites option includes all sites except for any template listed below. This capability supersedes all others.
 
 |Type|Template name|Template ID|Reason|
 |---|---|---|---|
@@ -57,7 +59,7 @@ Choosing the All Sites option includes all sites except for any template listed 
 
 ## Restricted site creation PowerShell commands
 
-See the following table to learn more about the commands used to manage Restricted site creation for SiteTypes such as All, team, communication, and OneDrive:
+See the following table to learn more about the commands used to manage Restricted site creation for SiteTypes: all sites, SharePoint team sites (group-connected and classic), communication, and OneDrive: See [Create a site](/sharepoint/create-site-collection) to learn more about different types of SharePoint sites.
 
 |Action|PowerShell command|Example|
 |---|---|---|
@@ -103,7 +105,7 @@ Teams site creation error message if created from the admin UI:
 :::image type="content" source="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png" alt-text="screenshot of failed OneDrive site creation if created from admin UI." lightbox="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png":::
 
 > [!NOTE]
-> Acceptable enumerations or enums for this command are: All Sites, Team sites (group-connected and classic), Communication sites.
+> Acceptable enumerations or enums for this command are: all sites, team sites (group-connected and classic), communication sites.
 
 ### Allow Microsoft Entra groups to create sites
 
