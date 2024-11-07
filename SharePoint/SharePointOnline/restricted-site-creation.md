@@ -1,6 +1,6 @@
 ---
 ms.date: 11/20/2024
-title: "Restrict SharePoint site creation (preview)"
+title: "Restrict SharePoint site creation"
 ms.reviewer: vgaddam
 manager: jtremper
 recommendations: true 
@@ -22,7 +22,7 @@ search.appverid:
 description: "Learn how to restrict users from creation SharePoint sites using Restricted site creation."
 ---
 
-# Restrict SharePoint site creation (preview)
+# Restrict SharePoint site creation
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
