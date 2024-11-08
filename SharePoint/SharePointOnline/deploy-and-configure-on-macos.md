@@ -138,7 +138,6 @@ Use the following keys to preconfigure or change settings for your users. The ke
 - [DefaultFolderLocation](deploy-and-configure-on-macos.md#defaultfolderlocation)
 - [DisableAutoConfig](deploy-and-configure-on-macos.md#disableautoconfig)
 - [DisableFirstDeleteDialog](deploy-and-configure-on-macos.md#disablefirstdeletedialog)
-- [DisableCustomRoot](deploy-and-configure-on-macos.md#disablecustomroot)
 - [DisableFirstDeleteDialog](deploy-and-configure-on-macos.md#disablefirstdeletedialog)
 - [DisableFREAnimation](deploy-and-configure-on-macos.md#disablefreanimation)
 - [DisableOfflineMode](#disableofflinemode)
@@ -296,19 +295,6 @@ The example for this setting in the .plist file is:
 ```xml
 <key>DisableAutoConfig</key>
 <integer>1</integer>
-```
-
-### DisableCustomRoot
-
-This setting lets you block users from changing the location of the OneDrive folder on their computer.
-
-If you set this setting's value to **True**, the Change location link is hidden in OneDrive Setup. The OneDrive folder is created in the default location, or in the custom location you specified if you enabled [DefaultFolderLocation](deploy-and-configure-on-macos.md#defaultfolderlocation).
-
-The example for this setting in the .plist file is:
-
-```xml
-<key>DisableCustomRoot</key>
-<(Bool)/>
 ```
 
 ### DisableFirstDeleteDialog
