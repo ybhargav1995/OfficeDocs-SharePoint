@@ -45,18 +45,6 @@ Restricted site creation policy only controls the provisioning capability and no
 - Only Microsoft Entra security groups (mail-enabled or non-mail-enabled) are supported at this time.
 - You can configure up to 10 groups per site type.
 
-## Template exceptions
-
-The all sites option includes all sites except for any template listed below. This capability supersedes all others.
-
-|Type|Template name|Template ID|Reason|
-|---|---|---|---|
-|OneDrive|SPSPERS|21|OneDrive experience is separate|
-|RaaS|CSPCONTAINER|70|RaaS experience is managed separately|
-|Redirect site|REDIRECTSITE|301|Critical SharePoint functionality|
-|My Site Host|MYSITEHOST|54|Core site|
-|Tenant Admin|TENANTADMIN|16|Core site|
-
 ## Restricted site creation PowerShell commands
 
 See the following table to learn more about the commands used to manage Restricted site creation for SiteTypes: all sites, SharePoint team sites (group-connected and classic), communication, and OneDrive: See [Create a site](/sharepoint/create-site-collection) to learn more about different types of SharePoint sites.
