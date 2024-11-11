@@ -39,7 +39,7 @@ As a SharePoint admin in Microsoft 365, you can queue a job to trim existing ver
 :::image type="content" source="media/version-history/trimming-workflows.png" lightbox="media/version-history/trimming-workflows.png" alt-text="Diagram of trimming workflows.":::
 
 > [!NOTE]
-> Trim jobs are background jobs whose processing depends on a factors such as volume of file versions the job has to evaluate, service health, other jobs that need to be processed on the farm, and off-peak hour processing logic. However, you can always track progress of the job.
+> Trim jobs are background jobs that are influenced by factors such as the volume of file versions to be evaluated, service health, and other jobs being processed on the farm. They are also subject to off-peak hour processing logic. The progress of a trim job can always be tracked.
 
 ## Review impact by running ‘What-if’ analysis 
 
