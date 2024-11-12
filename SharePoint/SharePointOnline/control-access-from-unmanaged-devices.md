@@ -92,13 +92,13 @@ Using a policy that affects all Microsoft 365 services can lead to better securi
    
     If you revert back to **Allow Full Access**, it could take up to 24 hours for the changes to take effect.
 
-> [!IMPORTANT]
-> If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
+    > [!IMPORTANT]
+    > If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
 
-> [!NOTE]
-> If you limit access and edit a site from an unmanaged device, image web parts won't display images that you upload to the site assets library or directly to the web part. To work around this issue, you can use this [SPList API](/previous-versions/office/sharepoint-server/mt796229(v%3Doffice.15)) to exempt the block download policy on the site assets library. This allows the web part to download images from the site assets library.
->
-> When Access Control for Unmanaged Devices in SharePoint is set to **Allow limited, web-only access**, SharePoint files cannot be downloaded but they can be previewed. The previews of Office files work in SharePoint but the previews do not work in Microsoft Viva Engage.
+    > [!NOTE]
+    > If you limit access and edit a site from an unmanaged device, image web parts won't display images that you upload to the site assets library or directly to the web part. To work around this issue, you can use this [SPList API](/previous-versions/office/sharepoint-server/mt796229(v%3Doffice.15)) to exempt the block download policy on the site assets library. This allows the web part to download images from the site assets library.
+    >
+    > When Access Control for Unmanaged Devices in SharePoint is set to **Allow limited, web-only access**, SharePoint files cannot be downloaded but they can be previewed. The previews of Office files work in SharePoint but the previews do not work in Microsoft Viva Engage.
 
 ## Limit access using PowerShell
 
@@ -176,7 +176,7 @@ The following parameters can be used with  `-ConditionalAccessPolicy AllowLimite
 
  `-LimitedAccessFileType OtherFiles` Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security. If this mode is enabled, then for downloading files like .zip or .exe, simply copy the url of the file and paste in browser (example: https://contoso.sharepoint.com/:u:/r/sites/test/Shared%20Documents/test1.zip).
 
-The AllowDownlownloadingNonWebViewableFiles parameter has been discontinued. Please use LimitedAccessFileType instead.
+The `AllowDownlownloadingNonWebViewableFiles` parameter has been discontinued. Please use LimitedAccessFileType instead.
 
 People outside the organization will be affected when you use conditional access policies to block or limit access from unmanaged devices. If users have shared items with specific people (who must enter a verification code sent to their email address), you can exempt them from this policy by running the following command.
 
