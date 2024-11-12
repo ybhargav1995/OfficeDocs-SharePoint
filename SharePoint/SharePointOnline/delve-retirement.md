@@ -61,6 +61,20 @@ The modern search experiences on Microsoft365.com, Office.com, and in SharePoint
 
 Both Delve URLs and SharePoint profile URLs will be redirected to the modern search profile pages on Microsoft365.com. For tenants not using Delve today, there will be no change to URLs and their legacy profile experiences in SharePoint. However, they get the extended profile page in modern search and the extended profile cards across Microsoft 365, which will include the properties that are visible in Delve.
 
+Below are all the URLs that will redirect to modern search profile pages on Microsoft365.com. If you are using a third-party solution with crafted Delve URLs or have internal documentation that for some reason is providing URLs not in this list, these will need to be updated. One option is to remove the subdomain and just use the main domain (delve.office.com). Another is to update your solution to support the new profile URLs in modern search. Examples of these URLs can be found at another place on this page.
+
+`https://delve.office.com`<br/>
+`https://gcc.delve.office.com`<br/>
+`https://delve-gcc.office.com`<br/>
+`https://nam.delve.office.com`<br/>
+`https://eur.delve.office.com`<br/>
+`https://apc.delve.office.com`<br/>
+`https://gbr.dele.office.com`<br/>
+`https://can.delve.office.com`<br/>
+`https://lam.delveoffice.com`<br/>
+`https://sfeur.delve.office.com`<br/>
+`https://sfnam.delve.office.com`
+
 ## Where can users edit properties currently editable in Delve?
 
 A new edit profile experience, tightly coupled with the profile card, is currently being developed and is targeted for release in November 2024. This will allow users to easily edit their profiles across Microsoft 365. Some properties that are viewable in Delve today aren't editable in Delve, but in the SharePoint edit profile experience.
