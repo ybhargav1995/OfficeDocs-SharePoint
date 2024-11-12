@@ -119,7 +119,7 @@ items:
         href: sharepoint-advanced-management.md
       - name: Review recent site actions
         href: recent-actions-panel.md
-      - name: Create site ownership policy
+      - name: Create site ownership policy 
         href: create-sharepoint-site-ownership-policy.md
       - name: Inactive sites
         href: site-lifecycle-management.md
