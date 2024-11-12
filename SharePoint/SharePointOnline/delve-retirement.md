@@ -1,5 +1,5 @@
 ---
-ms.date: 09/24/2024
+ms.date: 11/07/2024
 title: "Guidance for retiring Delve in your organization"
 ms.reviewer: 
 ms.author: ruihu
