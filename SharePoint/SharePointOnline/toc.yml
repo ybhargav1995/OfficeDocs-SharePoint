@@ -442,12 +442,6 @@ items:
       href: control-access-from-unmanaged-devices.md
     - name: Control access based on network location
       href: control-access-based-on-network-location.md
-    - name: Restrict OneDrive access
-      href: limit-access.md
-    - name: Restrict OneDrive content access
-      href: onedrive-site-access-restriction.md
-    - name: Restrict SharePoint site access
-      href: restricted-access-control.md
     - name: Enable conditional access (OneDrive)
       href: enable-conditional-access.md
     - name: Block meeting recording download
@@ -496,8 +490,6 @@ items:
       href: sensitive-by-default.md
     - name: Manage site access based on sensitivity label
       href: authentication-context-example.md
-    - name: Generate AI insights
-      href: ai-insights.md
     - name: Privacy, security, and compliance in Microsoft OneDrive
       href: onedrive-privacy-security-overview.md
     - name: Manage unlicensed OneDrive accounts
