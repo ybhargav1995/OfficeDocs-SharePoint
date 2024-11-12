@@ -42,10 +42,10 @@ Limiting access allows users to remain productive while addressing the risk of a
 ![The experience when web access is limited](media/unmanaged-device-limited-web-access.png)
 
 > [!NOTE]
-> Blocking or limiting access on unmanaged devices relies on Microsoft Entra Conditional Access policies. [Learn about Microsoft Entra ID licensing](https://azure.microsoft.com/pricing/details/active-directory/) For an overview of conditional access in Microsoft Entra ID, see [Conditional access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview). 
-> For info about recommended SharePoint access policies, see [Policy recommendations for securing SharePoint sites and files](/microsoft-365/enterprise/sharepoint-file-access-policies). 
-> If you limit access on unmanaged devices, users on managed devices must use one of the [supported OS and browser combinations](/azure/active-directory/conditional-access/technical-reference#client-apps-condition), or they will also have limited access.
-> Because Microsoft Entra ID does not offer [Muit-Geo Capabilities](https://www.microsoft.com/en-us/microsoft-365/business/multi-geo-capabilities), blocking or limiting unmanaged devices will impact all Geos within the Microsoft 365 tenant.
+> - Blocking or limiting access on unmanaged devices relies on Microsoft Entra Conditional Access policies. [Learn about Microsoft Entra ID licensing](https://azure.microsoft.com/pricing/details/active-directory/) For an overview of conditional access in Microsoft Entra ID, see [Conditional access in Microsoft Entra ID](/azure/active-directory/conditional-access/overview). 
+> - For info about recommended SharePoint access policies, see [Policy recommendations for securing SharePoint sites and files](/microsoft-365/enterprise/sharepoint-file-access-policies). 
+> - If you limit access on unmanaged devices, users on managed devices must use one of the [supported OS and browser combinations](/azure/active-directory/conditional-access/technical-reference#client-apps-condition), or they will also have limited access.
+> - Because Microsoft Entra ID does not offer [Multi-Geo Capabilities](https://www.microsoft.com/en-us/microsoft-365/business/multi-geo-capabilities), blocking or limiting unmanaged devices will impact all Geos within the Microsoft 365 tenant.
 
 ## Control device access across Microsoft 365
 
@@ -74,8 +74,8 @@ Using a policy that affects all Microsoft 365 services can lead to better securi
     > [!NOTE]
     > It can take up to 24 hours for the policy to take effect. It won't take effect for users who are already signed in from unmanaged devices.
 
-> [!IMPORTANT]
-> If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
+    > [!IMPORTANT]
+    > If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
 
 ## Limit access
 
@@ -90,15 +90,15 @@ Using a policy that affects all Microsoft 365 services can lead to better securi
 
     ![The Unmanaged devices pane in the new SharePoint admin center](media/unmanaged-devices-limit-access.png)
    
-If you revert back to **Allow Full Access**, it could take up to 24 hours for the changes to take effect.
+    If you revert back to **Allow Full Access**, it could take up to 24 hours for the changes to take effect.
 
-> [!IMPORTANT]
-> If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
+    > [!IMPORTANT]
+    > If you block or limit access from unmanaged devices, we recommend also blocking access from apps that don't use modern authentication. Some third-party apps and versions of Office prior to Office 2013 don't use modern authentication and can't enforce device-based restrictions. This means they allow users to bypass conditional access policies that you configure in Azure. In <a href="https://go.microsoft.com/fwlink/?linkid=2185071" target="_blank">**Access control** in the new SharePoint admin center</a>, select **Apps that don't use modern authentication**, select **Block access**, and then select **Save**.
 
-> [!NOTE]
-> If you limit access and edit a site from an unmanaged device, image web parts won't display images that you upload to the site assets library or directly to the web part. To work around this issue, you can use this [SPList API](/previous-versions/office/sharepoint-server/mt796229(v%3Doffice.15)) to exempt the block download policy on the site assets library. This allows the web part to download images from the site assets library.
->
-> When Access Control for Unmanaged Devices in SharePoint is set to **Allow limited, web-only access**, SharePoint files cannot be downloaded but they can be previewed. The previews of Office files work in SharePoint but the previews do not work in Microsoft Viva Engage.
+    > [!NOTE]
+    > If you limit access and edit a site from an unmanaged device, image web parts won't display images that you upload to the site assets library or directly to the web part. To work around this issue, you can use this [SPList API](/previous-versions/office/sharepoint-server/mt796229(v%3Doffice.15)) to exempt the block download policy on the site assets library. This allows the web part to download images from the site assets library.
+    >
+    > When Access Control for Unmanaged Devices in SharePoint is set to **Allow limited, web-only access**, SharePoint files cannot be downloaded but they can be previewed. The previews of Office files work in SharePoint but the previews do not work in Microsoft Viva Engage.
 
 ## Limit access using PowerShell
 
@@ -115,8 +115,8 @@ If you revert back to **Allow Full Access**, it could take up to 24 hours for th
     Set-SPOTenant -ConditionalAccessPolicy AllowLimitedAccess
     ```
 
-> [!NOTE]
-> By default, this policy allows users to view and edit files in their web browser. To change this, see [Advanced configurations](control-access-from-unmanaged-devices.md#advanced-configurations).
+    > [!NOTE]
+    > By default, this policy allows users to view and edit files in their web browser. To change this, see [Advanced configurations](control-access-from-unmanaged-devices.md#advanced-configurations).
 
 ## Block or limit access to a specific SharePoint site or OneDrive
 
@@ -176,7 +176,7 @@ The following parameters can be used with  `-ConditionalAccessPolicy AllowLimite
 
  `-LimitedAccessFileType OtherFiles` Allows users to download files that can't be previewed, such as .zip and .exe. This option offers less security. If this mode is enabled, then for downloading files like .zip or .exe, simply copy the url of the file and paste in browser (example: https://contoso.sharepoint.com/:u:/r/sites/test/Shared%20Documents/test1.zip).
 
-The AllowDownlownloadingNonWebViewableFiles parameter has been discontinued. Please use LimitedAccessFileType instead.
+The `AllowDownlownloadingNonWebViewableFiles` parameter has been discontinued. Please use LimitedAccessFileType instead.
 
 People outside the organization will be affected when you use conditional access policies to block or limit access from unmanaged devices. If users have shared items with specific people (who must enter a verification code sent to their email address), you can exempt them from this policy by running the following command.
 
