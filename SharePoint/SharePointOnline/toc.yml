@@ -116,7 +116,7 @@ items:
     - name: SharePoint advanced management
       items:
       - name: Overview
-        href: sharepoint-advanced-management.md
+        href: advanced-management.md
       - name: Review recent site actions
         href: recent-actions-panel.md
       - name: Create site ownership policy 
