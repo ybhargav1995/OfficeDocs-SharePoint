@@ -123,6 +123,10 @@ items:
         href: create-sharepoint-site-ownership-policy.md
       - name: Inactive sites
         href: site-lifecycle-management.md
+      - name: Data access governance reports
+        href: data-access-governance-reports.md
+      - name: Initiate site access reviews for data access governance reports
+        href: site-access-review.md
       - name: Create change history reports
         href: change-history-report.md
       - name: Restrict SharePoint site access by security groups
@@ -492,12 +496,8 @@ items:
       href: sensitive-by-default.md
     - name: Manage site access based on sensitivity label
       href: authentication-context-example.md
-    - name: Data access governance reports
-      href: data-access-governance-reports.md
     - name: Generate AI insights
       href: ai-insights.md
-    - name: Initiate site access reviews for data access governance reports
-      href: site-access-review.md
     - name: Privacy, security, and compliance in Microsoft OneDrive
       href: onedrive-privacy-security-overview.md
     - name: Manage unlicensed OneDrive accounts
