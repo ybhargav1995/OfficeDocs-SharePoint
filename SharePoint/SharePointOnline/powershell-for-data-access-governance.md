@@ -1,0 +1,274 @@
+---
+ms.date: 11/14/2024
+title: "Manage Data access governance report using SharePoint online PowerShell"
+ms.reviewer: pullabhk
+ms.author: mactra
+author: MachelleTranMSFT
+manager: jtremper
+recommendations: true
+audience: Admin
+f1.keywords: NOCSH
+ms.topic: article
+ms.service: sharepoint-online
+ms.localizationpriority: medium
+ms.collection:  
+- Strat_SP_admin
+- Highpri
+- Tier2
+- M365-sam
+- M365-collaboration
+ms.custom:
+- seo-marvel-apr2020
+- admindeeplinkSPO
+search.appverid: MET150
+description: "Learn about how to use SharePoint online PowerShell module to manage Data Access Governance reports"
+---
+
+# Manage Data access governance reports using SharePoint online PowerShell
+
+[!INCLUDE[Advanced Management](includes/advanced-management.md)]
+
+While [Data Access Governance](data-access-governance-reports.md) is available in SharePoint admin center portal, large organization usually look for PowerShell support in order to manage scale via scripting and automation. This document discusses all appropriate PowerShell commands available via SharePoint online PowerShell module to manage reports from Data Access Governance.
+
+> [!IMPORTANT]
+> PowerShell support for Data Access Governance is available from module "Microsoft.Online.SharePoint.PowerShell" and version "16.0.25409" onwards.
+
+> [!IMPORTANT]
+> Run the ‘Connect-SPOService’ command WITHOUT the **Credential** parameter. We do NOT support login using the **Credential** parameter inline with the latest security practices.
+
+## Creating reports using PowerShell
+
+Use the **Start-SPODataAccessGovernanceInsight** command to generate [all reports](data-access-governance-reports.md#access-the-reports-in-the-sharepoint-admin-center) with appropriate filters and parameters
+
+### Oversharing baseline report using Permissions
+
+The definition of ‘oversharing’ can be different for different customers. Data access Governance considers ‘number of users’ as one possible pivot to establish a baseline and then track key contributors to potential ‘oversharing’ such as sharing links created and sharing to large groups such as Everyone Except External users in the last 28 days. You can define your threshold of 'number of users' below and generate a report of sites that can be accessed by many users, at the time of report generation. Hence this is a 'snapshot' report.
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers -ReportType Snapshot -Workload SharePoint -CountOfUsersMoreThan 100 -Name "ReportForTestingLatestFixes"
+```
+
+This generates a list of all sites where more than 100 users can access any content within the site. More information about the list of sites and how to interpret the results is provided [here](data-access-governance-reports.md#understanding-the-oversharing-baseline-report).
+
+> [!NOTE]
+> Currently the report consists of both SharePoint sites and OneDrive accounts and can generate upto 1M sites/accounts.
+
+### Sharing link reports
+
+These reports are useful in identifying sites which are active in collaboration and hence needs quicker intervention to mitigate any potential oversharing risk. These 'RecentActivity' based reports idenfity sites which are generating the most number of sharing links in the last 28 days.
+
+#### Anyone sharing links created in last 28 days
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity SharingLinks_Anyone -Workload SharePoint -ReportType RecentActivity
+```
+
+Provide the workload value as 'OneDriveForBusiness' to get all OneDrive accounts with the same criteria.
+
+#### PeopleInYourOrg sharing links created in last 28 days
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity SharingLinks_PeopleInYourOrg -Workload SharePoint -ReportType RecentActivity
+```
+
+Provide the workload value as 'OneDriveForBusiness' to get all OneDrive accounts with the same criteria.
+
+#### Specific people (guests) sharing links created in last 28 days
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity SharingLinks_Guests -Workload SharePoint -ReportType RecentActivity
+```
+
+Provide the workload value as 'OneDriveForBusiness' to get all OneDrive accounts with the same criteria.
+
+### Content shared with Everyone except external users in last 28 days
+
+While Sharing links are one possible contributor for potential oversharing, another key contributor is 'Everyone except external users' (EEEU) which makes content 'public' i.e., visible to entire organization and makes it easy for others to discover content and get access. These reports identify sites which actively used EEEU at various scopes in last 28 days.
+
+#### Sites shared with Everyone except external users in last 28 days
+
+When EEEU is added to a site membership (owners/members/visitors), the entire content of the site becomes public and more prone to oversharing. The PS command below triggers the report to capture such sites in the last 28 days
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersAtSite -Workload SharePoint -ReportType RecentActivity -Name "PublicSiteViaEEEU"
+```
+
+> [!NOTE]
+> Currently report for OneDriveForBusiness with EEEU at the site level is not supported.
+
+
+#### Items shared with Everyone except external users in last 28 days
+
+The PS command below triggers the report to capture sites where specific items (files/folders/lists) were shared with EEEU in the last 28 days.
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersAtSite -Workload SharePoint -ReportType RecentActivity -Name "PublicSiteViaEEEU"
+```
+
+Provide the workload value as 'OneDriveForBusiness' to get all OneDrive accounts with the same criteria.
+
+### Sensitivity label in files report
+
+This PS command triggers the report to list sites where specific items were labelled with a given 'label', as of report generation date. This is a snapshot report. 
+
+First retrieve the label name or label GUID using "Security and compliance" PowerShell module.
+
+```powershell
+Get-Label | Format-Table -Property DisplayName, Name, Guid, ContentType
+```
+
+Then use the Name AND GUID to retrieve sites with files labelled with the given label name or GUID.
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "1fe7cc96-b07b-4474-83c1-3f2462bcc3bz" -FileSensitivityLabelName Secret
+```
+
+> [!NOTE]
+> Currently report for OneDriveForBusiness accounts with labelled files is not supported.
+
+## Tracking reports using Powershell
+
+> [!IMPORTANT]
+> All report creations will result in a GUID as output which could be used to track the report status
+
+```powershell
+Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "1fe7cc96-b07b-4474-83c1-3f2462bcc3bz" -FileSensitivityLabelName Secret
+```
+
+```output
+ReportId                             Status
+--------                             ------
+e378bc14-fdab-4cae-a16f-328b860f3643 NotStarted
+```
+
+Use the **Get-SPODataAccessGovernanceInsight** command to retrieve the current status of a specific DAG report using the report ID.
+
+```powershell
+Get-SPODataAccessGovernanceInsight -ReportID 346ec49a-7d1b-4e75-bdd8-95dab02603d5
+```
+
+```output
+ReportId          : 346ec49a-7d1b-4e75-bdd8-95dab02603d5
+ReportEntity      : SharingLinks_Anyone
+Status            : InQueue
+Workload          : SharePoint
+TriggeredDateTime : 11/13/2024 19:32:34
+CreatedDateTime   : 11/13/2024 20:09:23
+ReportStartTime   : 10/17/2024 19:32:33
+ReportEndTime     : 11/13/2024 19:32:33
+ReportType        : RecentActivity
+SitesFound        : 120
+```
+
+The ReportStartTime and ReportEndTime indicate the period of data to generate the report. The status will be marked as 'Completed' when the report generation is complete.
+
+You can also view the current status of DAG reports by using the filter **ReportEntity** instead of ID. The reportID is listed in the output and will be required later to download a specific report.
+
+```powershell
+Get-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers
+```
+
+```output
+ReportId             : f2003a70-eca0-4db7-8d75-a5b7f2f8d1b4
+ReportName           : PermissionReportFor1AsOfSept
+ReportEntity         : PermissionedUsers
+Status               : Completed
+Workload             : SharePoint
+TriggeredDateTime    : 09/18/2024 11:06:16
+CreatedDateTime      : 09/22/2024 12:12:48
+ReportType           : Snapshot
+CountOfUsersMoreThan : 1
+CountOfSitesInReport : 7
+CountOfSitesInTenant : 22
+Privacy              : All
+Sensitivity          : {All}
+Templates            : {All}
+
+ReportId             : 94e37d1a-bdf4-4e9d-8b0c-f7acb1162659
+ReportName           : PermissionReportFor1AsOfOct
+ReportEntity         : PermissionedUsers
+Status               : Completed
+Workload             : SharePoint
+TriggeredDateTime    : 10/09/2024 14:15:40
+CreatedDateTime      : 10/09/2024 15:18:23
+ReportType           : Snapshot
+CountOfUsersMoreThan : 100
+CountOfSitesInReport : 0
+CountOfSitesInTenant : 26
+Privacy              : All
+Sensitivity          : {All}
+Templates            : {All}
+```
+
+## View/Download reports using PowerShell
+
+To download a specific report, you will need the reportID. Retrieve the reportID using the **Get-SPODataAccessGovernanceInsight** command as specified above and use the **Export-SPODataAccessGovernanceInsight** command to download the report to a specified path.
+
+```powershell
+Export-SPODataAccessGovernanceInsight -ReportID f2003a70-eca0-4db7-8d75-a5b7f2f8d1a0 -DownloadPath "C:\Users\TestUser\Documents\DAGReports"
+```
+
+This will download a CSV file to the specified path. Details of the CSV/view for each report are discussed [here](data-access-governance-reports.md#access-the-reports-in-the-sharepoint-admin-center).
+
+> [!NOTE]
+> The default download path is the 'Downloads' folder.
+
+## Remedial actions using PowerShell
+
+Once DAG reports are generated, SharePoint admins can perform remedial actions as described [here](data-access-governance-reports.md#remedial-actions-from-data-access-governance-reports). The following section describes PowerShell commands to trigger and track 'site access review' as a remedial action.
+
+### Initiate Site access review using PowerShell
+
+Use **Start-SPOSiteReview** command to initiate a site access review for a specific site, listed under a DAG report. The DAG report provides the context under which the review should be initiated. Retrieve the reportID as specified in the above section, site ID from the CSV file and provide comments to give clarity to the site owner regarding the purpose of the review.
+
+```powershell
+Start-SPOSiteReview -ReportID f2003a70-eca0-4db7-8d75-a5b7f2f8d1a0 -SiteID 599d5719-d15a-490e-a6fb-e6172641d64d -Comment "Check for org wide access"
+```
+
+```output
+ReviewId                : 0f3948e6-5b4e-4ea0-8e94-c5e91c7fe0ef
+SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewInitiatedDateTime : 13-11-2024 20:55:41
+ReportEntity            : PermissionedUsers
+Status                  : Pending
+AdminComment            : Check for org wide access
+SiteName                : All Company
+```
+
+This will trigger emails to site owner as described [here](site-access-review.md#initiate-a-site-access-review).
+
+### Track Site access reviews using PowerShell
+
+Use **Start-SPOSiteReview** command to track the status of site access reviews. For specific reviews, you can use the `ReviewID` value as shown in the above output. To retrieve all review related to a reporting module, use the `ReportEntity` parameter.
+
+```powershell
+Get-SPOSiteReview -ReportEntity PermissionedUsers
+```
+
+```output
+ReviewId                : 0f3948e6-5b4e-4ea0-8e94-c5e91c7fe0ef
+SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewInitiatedDateTime : 13-11-2024 20:55:41
+ReviewCompletedDateTime :
+ReportCreatedDateTime   : 13-11-2024 23:25:41
+ReportEndDateTime       : 13-11-2024 23:25:41
+ReportEntity            : PermissionedUsers
+Status                  : Pending
+AdminComment            : Check for org wide access
+SiteName                : All Company
+ReviewerEmail           :
+ReviewerComment         :
+
+ReviewId                : 21ea5abc-2d5b-4e36-9a43-de1207ec6f9b
+SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewInitiatedDateTime : 24-10-2024 11:07:39
+ReviewCompletedDateTime : 15-11-2024 11:07:39
+ReportCreatedDateTime   : 15-10-2024 09:24:47
+ReportEndDateTime       : 15-10-2024 11:39:52
+ReportEntity            : PermissionedUsers
+Status                  : Completed
+AdminComment            : Check for org wide access
+SiteName                : All Company
+ReviewerEmail           : Jon@contosofinance.com
+ReviewerComment         : Removed EEEU for sensitive documents
+```

@@ -47,7 +47,11 @@ This feature requires either Microsoft 365 E5 or Microsoft SharePoint Premium - 
    - Sharing links
    - Sensitivity labels applied to files
    - Shared with 'Everyone except external users'
-     :::image type="content" source="media/data-access-governance/dag-landing-page.png" alt-text="Screenshot that shows data access governance dashboard." lightbox="media/data-access-governance/dag-landing-page.png":::
+      :::image type="content" source="media/data-access-governance/dag-landing-page.png" alt-text="Screenshot that shows data access governance dashboard." lightbox="media/data-access-governance/dag-landing-page.png":::
+
+A new oversharing baseline report using permissions is now available via PowerShell only.
+
+The definition of ‘oversharing’ can be different for different customers. Data access Governance considers ‘number of users’ as one possible pivot to establish a baseline and then track key contributors to potential ‘oversharing’ such as sharing links created and sharing to large groups such as Everyone Except External users in the last 28 days.
 
 ## Sharing links reports
 
@@ -77,7 +81,7 @@ When a report is ready, select the name of the report to view the data. Each sha
 - The name of the primary administrator for each site.
 
 > [!NOTE]
-> The reports don't include OneDrive data.
+> Support for OneDrive data is now [available via PowerShell](powershell-for-data-access-governance.md).
 
 ### Download the reports
 
@@ -173,6 +177,63 @@ After running the report, select the report to download the data. In the report:
 - Reports work if you have nonpseudonymized report data selected for your organization. To change this setting, you must be a Global Administrator. Go to the [Reports setting in the Microsoft 365 admin center](https://admin.microsoft.com/#/Settings/Services/:/Settings/L1/Reports) and clear **Display concealed user, group, and site names in all reports**.
 - Report data can be delayed for up to 48 hours. In new tenants, it can take a few days for data to be generated successfully and available for viewing.
 
+## Setting up oversharing baseline with Permissions based report
+
+It is vital for SharePoint admin to understand the permissions setup in their tenant, particularly in the wake of Copilot adoption, as it respects user and content permissions. Copilot's data exposure risk increases with the number of users having access. Hence, SharePoint admins need to evaluate sensitive data 'exposure' by checking permissions to items/sites.  Data access governance (DAG) can assist in establishing oversharing thresholds by identifying sites with ‘too many’ permissioned users.
+
+### Creating the oversharing baseline report
+
+> [!IMPORTANT]
+> Currently, SharePoint admins can generate the report via PowerShell only. The 1st report for the tenant will take up to 5 days. Subsequent reports will be completed in few hours.
+
+### Run the oversharing baseline report
+
+The PS command to generate oversharing baseline report is described [here](powershell-for-data-access-governance.md#oversharing-baseline-report-using-permissions).
+
+### View/download the oversharing baseline report
+
+The PS command to download the baseline report is described [here](powershell-for-data-access-governance.md#viewdownload-reports-using-powershell).
+
+> [!NOTE]
+> The report includes both SharePoint and OneDrive data.
+
+### Understanding the oversharing baseline report
+
+The output for the report will have the following data:
+
+
+|Column  |Description  |
+|---------|---------|
+|TenantID     |   GUID identifying the tenant     |
+|Site ID     |  GUID identifying the tenant       |
+|Site Name     |   Name of the site      |
+|Site URL     |  URL of the site       |
+|Site Template     |   Specifies the type of site. Has values such as Communication site, Team site, Team site (no M365 group), Other sites     |
+|Primary admin     |    Site administrator marked as Primary in Active sites page     |
+|Primary admin email     |    Email of primary site administrator     |
+|ExternalSharing |  Specifies whether content can be shared with external guests. Yes or No.    |
+|Site Privacy |   Applicable in case of M365 connected team sites. Specifies the privacy setting of the group. Has values Public or Private   |
+|Site Sensitivity |   Specifies the sensitivity label applied to the site   |
+|Number of users having access |  Unique number of users having access to site content at any level/scope. Min value is 100. More details are given below    |
+|People In Your Org link count |   Number of existing PeopleInYourOrg links across all the files in the site   |
+|Anyone link count |   Number of existing Anyone links across all the files in the site   |
+|Report Date |  Time of generation of report. It might take upto 48 hours to reflect any changes in the report    |
+
+#### Number of users having access
+
+This number represents all unique users who have permission to access the site and its content.
+
+Access to the site and its content can be given at any scope.
+
+- SharePoint groups have access to the entire content within the site as owner, members or visitors. You can have individuals OR Entra groups within SharePoint groups.
+- Access can be limited to a few items/files via unique permissions/broken inheritance. The target recipients could be individual users AND SharePoint groups/Entra groups. These are important to know and manage for oversharing since they are outside the site membership scope.
+
+This number is calculated by expanding all groups and individuals across all scopes, removing duplicates and by counting the number of unique users.
+In other words, this represents the extent of current ‘data exposure.’ If you are adding users directly OR adding Entra groups across any scope, then this number will increase corresponding to the Entra group size and/or number of individuals added.
+However, creating sharing links and sharing the site with ‘Everyone except external users’ does not automatically increase this number since no permissions are directly assigned. These increase the probability that the site/site content is now publicly visible, and more users can access. The number increases only when the users access the content. Hence you can view the number of sharing links or EEEU permission as ‘potential exposure’
+
+This report thereby lists all sites with 'too-many-users' accessing the content and hence more prone for Copilot exposure.
+
 ## Remedial actions from Data access governance reports
 
 > [!IMPORTANT]
@@ -183,3 +244,16 @@ Once you run the Data access governance reports to discover potential oversharin
 If immediate action needs to be taken, you can configure [Restricted access control (RAC)](./restricted-access-control.md) and restrict access to a specified group (currently in preview). You can also use the ['Change history' report](./change-history-report.md) to identify recent changes to site properties that could lead to oversharing.
 
 You can also request the site owner review the permissions before taking necessary actions via [the Site access review feature](site-access-review.md) that is available within the Data access governance reports.
+
+## Auto-run Data access Governance reports
+
+As a SharePoint admin, with this 'Auto-run' feature, you can now schedule Data access Governance reports to automatically run periodically instead having to remember to manually run every time. Few salient points are mentioned below:
+
+1. Auto-run is currently available only from UI. Hence this supports reports present in the DAG landing page only.
+1. Auto-run runs ALL available reports in a module at the same time. For example: You can schedule to run ALL sharing link reports at once. You can't schedule a single report with a different frequency. Similar is the case with all Everyone except external user reports and all sensitivity label reports.
+1. You can still go ahead and manually run a report any time. But the limitations with respect to time between multiple runs is still valid. For eg: You can run any sharing link report only once a day. If Auto-run has already triggered the report once, you can't run it again manually within the 24 hour time period and vice-versa.
+1. Reports are run every 28 days from the day of enablement. There is no configuration yet.
+1. Reports are automatically run for the period of 6 months from the day of enablement. If you want the reports to continue running automatically, you need to re-enable after 6 months.
+1. Once a report is run automatically, all SharePoint admins are notified via an email with the final status.
+
+"TBD - include image of Auto-run DAG reports"
