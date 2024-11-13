@@ -18,7 +18,7 @@ description: Learn about the document translation service in OneDrive.
 # Translate documents in OneDrive
 
 > [!NOTE]
-> Through June 2025, you can try out document translation and other selected Microsoft Syntex services at no cost if you have [pay-as-you-go billing](/syntex/syntex-azure-billing) set up. For details on how to get started and the limitations, see [Try out Microsoft Syntex and explore its services](/syntex/promo-syntex).
+> Through June 2025, you can try out document translation and other selected Microsoft Syntex services at no cost if you have [pay-as-you-go billing](/microsoft-365/syntex/syntex-azure-billing) set up. For details on how to get started and the limitations, see [Try out Microsoft Syntex and explore its services](/microsoft-365/syntex/promo-syntex).
 
 OneDrive, powered by Microsoft Syntex, allows you to translate documents while preserving the original format and structure. With this feature, you can create a translated copy of a single file or a set of files. The translation feature is available for all supported languages and dialects.
 
