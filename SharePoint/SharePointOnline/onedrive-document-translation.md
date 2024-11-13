@@ -18,7 +18,7 @@ description: Learn about the document translation service in OneDrive.
 # Translate documents in OneDrive
 
 > [!NOTE]
-> Through June 2025, you can try out document translation and other selected Microsoft Syntex services at no cost if you have [pay-as-you-go billing](/syntex/syntex-azure-billing.md) set up. For details on how to get started and the limitations, see [Try out Microsoft Syntex and explore its services](/syntex/promo-syntex.md).
+> Through June 2025, you can try out document translation and other selected Microsoft Syntex services at no cost if you have [pay-as-you-go billing](/syntex/syntex-azure-billing) set up. For details on how to get started and the limitations, see [Try out Microsoft Syntex and explore its services](/syntex/promo-syntex).
 
 OneDrive, powered by Microsoft Syntex, allows you to translate documents while preserving the original format and structure. With this feature, you can create a translated copy of a single file or a set of files. The translation feature is available for all supported languages and dialects.
 
@@ -30,7 +30,7 @@ OneDrive, powered by Microsoft Syntex, allows you to translate documents while p
 
 - **Manual or automatic translation**: You can manually translate files or set up a rule for automatic translation.
 - **Translation of different file types**: Translate various file types, including .docx, .pdf, .pptx, and more.
-- **Video transcripts and captions**: The translation feature also supports translating video transcripts and closed caption files. For more information, see [Transcript Translations in Stream for SharePoint](https://prod.support.services.microsoft.com/office/microsoft-syntex-pay-as-you-go-transcript-translations-in-stream-for-sharepoint-2e34ad1b-e213-47ed-a806-5cc0d88751de).
+- **Video transcripts and captions**: The translation feature also supports translating video transcripts and closed caption files. For more information, see [Transcript Translations in Stream for SharePoint](https://support.microsoft.com/office/microsoft-syntex-pay-as-you-go-transcript-translations-in-stream-for-sharepoint-2e34ad1b-e213-47ed-a806-5cc0d88751de).
 
 ---
 
