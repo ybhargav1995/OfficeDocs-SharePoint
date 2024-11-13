@@ -19,18 +19,18 @@ ms.collection:
 - M365-collaboration
 - essentials-manage
 search.appverid:
-description: "Learn how to restrict users from creation SharePoint sites using Restricted site creation."
+description: "Learn how to restrict users from creation SharePoint sites using restricted site creation."
 ---
 
 # Restrict SharePoint site creation
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
-The Restricted site creation feature lets IT administrators use SharePoint Online PowerShell to designate which Microsoft Entra groups in their tenant can create SharePoint sites.
+The restricted site creation feature lets IT administrators use [SharePoint Online PowerShell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell#getting-started-with-sharepoint-online-powershell) to designate which Microsoft Entra security groups in their tenant can create SharePoint sites.
 
-You can choose between two ways to manage site creation within your tenant: deny mode (specified groups are unable to create sites) and allow mode (only the specified groups are allowed to create sites). Once enabled for your tenant, Restricted site creation is set to deny mode by default.
+You can choose between two ways to manage site creation within your tenant: deny mode (the specified groups are unable to create sites) and allow mode (only the specified groups are allowed to create sites). Once enabled for your tenant, restricted site creation is set to deny mode by default.
 
-Restricted site creation policy only controls the provisioning capability and not the site access permissions.
+Restricted site creation policies only control site provisioning capabilities and not site access permissions.
 
 > [!NOTE]
 > The sites in scope for this feature are SharePoint team sites (group-connected and classic), communication sites, OneDrive, and all sites.
@@ -38,16 +38,16 @@ Restricted site creation policy only controls the provisioning capability and no
 ## Prerequisites
 
 - Confirm you have the latest version of [Microsoft SharePoint Online PowerShell](https://www.microsoft.com/download/details.aspx?id=35588) installed.
-- The Restricted site creation feature requires a [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md) subscription.
+- The restricted site creation feature requires a [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md) subscription.
 
 ## Current limitations
 
 - Only Microsoft Entra security groups (mail-enabled or non-mail-enabled) are supported at this time.
-- You can configure up to 10 groups per site type.
+- You can configure up to 10 security groups per site type.
 
 ## Restricted site creation PowerShell commands
 
-See the following table to learn more about the commands used to manage Restricted site creation for SiteTypes: all sites, SharePoint team sites (group-connected and classic), communication, and OneDrive: See [Create a site](/sharepoint/create-site-collection) to learn more about different types of SharePoint sites.
+See the following table to learn more about the commands used to manage restricted site creation for SiteTypes: all sites, SharePoint team sites (group-connected and classic), communication, and OneDrive: See [Create a site](/sharepoint/create-site-collection) to learn more about different types of SharePoint sites.
 
 |Action|PowerShell command|Example|
 |---|---|---|
@@ -56,26 +56,28 @@ See the following table to learn more about the commands used to manage Restrict
 |View security group|`Get-SPORestrictedSiteCreation -SiteType <Enum>`|`Get-SPORestrictedSiteCreation –SiteType All`|
 |Disable site access restriction|`Set-SPORestrictedSiteCreation -Enabled:$false`||
 
-## Manage Restricted site creation
+## Manage restricted site creation
 
-The following processes let you enable Restricted site creation for the tenant and the two methods of managing the feature:
+The following processes let you enable restricted site creation for the tenant and the two methods of managing the feature:
 
-### Enable Restricted site creation for your tenant
+### Enable restricted site creation for your tenant
 
-To enable site creation restriction, run the following command in SharePoint Online PowerShell:
+To enable site creation restriction, run the following command in SharePoint Online Management Shell:
 
 ```powershell
 Set-SPORestrictedSiteCreation -RestrictedSiteCreation $true
 ```
 
 > [!IMPORTANT]
-> Once you enable the Restricted site creation feature, consider if you want to deny certain groups from creating sites, or if you prefer to allow certain groups the ability to create sites.
+> Once you enable the restricted site creation feature, consider if you want to deny certain groups from creating sites, or if you prefer to allow certain groups the ability to create sites.
 >
->Choosing your strategy is important because swapping between the two modes will remove the existing Restricted site creation configuration.
+>Choosing your strategy is important because swapping between the two modes will remove the existing restricted site creation configuration.
 
-### Restrict Microsoft Entra groups from creating sites
+The restricted site creation feature only supports either all deny, or all allow configurations.
 
-You can specify up to 10 Microsoft Entra groups to be restricted from creating sites. To exclude a group from site provisioning capabilities, run the following command:
+### Restrict Microsoft Entra security groups from creating sites
+
+You can specify up to 10 Microsoft Entra security groups to be restricted from creating sites. To exclude a security group from site provisioning capabilities, run the following command:
 
 ```PowerShell
 Set-SPORestrictedSiteCreation -SiteType <Enum> -SetRestrictedSiteCreationGroups <comma separated group GUIDS>  -Deny
@@ -95,9 +97,9 @@ Teams site creation error message if created from the admin UI:
 > [!NOTE]
 > Acceptable enumerations or enums for this command are: all sites, team sites (group-connected and classic), communication sites.
 
-### Allow Microsoft Entra groups to create sites
+### Allow Microsoft Entra security groups to create sites
 
-To specify up to 10 Microsoft Entra groups to be allowed to create sites, run the following command:
+To specify up to 10 Microsoft Entra security groups to be allowed to create sites, run the following command:
 
 ```powershell
 Set-SPORestrictedSiteCreation -SiteType <Enum> -SetRestrictedSiteCreationGroups <comma separated group GUIDS> -Allow  
@@ -106,9 +108,9 @@ Set-SPORestrictedSiteCreation -SiteType <Enum> -SetRestrictedSiteCreationGroups 
 > [!NOTE]
 > Changing from deny to allow mode will prompt the message: “Are you sure you want to switch from Deny to Allow? Switching will remove all current configuration of restrictions.”
 
-### Manage Microsoft Entra groups in existing Restricted site creation configurations
+### Manage Microsoft Entra security groups in existing restricted site creation configurations
 
-If you enabled Restricted site creation and need to edit or remove a Microsoft Entra group, you must use the **-Deny** command to replace the existing configuration. The **-Deny** command replaces the existing configuration and you're able to specify a new group configure.
+If you enabled restricted site creation and need to edit or remove a Microsoft Entra security group, you must use the **-Deny** command to replace the existing configuration. The **-Deny** command replaces the existing configuration and you're able to specify a new group configure.
 
 ```powershell
 Set-SPORestrictedSiteCreation -SiteType <Enum> -SetRestrictedSiteCreationGroups <comma separated group GUIDS> -Deny
