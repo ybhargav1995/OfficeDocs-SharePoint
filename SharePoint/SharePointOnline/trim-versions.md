@@ -1,11 +1,11 @@
 ---
-title: "Trim existing versions on site, library, or OneDrive(Preview)"
+title: "Trim existing versions on site, library, or OneDrive"
 ms.reviewer: rekamath
 ms.author: ruihu
 author: maggierui
 manager: jtremper
 recommendations: true
-ms.date: 04/30/2024
+ms.date: 10/03/2024
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -21,10 +21,10 @@ description: "This article provides guidance on how to trim existing versions fr
 ---
 
 
-# Trim existing versions from site, library, or OneDrive(Preview) 
+# Trim existing versions from site, library, or OneDrive
 
 > [!CAUTION]
-> Versions deleted using trimming jobs are permanently deleted. This deletion workflow bypasses the normal recycle bin retention and deleted versions cannot be recovered. 
+> Versions deleted using trimming jobs are permanently deleted. This deletion workflow bypasses the normal recycle bin retention and deleted versions cannot be recovered. To prevent unwanted data loss, it's highly recommended to [run an impact analysis](tutorial-run-what-if-analysis.md) before trimming activity.
 
 As a SharePoint admin in Microsoft 365, you can queue a job to trim existing versions on a site, library, or OneDrive user account to reduce the version storage footprint of your site. You can also align existing version storage with updated version history limits by scheduling a job to trim existing versions or align existing version storage with updated Version history limits.<br> There are several things you need to consider before you decide to trim existing Version history on a site or library. Version availability is critical for recovery scenarios like undoing unwanted changes. Versions deleted using trimming jobs are permanently deleted and can't be recovered from recycle bin. 
 
@@ -37,6 +37,9 @@ As a SharePoint admin in Microsoft 365, you can queue a job to trim existing ver
 
 
 :::image type="content" source="media/version-history/trimming-workflows.png" lightbox="media/version-history/trimming-workflows.png" alt-text="Diagram of trimming workflows.":::
+
+> [!NOTE]
+> Trim jobs are background jobs that are influenced by factors such as the volume of file versions to be evaluated, service health, and other jobs being processed on the farm. They are also subject to off-peak hour processing logic. The progress of a trim job can always be tracked.
 
 ## Review impact by running ‘What-if’ analysis 
 

@@ -1,5 +1,5 @@
 ---
-title: "Generate version storage usage report for a site(Preview)"
+title: "Generate version storage usage report for a site"
 ms.reviewer: rekamath
 ms.author: ruihu
 author: maggierui
@@ -20,7 +20,7 @@ description: "This article provides guidance on how to generate version storage 
 ---
 
 
-# Generate version storage usage report for a SharePoint site (Preview)
+# Generate version storage usage report for a SharePoint site
 
 As a SharePoint admin in Microsoft 365, you can request an inventory of the versions on a site, library, or file, which can be used for various scenarios:
 
@@ -33,7 +33,7 @@ As a SharePoint admin in Microsoft 365, you can request an inventory of the vers
 > [!NOTE]
 > Additional reporting options are available with [Microsoft Graph Data Connect](/graph/data-connect-datasets#onedrive-and-sharepoint-online).
 
-When you run the report, a background timer job is scheduled to generate a CSV file of every file version on a given SharePoint site. The CSV file is saved to the location of your choice on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
+When you run the report, a background timer job is queued to generate a CSV file of every file version on a given SharePoint site. The CSV file is saved to the location of your choice on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
 
 > [!IMPORTANT]
 > The file version report generation job completes asynchronously over the next few days. The time it takes for the report to complete depends on the size of your library or site. For smaller sites or libraries, it takes over 24 hours to complete. For larger ones, it takes a few days to complete. 
@@ -94,5 +94,5 @@ Follow these steps to manage version history limits for a site by using PowerShe
 
 ## Learn More
 
-1. [Tutorial: Generate Version Usage Report (Preview)](tutorial-generate-version-usage-report.md)
+1. [Tutorial: Generate Version Usage Report](tutorial-generate-version-usage-report.md)
 1. [Tutorial: Run 'What-If' Analysis](tutorial-run-what-if-analysis.md)

@@ -129,10 +129,14 @@ Items:
         href: mm-project-settings-permissions.md
       - name: Google sheet scan settings
         href: mm-google-sheet-scan.md
+      - name: File versions
+        href: file-versions.md
     - name: Migration time estimator
       href: mm-time-estimator.md
     - name: Reports and codes for cloud migrations
       href: mm-cloud-reports.md
+    - name: Specialty Environments support
+      href: mm-specialty-environments-support.md
     - name: File share Reference
       items:
       - name: Prerequisites and endpoints
@@ -227,6 +231,8 @@ Items:
         href: how-to-format-your-csv-file-for-data-content-migration.md
       - name: Create user mapping files
         href: create-a-user-mapping-file-for-data-content-migration.md
+      - name: Migrate with Certificate Based Authentication
+        href: migration-with-cba.md
       - name: How the SharePoint Migration Tool works
         href: how-the-sharepoint-migration-tool-works.md
     - name: Reports

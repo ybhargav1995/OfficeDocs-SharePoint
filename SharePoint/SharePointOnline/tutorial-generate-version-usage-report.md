@@ -1,11 +1,11 @@
 ---
-title: "Tutorial: Generate and analyze version usage report (Preview)"
+title: "Tutorial: Generate and analyze version usage report"
 ms.reviewer: rekamath
-ms.author: serdars
-author: serdars
-manager: serdars
+ms.author: ruihu
+author: maggierui
+manager: jtemper
 recommendations: true
-ms.date: 04/30/2024
+ms.date: 10/03/2024
 audience: Admin
 f1.keywords:
 - NOCSH
@@ -20,7 +20,7 @@ description: "This article provides guidance on how to generate and analyze vers
 
 ---
 
-# Tutorial: Generate and analyze version usage report for SharePoint site (Preview)
+# Tutorial: Generate and analyze version usage report for SharePoint site
 
 By understanding version storage on a site, you can better optimize the Version history settings to meet your organization’s recovery objectives and manage storage costs.
 
@@ -110,18 +110,23 @@ Let’s go through the first file version displayed in this report.
 
 - Expiration schedule identifiers:`CurrentExpirationDate` indicates that this version is currently set to never expire. `AutomaticPolicyExpirationDate` shows that under the automatically expire policy, this version is also set to never expire. `TargetExpirationDate` indicates that if we follow this schedule for trimming, we would set this version to never expire.  
 
+>[!NOTE]
+> File versions stored in the preservation hold library will be included in this report as well. 
+
 Let’s look at the third version.  
 
 The `WebId` and `DocId` values are empty because these columns are compact columns, denoted by *.Compact* post-fix, it means they should have values. If we look for the last nonempty above that row, we find `WebId` as `4c7a58c1-01f2-4fa3-a730-44081a44f689`, and `DocId` as `18c3e09c-b5be-48e7-a754-7a2ce53e0999`.
 
-We can also see that the `TargetExpirationDate` is set for April 19, 2023, at 18:08:53 UTC. It means if we trim based on this schedule, we would be setting the expiration date for this version to that time. However, at the time this documentation was written, it passed April 19, 2023. Instead of setting the version to expire, the document is deleted immediately.
+We can also see that the `TargetExpirationDate` is set for April 19, 2023, at 18:08:53 UTC. It means if we trim based on this schedule, we would be setting the expiration date for this version to that time. 
 
 > [!NOTE]
 > All date times are represented in the round-trip format. For more information, see [Standard date and time format strings - .NET | Microsoft Learn](/dotnet/standard/base-types/standard-date-and-time-format-strings)
 
 ## Analyze version storage for sites
 
-After configuring the `TargetExpirationDate` values for your report, you can choose to perform deeper analysis to see the impact of the trimming before running an actual trim. You can perform this analysis independently, or alternatively, we provide two recommended options for your analysis.  
+Before you start your analysis, you should update the `TargetExpirationDate` column in your report file to the dates that you want, like the versions to be expired. Again, if you choose a date that is in the past for a version, then that version will be treated as "version that had already expired" and will be deleted right away after you start the trim.  
+
+You can manually update the dates in `TargetExpirationDate` by editing the csv file. However, you may have too many rows to update by hand. To bulk update the column, you can use Excel formulas, or you can also use one of the PowerShell scripts we have provided in [Tutorial: Run 'What-If' analysis](tutorial-run-what-if-analysis.md). Specifically, you may choose a trimming mode, run the corresponding script to get a updated csv file with `TargetExpirationDate` filled out based on that trimming mode, and continue from there.
 
 ### Option one: Analyze the report using Excel
 
@@ -140,25 +145,25 @@ Populate the workbook by following these steps:
 
 1. On the **Configuration** worksheet, enter the full path to the What-If report file in **Cell B3**.
 
-:::image type="content" source="media/version-history/analyze-version-step1.png" lightbox="media/version-history/analyze-version-step1.png" alt-text="Screenshot of configuration worksheet.":::
+    :::image type="content" source="media/version-history/analyze-version-step1.png" lightbox="media/version-history/analyze-version-step1.png" alt-text="Screenshot of configuration worksheet.":::
 
 2. If you want to change the date range of graphs in **Number of Versions Available** worksheet, or **Size of Versions Expired** worksheet, change the corresponding values in Cells B6, B7, B10, and/or B11. It's optional.  
 
-:::image type="content" source="media/version-history/analyze-version-step2.png" lightbox="media/version-history/analyze-version-step2.png" alt-text="Screenshot of analyze version configuration.":::
+    :::image type="content" source="media/version-history/analyze-version-step2.png" lightbox="media/version-history/analyze-version-step2.png" alt-text="Screenshot of analyze version configuration.":::
 
 3. At the top of Excel, select the **Data** tab, and in the Ribbon, select the **Refresh All** button.
 
-:::image type="content" source="media/version-history/analyze-version-step3.png" lightbox="media/version-history/analyze-version-step3.png" alt-text="Screenshot of analyze version data tab.":::
+    :::image type="content" source="media/version-history/analyze-version-step3.png" lightbox="media/version-history/analyze-version-step3.png" alt-text="Screenshot of analyze version data tab.":::
 
 4. On the **Calculations** worksheet, autofill the **Number of Versions** and **Number of Versions Remaining After Deletion** columns.
 
-:::image type="content" source="media/version-history/analyze-version-step4-a.png" lightbox="media/version-history/analyze-version-step4-a.png" alt-text="Screenshot of calculations worksheet 1.":::
+    :::image type="content" source="media/version-history/analyze-version-step4-a.png" lightbox="media/version-history/analyze-version-step4-a.png" alt-text="Screenshot of calculations worksheet 1.":::
 
-:::image type="content" source="media/version-history/analyze-version-step4-b.png" lightbox="media/version-history/analyze-version-step4-b.png" alt-text="Screenshot of calculations worksheet 2.":::
+    :::image type="content" source="media/version-history/analyze-version-step4-b.png" lightbox="media/version-history/analyze-version-step4-b.png" alt-text="Screenshot of calculations worksheet 2.":::
 
 5. On the **Impacted Users** worksheet, autofill the **Number of Versions Will be Deleted** column.
 
-:::image type="content" source="media/version-history/analyze-version-step5.png" lightbox="media/version-history/analyze-version-step5.png" alt-text="Screenshot of impacted users worksheet.":::
+    :::image type="content" source="media/version-history/analyze-version-step5.png" lightbox="media/version-history/analyze-version-step5.png" alt-text="Screenshot of impacted users worksheet.":::
 
 All worksheets should now be up to date. You can check the information you're interested in.
 
@@ -348,7 +353,7 @@ Write-Host
 . “<path to AnalyzeReportFile.ps1>” –ReportLocalFilePath “<path to the file version expiration What-If report .csv file>”
 ```
 
-:::image type="content" source="media/version-history/analyze-report-powershell-command.png" lightbox="media/version-history/analyze-report-powershell-command.png" alt-text="Screenshot of analyze report powershell command.":::
+  :::image type="content" source="media/version-history/analyze-report-powershell-command.png" lightbox="media/version-history/analyze-report-powershell-command.png" alt-text="Screenshot of analyze report powershell command.":::
 
 3. The output displays four tables:
 
@@ -358,19 +363,19 @@ Write-Host
     1. **NumberOfVersionsExpired**: the number of versions expired on that date under the current schedule.  
     1. **SizeOfVersionsExpiredMB**: the size of versions expired on that date under the current schedule.  
 
-:::image type="content" source="media/version-history/current-expiration-schedule.png" lightbox="media/version-history/current-expiration-schedule.png" alt-text="Screenshot of Current Expiration Schedule.":::
+    :::image type="content" source="media/version-history/current-expiration-schedule.png" lightbox="media/version-history/current-expiration-schedule.png" alt-text="Screenshot of Current Expiration Schedule.":::
 
 - **Target Expiration Schedule:** this table is the same as Current Expiration Schedule but reflects the updated schedule instead. This table is only helpful if you want to test out different expiration scenarios by changing the **TargetExpirationDate** column in the file version expiration report.  
 
-:::image type="content" source="media/version-history/target-expiration-schedule.png" lightbox="media/version-history/target-expiration-schedule.png" alt-text="Screenshot of Target Expiration Schedule.":::
+    :::image type="content" source="media/version-history/target-expiration-schedule.png" lightbox="media/version-history/target-expiration-schedule.png" alt-text="Screenshot of Target Expiration Schedule.":::
 
 - **Files with Fewer Than 10 Versions:** a list of the URLs, and the number of versions before and after the deletion for those files whose number of versions is fewer than 10 after immediate deletion (but was more than 10 before the immediate deletion).  
 
-:::image type="content" source="media/version-history/files-with-fewer-than-10-versions.png" lightbox="media/version-history/files-with-fewer-than-10-versions.png" alt-text="Screenshot of files with fewer than 10 Versions.":::
+    :::image type="content" source="media/version-history/files-with-fewer-than-10-versions.png" lightbox="media/version-history/files-with-fewer-than-10-versions.png" alt-text="Screenshot of files with fewer than 10 Versions.":::
 
 - **Users Impacted:** the users whose versions would be immediately deleted.
 
-:::image type="content" source="media/version-history/users-impacted.png" lightbox="media/version-history/users-impacted.png" alt-text="Screenshot of Users Impacted.":::
+    :::image type="content" source="media/version-history/users-impacted.png" lightbox="media/version-history/users-impacted.png" alt-text="Screenshot of Users Impacted.":::
 
 Optionally, you can adjust the parameters:
 
