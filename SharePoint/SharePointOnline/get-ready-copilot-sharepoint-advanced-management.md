@@ -1,5 +1,5 @@
 ---
-ms.date: 09/12/2024
+ms.date: 11/14/2024
 title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)
 ms.reviewer: 
 ms.author: ruihu
@@ -24,17 +24,9 @@ description: "Learn how to get ready for Microsoft 365 Copilot by using SharePoi
 ---
 # Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)
 
-## Copilot and SharePoint
+## Use SharePoint to govern your organization's data effectively
 
-Your organization is preparing to enable Microsoft 365 Copilot, an AI-driven productivity tool that enhances creativity, productivity, and skills in real-time.  As the SharePoint admin, it’s crucial to govern your organization's SharePoint data properly to ensure Copilot's results are appropriate, accurate, and compliant. Understanding the significance of content governance in SharePoint for Copilot begins with knowing [how Copilot works through three components](/copilot/microsoft-365/microsoft-365-copilot-overview#copilot-integration-with-graph-and-microsoft-365-apps):
-
-- Large language models (LLMs)
-- The Microsoft 365 productivity apps that you use every day, such as Word, Excel, PowerPoint, Outlook, Teams, and others.
-- Content in Microsoft Graphs
-
-When a user makes a request to Copilot, it processes the request using large language models (LLMs). It then generates a response with LLMs by leveraging content from Microsoft Graph and web content (optional).
-
-Content in Microsoft Graph includes emails, files, meetings, chats, calendars, and contacts. A significant portion of them is stored as SharePoint files. When you share documents with others, these documents become data stored on SharePoint sites, document libraries and OneDrive. These documents can be: Word document shared by your colleagues, a presentation that you're working with your team, meeting recordings, project notes you created in Loop and OneNote, and more. To ensure assistance provided by Copilot is appropriate, accurate, and compliant, as your organization’s SharePoint admin, it's crucial for you to ensure that your organization’s data in SharePoint is appropriately governed from the following three aspects:
+To ensure assistance provided by Copilot is appropriate, accurate, and compliant, as your organization’s SharePoint admin, it's crucial for you to ensure that your organization’s data in SharePoint is appropriately governed from the following three aspects:
 
 - **Manage content sprawl**: Reduce content duplication and ensure well-planned content creation. Ensure all sites and content are well managed governed by site owners.
 - **Prevent content oversharing and control content access**: Use tools available to SharePoint admins and site owners to prevent users from oversharing content. Limit content access by Copilot with user group settings, and other tools. 
