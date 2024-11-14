@@ -22,6 +22,7 @@ search.appverid:
 - MET150
 description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint advanced management features such as restricted access control, and restricted content discoverability."
 ---
+# Manage access to agents in SharePoint
 
 ## Control access with built-in SharePoint features
 
