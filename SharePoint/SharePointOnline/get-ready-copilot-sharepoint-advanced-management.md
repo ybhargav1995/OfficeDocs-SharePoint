@@ -1,6 +1,6 @@
 ---
 ms.date: 11/14/2024
-title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)
+title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management
 ms.reviewer: 
 ms.author: ruihu
 author: maggierui
@@ -20,9 +20,9 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to get ready for Microsoft 365 Copilot by using SharePoint Advanced Management (SAM). Use SAM to govern your organization's data effectively by controlling content sprawl, preventing oversharing, control content access by Copilot, and manage content lifecycle."
+description: "Learn how to get ready for Microsoft 365 Copilot by using SharePoint Advanced Management. Use SAM to govern your organization's data effectively by controlling content sprawl, preventing oversharing, control content access by Copilot, and manage content lifecycle."
 ---
-# Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)
+# Get ready for Microsoft 365 Copilot with SharePoint Advanced Management
 
 ## Use SharePoint to govern your organization's data effectively
 
@@ -32,7 +32,7 @@ To ensure assistance provided by Copilot is appropriate, accurate, and compliant
 - **Prevent content oversharing and control content access**: Use tools available to SharePoint admins and site owners to prevent users from oversharing content. Limit content access by Copilot with user group settings, and other tools. 
 - **Manage content lifecycle**: Remove inactive and outdated content and sites. Make sure the information Copilot access is accurate and up to date. 
 
-## Use SharePoint Advanced Management (SAM) to get your organization ready for Copilot
+## Use SharePoint Advanced Management to get your organization ready for Copilot
 
 [Microsoft SharePoint Premium – SharePoint Advanced Management (SAM)](/sharepoint/advanced-management) is an essential Microsoft 365 add-on that helps you, as the SharePoint admin to address these three pillars around content governance. To get ready for your organization’s Microsoft 365 Copilot adoption, there are a few highly recommended steps you can take, primarily using SharePoint Advanced Management tools. These steps reduce accidental oversharing, minimize your content governance footprint, improve Copilot response quality, control content access by Copilot, and ensure data safety specifically for business-critical sites. Let's delve into the specific steps you can take:
 
