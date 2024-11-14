@@ -188,11 +188,11 @@ It's vital for SharePoint admin to understand the permissions setup in their ten
 
 ### Run the oversharing baseline report
 
-The PowerShell command to generate oversharing baseline report is described [here](powershell-for-data-access-governance.md#oversharing-baseline-report-using-permissions).
+See [PowerShell for Data access governance](powershell-for-data-access-governance.md#oversharing-baseline-report-using-permissions) for more information on running the command to generate the oversharing baseline report.
 
-### View/download the oversharing baseline report
+### View and download the oversharing baseline report
 
-The PowerShell command to download the baseline report is described [here](powershell-for-data-access-governance.md#viewdownload-reports-using-powershell).
+See [PowerShell for Data access governance](powershell-for-data-access-governance.md#view-and-download-reports-using-powershell) for more information on running the command to view and download the oversharing baseline report.
 
 > [!NOTE]
 > The report includes both SharePoint and OneDrive data.
