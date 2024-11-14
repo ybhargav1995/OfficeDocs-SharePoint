@@ -1,5 +1,5 @@
 ---
-ms.date: 02/29/2024
+ms.date: 11/14/2024
 title: Microsoft 365 Copilot - best practices with SharePoint
 ms.reviewer: 
 ms.author: ruihu
@@ -23,63 +23,68 @@ search.appverid:
 - MET150
 description: "Learn about the best practices with SharePoint for content sharing when enabling Microsoft 365 Copilot."
 ---
-# Microsoft 365 Copilot - best practices with SharePoint
+# Microsoft 365 Copilot with SharePoint
 
-Microsofts value by connecting Large Language Models (LLMs) to your organizational data. Microsoft 365 Copilot accesses content and context through [Microsoft Graph](/graph/overview) and can generate responses based on your organizational data. The data sources include user documents stored in SharePoint and OneDrive, emails, calendars, chats, meetings, and contacts. Microsoft 365 Copilot combines this content with the user’s working context, such as the meeting a user is in now, the email exchanges the user had on a topic, or the chat conversations the user had last week. Microsoft 365 Copilot uses this combination of content and context to help provide accurate, relevant, and contextual responses.
+## Copilot and SharePoint
 
-## How do SharePoint permissions affect your users’ Microsoft 365 Copilot experience?
+Your organization is preparing to enable Microsoft 365 Copilot, an AI-driven productivity tool that enhances creativity, productivity, and skills in real-time.  As the SharePoint admin, it’s crucial to govern your organization's SharePoint data properly to ensure Copilot's results are appropriate, accurate, and compliant. Understanding the significance of content governance in SharePoint for Copilot begins with knowing [how Copilot works through three components](/copilot/microsoft-365/microsoft-365-copilot-overview#copilot-integration-with-graph-and-microsoft-365-apps):
 
-Microsoft 365 Copilot only surfaces organizational data to which individual users have *at least view permissions*. It's important to use the permission models in SharePoint to ensure the right users or groups have the right access to the right content within your organization.
-This article provides guidance and best practices that you, as a SharePoint administrator, can take control of the SharePoint permissions model before your organization [enable Microsoft 365 Copilot for your users](/microsoft-365-copilot/microsoft-365-copilot-enable-users).
+- Large language models (LLMs)
+- The Microsoft 365 productivity apps that you use every day, such as Word, Excel, PowerPoint, Outlook, Teams, and others.
+- Content in Microsoft Graphs
 
-## Before enabling Microsoft 365 Copilot
+Content in Microsoft Graph includes emails, files, meetings, chats, calendars, and contacts. A significant portion of them is stored as SharePoint files. When you share documents with others, these documents become data stored on SharePoint sites, document libraries and OneDrive. These documents can be: Word document shared by your colleagues, a presentation that you're working with your team, meeting recordings, project notes you created in Loop and OneNote, and more. When a user makes a request to Copilot, it processes the request using large language models (LLMs). It then generates a response with LLMs by leveraging content from Microsoft Graph and web content (optional).
 
-Organizations operate at various levels of maturity in governing SharePoint data. While some enterprises strictly monitor permissions and oversharing of content, others don't. The situation is further complicated because many enterprises have legitimate reasons to share "some" data widely within the organization.
-Sometimes, end users in your organization make choices that result in the oversharing of SharePoint content. As an example, it's noticed that end users don't always pay attention to the permissions of the site/library/folder where they're uploading files. They may end up uploading or saving business critical content in locations where other users may have access and may include external users. It's also observed that some end users tend to prefer sharing files in SharePoint with large groups rather than with individuals. This practice can result in oversharing.  
-Microsoft 365 Copilot utilizes all data that a user has access to, which may include broadly shared files that the user is unaware of. As a result, users might see Microsoft 365 Copilot as exposing content that was overshared.
-To identify and remediate overshared content in SharePoint, follow these best practices.
+Microsoft 365 Copilot only surfaces organizational data to which individual users have *at least view permissions*. It's important to use the permission models in SharePoint to ensure the right users or groups have the right access to the right content within your organization. To get ready for your organization's Microsoft 365 Copilot adoption, there are a few [highly recommended steps](/sharepoint/get-ready-copilot-sharepoint-advanced-management) you can take with SharePoint and OneDrive using [SharePoint advanced management](/sharepoint/advanced-management). In addition, as a SharePoint administrator, here are some steps you can take using regular SharePoint settings to prepare your organization for Microsoft 365 Copilot:
 
-> [!Note]
->
-> - These steps are provided exclusively for SharePoint administrators.
-> - Some of the following features require a SharePoint Advance Management license.
+## Step 1 - Optimize search in SharePoint
 
-### Step 1: Review site-level sharing controls and remove "Everyone Except External Users" from people picker
+✅ **Optimize your SharePoint content for search**
 
-- Educate site admins on the site-level controls they can use to [restrict members from sharing](/microsoft-365/solutions/microsoft-365-limit-sharing#sharing-with-specific-people). One key setting here ensures that Site Owners are the recipients of [access requests](https://support.microsoft.com/office/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).  
-- Consider hiding broad-scope permissions from your end users to reduce risks around accidental misuse. [This example](/powershell/module/sharepoint-online/set-spotenant#example-2) hides the "Everyone Except External Users" in the People Picker control so that no end user can use it.  
-- Consider [adopting sharing best practices](/microsoft-365/solutions/microsoft-365-limit-sharing) like changing sharing link defaults from companywide sharing to specific people links.
+As mentioned before, when a user makes a request to Copilot, it processes the request and then generates a response with LLMs. Copilot leverages content from Microsoft Graph and web content (optional). 
+So how does Copilot get content from SharePoint? It is the same way when a user searches for content via [SharePoint Search](/sharepoint/overview-of-search).
 
-### Step 2: Identify inactive sites, then restrict access or delete
+To get the most out of Copilot and get the best results, optimize your SharePoint content for search:
 
-Reduce your surface area for potentially overshared content by identifying SharePoint sites that have been inactive for a long time. See how you can easily do that via the [Inactive Site Policies](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy) in SharePoint Advanced Management.
-You can then lock down permissions on these sites via the Restricted Access Control policy. You can also consider deleting these sites.
+- [Make sure the content can be found](/sharepoint/make-sure-content-can-be-found)
+- [Make sure the search results look great](/sharepoint/make-search-results-look-great)
+- [Plan your content](/microsoftsearch/plan-your-content)
 
-### Step 3: Identify potentially overshared content
+## Step 2 - Prevent oversharing and control access with SharePoint and OneDrive
 
-A SharePoint admin can run reports in the SharePoint Admin Center to discover broad sharing activity happening over the last month. [SharePoint Advanced Management’s](/sharepoint/advanced-management) new [data access governance reports](/sharepoint/data-access-governance-reports) can help here.  A SharePoint admin can run reports on:
+To prevent oversharing and control access with SharePoint and OneDrive, there are a few [highly recommended steps you can take with SharePoint and OneDrive](/sharepoint/get-ready-copilot-sharepoint-advanced-management). In addition, you can use some SharePoint built-in features to reduce oversharing and check permissions and site access in the SharePoint admin center. 
 
-- Usage of "Everyone Except External Users" in the last 28 days
-- Usage of broad org-wide ["People in your organization" sharing links](/sharepoint/shareable-links-anyone-specific-people-organization) in the last 28 days
-- Usage of "Anyone" sharing links in the last 28 days
+To start, you can:
 
-These reports can be downloaded as CSV files. You can also build your own report by using [Microsoft Graph Data Connect for SharePoint](/graph/data-connect-datasets#onedrive-and-sharepoint-online).  
+✅ **Reduce accidental oversharing with SharePoint sharing settings**
 
-### Step 4: Take remediation actions to address oversharing
+To minimize accidental content oversharing with Copilot results, implement sharing settings at the organization and site levels:
 
-Once you have identified the SharePoint sites with potential oversharing issues, it's time to act. Your actions should consider several factors, including data sensitivity, the severity of the oversharing, and the need to maintain business operations. These actions include:
+1. At the organization level:
 
-1. For content that has been overshared and needs immediate action:
-   1. The SharePoint admin should configure [Restricted Access Control Policy](/sharepoint/restricted-access-control) for such sites. As a result, all existing access to the site is restricted to only the group of users configured by the admin. Accordingly, the content from this site is visible in the Microsoft 365 Copilot experience only for this restricted group of users. This policy works for both OneDrive and SharePoint.
-   1. For high-profile instances, you may want to determine who/how/when the oversharing took place.  Use the [Change History](/sharepoint/change-history-report) feature to see what changes may have contributed to the oversharing.
-1. For cases where SharePoint admin needs to consult with site owners/admins for action:
-   1. The SharePoint admin can reach out to the owners of sites identified in data access governance reports. SharePoint admin can advise site owners on the overshared files/folders in that site and request them to act to manually remove unnecessary access.
-   1. A new [SharePoint Advanced Management](/sharepoint/advanced-management) feature called "[Site Access Review](site-access-review.md)" allows a SharePoint admin to initiate a review from any 'Data Access Governance' report. Site owners will use a new Site Access Review UI to review broadly shared content on their side and either take remediation action to remove overly broad permissions or provide business justification to the SharePoint admin.
+    - Update [sharing settings for SharePoint and OneDrive](/sharepoint/turn-external-sharing-on-or-off) for your tenant from organization-wide sharing to specific people links.
+    - Consider hiding broad-scope permissions from your end users. For example, use the SharePoint `Set-SPOTenant` PowerShell cmdlet to [hide "Everyone Except External Users" in the People Picker control](/powershell/module/sharepoint-online/set-spotenant) so end users can't use it.
+    - Use [Restricted SharePoint Search (RSS)](/sharepoint/restricted-sharepoint-search) to temporarily restrict Copilot results up to 100 selected SharePoint sites. Child sites of Hub sites aren't counted toward the 100 limit.
 
-### Step 5: Set restricted access control and block file download policies on business-critical sites
+      RSS gives you time to review & audit site permissions. It should be used only as a temporary solution to give your organization time to adopt Copilot.
 
-- Use [Restricted Access Control](/sharepoint/restricted-access-control) to proactively protect against oversharing.  
+2. At the site level:
 
-- Consider blocking downloads from selected sites via [a block download policy](/sharepoint/block-download-from-sites). Or specifically block the download of [Teams meetings recordings](/microsoftteams/block-download-meeting-recording).
+    - Educate site admins on the site-level controls they can use to [restrict members from sharing](/sharepoint/change-external-sharing-site).
+    - Make sure that [Site Owners receive a request to access the site](https://support.microsoft.com/office/set-up-and-manage-access-requests-94b26e0b-2822-49d4-929a-8455698654b3).
+    - [Change the external sharing setting for a user's OneDrive](/sharepoint/user-external-sharing-settings). When a user saves a file to OneDrive, it's in the end user's personal storage. The user has full control over the file and can share it with others. To ensure data security, review OneDrive sharing features.
 
-- Finally, consider applying encryption action with "extract rights" enforced on business-critical office documents. Learn more [here](/purview/ai-microsoft-purview).
+✅ **Check permissions and site access in SharePoint admin center**
+
+To ensure data is secure, review SharePoint site access and permissions. Prioritize sites that contain sensitive information.
+
+1. In the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), see **Active Sites** > select a site > **Edit** > **Settings**.
+
+    **Private** means that only users in your organization with access to the site can find it. **Public** (default) means anyone in your organization can find the site and access its content.
+
+    :::image type="content" source="media/sharepoint-active-sites-setting.png" alt-text="Screenshot showing the SharePoint admin center active sites panel." lightbox="media/sharepoint-active-sites-setting.png":::
+
+1. In the **Membership** tab, review access to site owners, members, and visitors. Ensure that only the necessary users have access to the site.
+
+> [!IMPORTANT]
+> This article mainly introduces using SharePoint built-in settings to reduce oversharing and check permissions and site access. To further enhance your organization's data governance with efficiency and at scale, consider using [SharePoint advanced management](/sharepoint/advanced-management) to monitor and manage your organization's SharePoint data.
