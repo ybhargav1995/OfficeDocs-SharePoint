@@ -111,11 +111,11 @@ For business-critical sites, you want to take proactive measures to ensure the c
 > [!IMPORTANT]
 > The following policies are currently in preview and will soon be generally available. [*Sign up to participate in the preview by following instructions here*](https://forms.office.com/pages/responsepage.aspx?id=v4j5cvGGr0GRqy180BHbRw8ueKeaH4JIsskRInqtJE5UNjhYVkg5NDRNWkMxRlI0TFVDR0FYSUNGUi4u&route=shorturl). 
 
-### Use the Oversharing Baseline Report for Sites, OneDrives, and Files policy to identify oversharing risks
+### Use the Oversharing Baseline Report for Sites, OneDrive, and Files policy to identify oversharing risks
 
 In Step 4, we discussed how to run three usage reports to identify potentially overshared content. Coming soon, you're able to Run a single report to learn where content overexposure risk exists in all sites on your organization, regardless of site activities.
 
-- You're able to start with running an “Oversharing Baseline Report for Sites, OneDrives and Files” report from the Data Access Governance (DAG) PowerShell commands in SharePoint Online PowerShell module. This report scans all sites in your organization, and lists sites that share content with more than a specified number of users (you specify the number).
+- You're able to start with running an “Oversharing Baseline Report for Sites, OneDrive and Files” report from the Data Access Governance (DAG) PowerShell commands in SharePoint Online PowerShell module. This report scans all sites in your organization, and lists sites that share content with more than a specified number of users (you specify the number).
 
 - You can sort, filter or download the report, and identify the sites with potentially overshared content.
 
