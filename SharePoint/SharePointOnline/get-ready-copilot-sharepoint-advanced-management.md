@@ -1,6 +1,6 @@
 ---
 ms.date: 09/12/2024
-title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management (SAM)
+title: Get ready for Microsoft 365 Copilot with SharePoint Advanced Management
 ms.reviewer: 
 ms.author: ruihu
 author: maggierui
