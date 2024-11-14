@@ -199,7 +199,7 @@ Sensitivity          : {All}
 Templates            : {All}
 ```
 
-## View/Download reports using PowerShell
+## View and download reports using PowerShell
 
 To download a specific report, you need the reportID. Retrieve the reportID using the **Get-SPODataAccessGovernanceInsight** command and use the **Export-SPODataAccessGovernanceInsight** command to download the report to a specified path.
 
@@ -214,11 +214,11 @@ This downloads a CSV file to the specified path. Details of the CSV/view for eac
 
 ## Remedial actions using PowerShell
 
-Once DAG reports are generated, SharePoint admins can perform remedial actions as described [here](data-access-governance-reports.md#remedial-actions-from-data-access-governance-reports). The following section describes PowerShell commands to trigger and track 'site access review' as a remedial action.
+Once Data access governance reports are generated, SharePoint admins can perform remedial actions as described [here](data-access-governance-reports.md#remedial-actions-from-data-access-governance-reports). The following section describes PowerShell commands to trigger and track 'site access review' as a remedial action.
 
 ### Initiate Site access review using PowerShell
 
-Use **Start-SPOSiteReview** command to initiate a site access review for a specific site, listed under a DAG report. The DAG report provides the context under which the review should be initiated. Retrieve the reportID, site ID from the CSV file and provide comments to give clarity to the site owner regarding the purpose of the review.
+Use **Start-SPOSiteReview** command to initiate a site access review for a specific site, listed under a Data access governance report. The Data access governance report provides the context under which the review should be initiated. Retrieve the reportID, site ID from the CSV file and provide comments to give clarity to the site owner regarding the purpose of the review.
 
 ```powershell
 Start-SPOSiteReview -ReportID f2003a70-eca0-4db7-8d75-a5b7f2f8d1a0 -SiteID 599d5719-d15a-490e-a6fb-e6172641d64d -Comment "Check for org wide access"
