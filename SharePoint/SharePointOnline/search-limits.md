@@ -1,5 +1,5 @@
 ---
-ms.date: 07/11/2018
+ms.date: 11/14/2024
 title: "Search limits for SharePoint"
 ms.reviewer: 
 ms.author: jtremper
@@ -35,7 +35,7 @@ The following table lists the limits for SharePoint search.
   
 |Limit|Maximum value|Limit type|Notes|
 |:-----|:-----|:-----|:-----|
-|Size of document that can be downloaded by the crawl components  |150 MB|Boundary  |Search downloads metadata of the document only for files >150 MB. The content of the document isn't downloaded.  |
+|Size of document that can be downloaded by the crawl components  |512 MB|Boundary  |Search downloads metadata of the document only for files >512 MB. The content of the document isn't downloaded. Supported filetypes: PDF, PPTX, PPT, DOC, DOCX. Consumer files are not supported. |
 |Parsed content size  |2 million characters  |Boundary  |Search stops parsing an item after it has parsed up to 2 million characters of content from it, including the item's attachments. The actual number of parsed characters can be lower than this limit because search uses a maximum of 30 seconds on parsing a single item and its attachments. When search stops parsing an item, the item is marked as partially processed. Any unparsed content isn't processed and therefore isn't indexed.  |
 |Characters processed by the word breaker  |1,000,000  |Boundary  |Search breaks content into individual words (tokens). The word breaker produces tokens from the first 1,000,000 characters of a single item, including the item's attachments.  <br/> The actual amount of tokens can be lower than this limit because search uses a maximum of 30 seconds on word breaking. Any remaining content isn't processed.  |
 |Indexed managed property size  |512 KB per managed property that is set to either "searchable" or "queryable"  |Boundary  ||
