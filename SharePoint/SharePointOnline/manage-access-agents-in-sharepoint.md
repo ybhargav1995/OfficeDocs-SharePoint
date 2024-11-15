@@ -20,7 +20,7 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint advanced management features such as restricted access control, and restricted content discoverability."
+description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint advanced management features such as restricted access control, and restricted content discovery."
 ---
 # Manage access to agents in SharePoint
 
@@ -39,6 +39,6 @@ Learn more about using SharePoint built-in features to control access [here](/sh
 Currently, to restrict access to a site by Microsoft 365 Copilot, the SharePoint Admin can set up a [restricted access control policy](/sharepoint/restricted-access-control). As a result, all access to the site is restricted to only the group of users specified in the policy. Accordingly, the content from this site is visible in Microsoft 365 Copilot only for this restricted group of users. You can restrict access to individual sites or OneDrive. 
 Learn more about additional features to prevent oversharing, control access, and enhance your content governance with SharePoint advanced management [here](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
-## Turn off agents in SharePoint with restricted content discoverability
+## Turn off agents in SharePoint with restricted content discovery
 
-You as a SharePoint Admin can turn off all agent-related features on individual sites with [restricted content discoverability](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discoverability, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the read-to-made agent, create new agents, or add content from that site to any other agents. The restricted content discoverability policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users.  
+You as a SharePoint Admin can turn off all agent-related features on individual sites with [restricted content discovery](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the read-to-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users.  
