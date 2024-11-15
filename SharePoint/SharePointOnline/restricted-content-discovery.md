@@ -126,3 +126,5 @@ Restricted Content Discovery is designed to limit the ability of end users to se
 ## Related topics
 
 [Overview of SharePoint Advanced Management](advanced-management.md)
+
+[Manage access agents in SharePoint](manage-access-agents-in-sharepoint.md)
