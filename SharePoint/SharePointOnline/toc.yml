@@ -79,9 +79,7 @@ items:
         href: onedrive-document-translation.md
   - name: Copilot
     items:
-    - name: Get ready for Microsoft 365 Copilot with SharePoint
-      items:
-      - name: Overview
+      - name: Copilot and SharePoint
         href: sharepoint-copilot-best-practices.md
       - name: Get ready for Copilot with SharePoint Advanced Management
         href: get-ready-copilot-sharepoint-advanced-management.md
@@ -93,10 +91,10 @@ items:
           href: restricted-sharepoint-search-allowed-list.md
         - name: Use PowerShell admin scripts
           href: restricted-sharepoint-search-admin-scripts.md
-    - name: Agents in SharePoint
-      items:
-      - name: Manage Access
-        href: manage-access-agents-in-sharepoint.md
+      - name: Agents in SharePoint
+        items:
+        - name: Manage Access
+          href: manage-access-agents-in-sharepoint.md
   - name: Classic to modern
     items:
     - name: Publishing
