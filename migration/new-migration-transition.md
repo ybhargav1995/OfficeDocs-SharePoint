@@ -54,7 +54,7 @@ Starting November 18, tenants who haven't previously initiated migration project
 
 Tenants with ongoing migration will experience transition UI elements:
 
-- **November 18th, 2024**: The Transition UI is released, featuring a New Migration switching panel in the Scan page. You can select "Switch now" button to switch to the New Migration.
+- **November 18th, 2024**: The Transition UI is released, featuring a New Migration switching panel in the Scan page. You can select the "Switch now" button to switch to the New Migration.
 
 - **Before Switching**: You may occasionally see pop-up prompts encouraging you to switch to New Migration. If you don't switch proactively, the transition is mandatory starting **December 11th**.
 
