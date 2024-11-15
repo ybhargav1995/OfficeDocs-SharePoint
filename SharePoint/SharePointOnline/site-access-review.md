@@ -1,7 +1,7 @@
 ---
-ms.date: 10/02/2024
+ms.date: 11/14/2024
 title: "Initiate site access reviews for data access governance reports"
-ms.reviewer: samust
+ms.reviewer: pullabhk
 ms.author: mactra
 author: MachelleTranMSFT
 manager: jtremper
@@ -42,7 +42,7 @@ To use the site access review feature, you must fulfill the following prerequisi
 - Have a [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md) subscription
 - Run a non-government cloud tenant environment. Site access review isn't supported in government cloud environments such as GCCH/GCC-Moderate/DoD/Gallatin
 - Have admin credentials to access the SharePoint admin center to initiate an access review
-- Have site owners respond to the review requests, take necessary actions and complete the review
+- Have site owners respond to the review requests, take necessary actions, and complete the review
 
 ## How site access review works
 
@@ -50,8 +50,13 @@ To use the site access review feature, you must fulfill the following prerequisi
 - When you initiate a review, the system generates a context-specific email for the site owner.
 - For example, if you initiate a site access review for a report from the "Content shared with 'Everyone except external users'" category, the review email exclusively addresses sharing issues regarding that particular report.
 
-> [!IMPORTANT]
-> Currently, site access review is available only for "Content shared with 'Everyone except external users'" reports.
+## Support matrix
+
+Currently, site access review is available for
+
+- All Sharing link reports (Anyone, PeopleInYourOrg, Specific people shared externally)
+- "Content shared with 'Everyone except external users'" reports.
+- Oversharing baseline report using permissions
 
 ## Initiate a site access review
 
@@ -69,6 +74,8 @@ To use the site access review feature, you must fulfill the following prerequisi
 
 1. Select **Send** to initiate the review request.
 
+For reports available only via PowerShell such as Oversharing baseline report using permissions, site access review can also be initiated using [PowerShell commands](powershell-for-data-access-governance.md#initiate-site-access-review-using-powershell).
+
 ### Track initiated site access reviews
 
 To see a list of all initiated site access reviews, select the **My review requests** tab from the data access governance landing page.
@@ -76,6 +83,8 @@ To see a list of all initiated site access reviews, select the **My review reque
 :::image type="content" source="./media/data-access-governance/my-review-requests.png" alt-text="Screenshot that shows track all reviews initiated from a central page" lightbox="./media/data-access-governance/my-review-requests.png":::
 
 When you initiate a site access review, it remains in a pending state until the site owner completes the review. Once the site owner completes the review, the status and comments are updated with the name of the reviewer and time and date of completion. A review can be marked as failed if site access review couldn't determine a valid email ID for the site owner to deliver the site access review.
+
+For reports available only via PowerShell such as Oversharing baseline report using permissions, site access review can also be tracked using this [PowerShell command](powershell-for-data-access-governance.md#track-site-access-reviews-using-powershell).
 
 ### Site access review process (for site owners)
 
@@ -109,6 +118,35 @@ Site owners can review and manage access in two main areas:
     1. Under the 'Everyone except external users' group in the **Groups** tab, select the group and select **remove access**. See [Stop sharing OneDrive or SharePoint files or folders, or change permissions](https://support.microsoft.com/office/stop-sharing-onedrive-or-sharepoint-files-or-folders-or-change-permissions-0a36470f-d7fe-40a0-bd74-0ac6c1e13323) for more information.
 
         :::image type="content" source="./media/data-access-governance/site-owner-view-foreeeu-files.png" alt-text="Screenshot that shows view for site owner regarding items shared with eeeu" lightbox="./media/data-access-governance/site-owner-view-foreeeu-files.png":::
+
+#### Review 'Sharing link reports' site access review requests (for site owners)
+
+Once the site owner selects the email, they're redirected to the site access review detailed report generated for the site.
+
+The site owner gets a view of files for whom links were generated along with the exact time of generation and who generated the links. The 'Manage access' button can be used to navigate to the link section and remove it/modify the permissions.
+
+#### Review 'Oversharing baseline using permission reports' site access review requests (for site owners)
+
+Once the site owner selects the email, they're redirected to the site access review detailed report generated for the site.
+
+The SharePoint admin views the unique number of permissioned users for this site in the DAG report and that number is also visible to site owner in the site access review email. This list shows how those users are distributed across the site content in terms of permissions and scopes.
+
+All items created in the site, by default, inherit permissions of the site and thus the 'site' acts like a parent. However, if the inherited permissions are broken due to sharing of an item by creating links, providing direct access to individuals or groups, removing users/groups etc., a unique scope is created for that item. Now this item acts as a new 'parent' and its children inherit its permissions. The site access review page is a list of such uniquely permissioned 'parents' with the appropriate scope and name. It's NOT the list of ALL items/files/folders in the site. The item with the highest number of permissioned users is shown first. Up to 100 items are shown in descending order so that site owner can focus on items with highest 'exposure' first.
+
+##### Understanding the site access review report for permission based reports
+
+**Number of permissioned users:** This column represents the number of users permissioned to that scope (Site/List/Folder/File) and hence illustrates the current 'exposure' for that item, as compared to other items. However, this number is NOT a unique number of users. In case the same user has both direct and indirect permissions to this item, the user is double counted.
+
+For example, a folder 'F' was shared to a group “A” consisting of 40 members and is directly shared with 10 individuals and 20 more individuals arrived using sharing links. The number of permissioned users is the sum of all users - 80 (40+10+20). No deduplication is done to see if the same user exists in groups or came via sharing links as well.
+
+Also, the sum of permissioned users across all scopes might not equal the number of users in the email and/or Data access governance report and could be greater. This scenario can happen when a user has permissions across multiple items. At the site-level, such a user is counted once. However, at an item-level, that user is counted individually.
+
+**Number of groups:** As the name suggests, this shows the number of groups having permissions to this scope/item. Usually, the exposure is caused by groups containing many users. Reducing exposure removes the permissions of groups and can edit their memberships. Select **Group number** to view the membership count of each group and identify which groups to target.
+
+The other columns show the number of ALL existing links (Anyone, PeopleInOrg) and the presence of EEEU/Everyone. If the number of links are high, or the EEEU/Everyone column says yes, the site owner can immediately target the relevant item/scope for reducing permissions.
+
+**Manage Access:** The 'Manage access' button allows the site owner to remove individual users, groups, delete links, or modify permissions accordingly. For a 'SharePoint site' scope, the button directs the site owner to SharePoint group management page, whereas for individual items, it uses the existing 'Manage access' experience.
+With this report, a site owner gets an overview of 'exposure' of parent items in their sites, can gauge the contribution of exposure and act via 'manage access' without having to manually iterate through every permission of every item in the site.
 
 #### Complete site access review requests (for site owners)
 
