@@ -129,6 +129,8 @@ items:
         href: site-lifecycle-management.md
       - name: Data access governance reports
         href: data-access-governance-reports.md
+      - name: Manage Data access governance reports using PowerShell
+        href: powershell-for-data-access-governance.md
       - name: Initiate site access reviews for data access governance reports
         href: site-access-review.md
       - name: Create change history reports
