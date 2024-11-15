@@ -1,5 +1,5 @@
 ---
-ms.date: 11/13/2024
+ms.date: 11/14/2024
 title: "Restrict discovery of SharePoint sites and content"
 ms.reviewer: nibandyo
 manager: jtremper
