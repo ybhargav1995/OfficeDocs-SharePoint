@@ -87,7 +87,7 @@ While Sharing links are one possible contributor for potential oversharing, anot
 
 #### Sites shared with Everyone except external users in last 28 days
 
-When EEEU is added to a site membership (owners/members/visitors), the entire content of the site becomes public and more prone to oversharing. The following PowerShell command triggers the report to capture such sites in the last 28 days:
+When EEEU is added to a site membership (owners, members, or visitors), the entire content of the site becomes public and more prone to oversharing. The following PowerShell command triggers the report to capture such sites in the last 28 days:
 
 ```powershell
 Start-SPODataAccessGovernanceInsight -ReportEntity EveryoneExceptExternalUsersAtSite -Workload SharePoint -ReportType RecentActivity -Name "PublicSiteViaEEEU"
@@ -113,17 +113,17 @@ This PowerShell command triggers the report to list sites where specific items w
 First, retrieve the label name or label GUID using "Security and compliance" PowerShell module.
 
 ```powershell
-Get-Label | Format-Table -Property DisplayName, Name, Guid, ContentType
+Get-Label | Format-Table -Property DisplayName, Name, GUID, ContentType
 ```
 
 Then, use the Name AND GUID to retrieve sites with files labeled with the given label name or GUID.
 
 ```powershell
-Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "1fe7cc96-b07b-4474-83c1-3f2462bcc3bz" -FileSensitivityLabelName Secret
+Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -FileSensitivityLabelName Secret
 ```
 
 > [!NOTE]
-> Currently report for OneDriveForBusiness accounts with labelled files is not supported.
+> Currently, the report for 'OneDriveForBusiness' accounts with labelled files is not supported.
 
 ## Tracking reports using PowerShell
 
@@ -131,23 +131,23 @@ Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Wor
 > All report creations will result in a GUID as output which could be used to track the report status
 
 ```powershell
-Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "1fe7cc96-b07b-4474-83c1-3f2462bcc3bz" -FileSensitivityLabelName Secret
+Start-SPODataAccessGovernanceInsight -ReportEntity SensitivityLabelForFiles -Workload SharePoint -ReportType Snapshot -FileSensitivityLabelGUID "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1" -FileSensitivityLabelName Secret
 ```
 
 ```output
 ReportId                             Status
 --------                             ------
-e378bc14-fdab-4cae-a16f-328b860f3643 NotStarted
+a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 NotStarted
 ```
 
-Use the **Get-SPODataAccessGovernanceInsight** command to retrieve the current status of a specific DAG report using the report ID.
+Use the **Get-SPODataAccessGovernanceInsight** command to retrieve the current status of a specific Data access governance report using the report ID.
 
 ```powershell
-Get-SPODataAccessGovernanceInsight -ReportID 346ec49a-7d1b-4e75-bdd8-95dab02603d5
+Get-SPODataAccessGovernanceInsight -ReportID a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ```
 
 ```output
-ReportId          : 346ec49a-7d1b-4e75-bdd8-95dab02603d5
+ReportId          : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ReportEntity      : SharingLinks_Anyone
 Status            : InQueue
 Workload          : SharePoint
@@ -168,7 +168,7 @@ Get-SPODataAccessGovernanceInsight -ReportEntity PermissionedUsers
 ```
 
 ```output
-ReportId             : f2003a70-eca0-4db7-8d75-a5b7f2f8d1b4
+ReportId             : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
 ReportName           : PermissionReportFor1AsOfSept
 ReportEntity         : PermissionedUsers
 Status               : Completed
@@ -183,7 +183,7 @@ Privacy              : All
 Sensitivity          : {All}
 Templates            : {All}
 
-ReportId             : 94e37d1a-bdf4-4e9d-8b0c-f7acb1162659
+ReportId             : b1b1b1b1-cccc-dddd-eeee-f2f2f2f2f2f2
 ReportName           : PermissionReportFor1AsOfOct
 ReportEntity         : PermissionedUsers
 Status               : Completed
@@ -204,7 +204,7 @@ Templates            : {All}
 To download a specific report, you need the reportID. Retrieve the reportID using the **Get-SPODataAccessGovernanceInsight** command and use the **Export-SPODataAccessGovernanceInsight** command to download the report to a specified path.
 
 ```powershell
-Export-SPODataAccessGovernanceInsight -ReportID f2003a70-eca0-4db7-8d75-a5b7f2f8d1a0 -DownloadPath "C:\Users\TestUser\Documents\DAGReports"
+Export-SPODataAccessGovernanceInsight -ReportID a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 -DownloadPath "C:\Users\TestUser\Documents\DAGReports"
 ```
 
 This downloads a CSV file to the specified path. Details of the CSV/view for each report are discussed [here](data-access-governance-reports.md#access-the-reports-in-the-sharepoint-admin-center).
@@ -221,12 +221,12 @@ Once Data access governance reports are generated, SharePoint admins can perform
 Use **Start-SPOSiteReview** command to initiate a site access review for a specific site, listed under a Data access governance report. The Data access governance report provides the context under which the review should be initiated. Retrieve the reportID, site ID from the CSV file and provide comments to give clarity to the site owner regarding the purpose of the review.
 
 ```powershell
-Start-SPOSiteReview -ReportID f2003a70-eca0-4db7-8d75-a5b7f2f8d1a0 -SiteID 599d5719-d15a-490e-a6fb-e6172641d64d -Comment "Check for org wide access"
+Start-SPOSiteReview -ReportID a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1 -SiteID c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3 -Comment "Check for org wide access"
 ```
 
 ```output
-ReviewId                : 0f3948e6-5b4e-4ea0-8e94-c5e91c7fe0ef
-SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewId                : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+SiteId                  : c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3
 ReviewInitiatedDateTime : 13-11-2024 20:55:41
 ReportEntity            : PermissionedUsers
 Status                  : Pending
@@ -245,8 +245,8 @@ Get-SPOSiteReview -ReportEntity PermissionedUsers
 ```
 
 ```output
-ReviewId                : 0f3948e6-5b4e-4ea0-8e94-c5e91c7fe0ef
-SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewId                : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+SiteId                  : c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3
 ReviewInitiatedDateTime : 13-11-2024 20:55:41
 ReviewCompletedDateTime :
 ReportCreatedDateTime   : 13-11-2024 23:25:41
@@ -258,8 +258,8 @@ SiteName                : All Company
 ReviewerEmail           :
 ReviewerComment         :
 
-ReviewId                : 21ea5abc-2d5b-4e36-9a43-de1207ec6f9b
-SiteId                  : 599d5719-d15a-490e-a6fb-e6172641d64d
+ReviewId                : a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1
+SiteId                  : c2c2c2c2-dddd-eeee-ffff-a3a3a3a3a3a3
 ReviewInitiatedDateTime : 24-10-2024 11:07:39
 ReviewCompletedDateTime : 15-11-2024 11:07:39
 ReportCreatedDateTime   : 15-10-2024 09:24:47
