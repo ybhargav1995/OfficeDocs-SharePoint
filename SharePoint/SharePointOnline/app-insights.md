@@ -107,7 +107,7 @@ Start-SPOEnterpriseAppInsightsReport
 
 #### Create report for any other duration
 
-To generate report for any other duration:
+To generate report for any other duration, run the following command:
 
 ```powershell
 Start-SPOEnterpriseAppInsightsReport -ReportPeriodInDays $ReportPeriodInDays (possible values = 1, 7, 14, 28) 
@@ -115,7 +115,7 @@ Start-SPOEnterpriseAppInsightsReport -ReportPeriodInDays $ReportPeriodInDays (po
 
 #### Check status of all active and available reports
 
-To check status of all active and available reports:
+To check status of all active and available reports, run the following command:
 
 ```powershell
 Get-SPOEnterpriseAppInsightsReport
@@ -123,7 +123,7 @@ Get-SPOEnterpriseAppInsightsReport
 
 #### Check status of a specific report
 
-To check status of a specific report:
+To check status of a specific report, run the following command:
 
 ```powershell
 Get-SPOEnterpriseAppInsightsReport -reportID $reportID (for the given report ID)
