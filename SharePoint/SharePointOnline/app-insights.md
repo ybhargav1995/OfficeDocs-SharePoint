@@ -90,7 +90,7 @@ To get updated data for a given report range, select an existing report and sele
 You can generate and manage App insights reports using SharePoint Online Management Shell.
 
 1. [Download](https://go.microsoft.com/fwlink/p/?LinkId=255251) and install the latest version of SharePoint Online Management Shell.
-2. Connect to SharePoint Online as a [SharePoint Administrator](sharepoint-admin-role.md) in Microsoft 365. For more information about SharePoint Online Management Shell, see [Getting started with SharePoint Online Management Shell](connect-sharepoint-online.md).
+2. Connect to SharePoint Online as a [SharePoint Administrator](sharepoint-admin-role.md) in Microsoft 365. For more information about SharePoint Online Management Shell, see [Getting started with SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 3. Ensure you have the SharePoint Premium - SharePoint Advanced Management license.
 
 ### PowerShell commands for App insights reports
