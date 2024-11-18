@@ -43,7 +43,7 @@ This feature requires Microsoft SharePoint Premium - SharePoint Advanced Managem
 
 ### Create report
 
-1. Sign in to SharePoint admin center with your SharePoint admin credentials your organization.
+1. Sign in to SharePoint admin center with your SharePoint admin credentials.
 2. In the left pane, expand **Reports** and then select **App insights**.
 3. Once on the **App insights** landing page, select **Add a report** to generate a new report. :::image type="content" alt-text="Screenshot of the create reports page for app insights dashboard in SharePoint admin center." source="media/app-insights/1-enterprise-app-insights-landing-page.png" lightbox="media/app-insights/1-enterprise-app-insights-landing-page.png":::
 
@@ -55,7 +55,7 @@ This feature requires Microsoft SharePoint Premium - SharePoint Advanced Managem
 >
 > - It can take up to a several hours for generated reports to be available.
 > - Only one report is allowed per report range.
-> - Reports can be re-run after 24 hours.
+> - Reports can be rerun after 24 hours.
 
 ### Manage reports in SharePoint admin center
 
