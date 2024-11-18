@@ -20,7 +20,7 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint advanced management features such as restricted access control, and restricted content discovery."
+description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint Advanced Management features such as restricted access control, and restricted content discovery."
 ---
 # Manage access to agents in SharePoint
 
@@ -32,9 +32,6 @@ Agents in SharePoint, powered by AI, help employees quickly find information and
 ## Manage who can access the agents
 
 Currently, users with a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) can use the agents. You can use the [Microsoft 365 Copilot setup guide](https://admin.microsoft.com/Adminportal/Home?Q=learndocs#/modernonboarding/microsoft365copilotsetupguide) in the Microsoft 365 admin center to assign the required licenses to users. For more information, see [Assign licenses to users in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users) and [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements).
-
-> [!NOTE]
-> From December 1, 2024, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free Agents in SharePoint queries for unlicensed users every month as a trial. SharePoint administrators or above can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. Please see terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
 
 ## Manage what information a user can access through the agents
 
@@ -49,10 +46,10 @@ Agents in SharePoint use SharePoint sites, pages and document libraries as knowl
 
 Learn more about using SharePoint built-in features to control access [here](/sharepoint/sharepoint-copilot-best-practices#step-2---prevent-oversharing-and-control-access-with-sharepoint-and-onedrive).
 
-## With SharePoint advanced management
+## With SharePoint Advanced Management
 
 Currently, to restrict access to a site by Microsoft 365 Copilot, the SharePoint Admin can set up a [restricted access control policy](/sharepoint/restricted-access-control). As a result, all access to the site is restricted to only the group of users specified in the policy. Accordingly, the content from this site is visible in Microsoft 365 Copilot only for this restricted group of users. You can restrict access to individual sites or OneDrive.
-Learn more about additional features to prevent oversharing, control access, and enhance your content governance with SharePoint advanced management [here](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
+Learn more about additional features to prevent oversharing, control access, and enhance your content governance with SharePoint Advanced Management [here](/sharepoint/get-ready-copilot-sharepoint-advanced-management).
 
 ## Turn off agents in SharePoint with restricted content discovery
 
