@@ -155,5 +155,3 @@ Get-SPOEnterpriseAppInsightsReport -reportID $reportID -action download
 3. There can only be one report for each value of **Report range**. This means that you can see a maximum of four reports in the **Enterprise Application Insights** homepage.
 4. These reports are powered by Audit data and don't include all audit events.  
 5. You might see App ID of the non-Microsoft app, or App name of a mid-tier app in some cases.
-
-:::image type="content" alt-text="Screenshot of site lifecycle management insights dashboard in SharePoint admin center." source="media/ai-insights/0-ai-insights-inactive-sites.png" lightbox="media/ai-insights/0-ai-insights-inactive-sites.png":::
