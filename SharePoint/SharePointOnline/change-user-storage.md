@@ -57,11 +57,11 @@ As an IT administrator, you can adjust a user's OneDrive storage space using the
 
     ![OneDrive storage settings screenshot](media/edit-user-storage-limit.png)
 
-When users need more storage beyond the initial 5 TB, Microsoft increases their storage as follows:
+When users need more storage beyond the initial 5 TB, you can increase their storage limit up to 25 TB with the following steps:
 
-- When a user reaches 90% of their 5 TB capacity, Microsoft increases their storage to up to 25 TB. Admins can set a lower limit if desired.
-- If usage drops below 90%, storage limit resets to 5 TB.
-- For users reaching 90% of their 25 TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.<sup>1</sup>    
+- When a user reaches 90% of their 5-TB capacity, [check whether the tenant is configured to increase a user's OneDrive quota beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility). After the tenant is configured for the increase, admins can set the user-specific limit to "greater than 5 TB".
+- If usage drops below 4.5 TB (90% of 5 TB), the storage limit resets to "5 TB".
+- For users reaching 90% of their 25-TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.<sup>1</sup>.
 
     > [!NOTE]
     > For Office 365 A1 users, storage is limited to 100 GB. For more information, see [Office 365 Education service descriptions](/office365/servicedescriptions/office-365-platform-service-description/office-365-education).
