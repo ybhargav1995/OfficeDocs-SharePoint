@@ -146,7 +146,7 @@ Get-SPOEnterpriseAppInsightsReport -reportID $reportID -action download
 ```
 
 > [!IMPORTANT]
-> Re-run and delete report capabilities are unavailable for PowerShell. The [Create report cmdlets](#create-a-one-day-default-duration-report) can be used with relevant report duration.
+> Rerun and delete report capabilities are unavailable for PowerShell. The [Create report cmdlets](#create-a-one-day-default-duration-report) can be used with relevant report duration.
 
 ## Known experiences
 
