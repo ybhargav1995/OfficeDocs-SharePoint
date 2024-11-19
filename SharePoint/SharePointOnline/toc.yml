@@ -125,6 +125,8 @@ items:
       items:
       - name: Overview
         href: advanced-management.md
+      - name: Restrict discovery of SharePoint sites and content
+        href: restricted-content-discovery.md
       - name: Review recent site actions
         href: recent-actions-panel.md
       - name: Create site ownership policy 
