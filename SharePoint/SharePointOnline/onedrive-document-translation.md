@@ -31,7 +31,7 @@ OneDrive, powered by Microsoft Syntex, allows you to manually translate document
 ## Key features
 
 - **Request multiple languages per translation**: You can select up to 10 languages per document translation.
-- **Translation of different file types**: Translate various [file types]([Supported file types](#supported-file-types), including .docx, .pdf, .pptx, and more.
+- **Translation of different file types**: Translate various [file types][Supported file types](#supported-file-types), including .docx, .pdf, .pptx, and more.
 - **Video transcripts and captions**: The translation feature also supports translating video transcripts and closed caption files. For more information, see [Transcript Translations in Stream for SharePoint](https://support.microsoft.com/office/microsoft-syntex-pay-as-you-go-transcript-translations-in-stream-for-sharepoint-2e34ad1b-e213-47ed-a806-5cc0d88751de).
 
 ---
