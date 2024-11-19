@@ -20,7 +20,7 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint Advanced Management features such as restricted access control, and restricted content discovery."
+description: "Learn how to manage access to agents in SharePoint with built-in SharePoint permissions models, SharePoint Advanced Management features such as restricted access control, and restricted content discovery."
 ---
 # Manage access to agents in SharePoint
 
