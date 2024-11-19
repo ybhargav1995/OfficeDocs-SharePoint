@@ -76,7 +76,7 @@ Sign in to [OneDrive](https://go.microsoft.com/fwlink/p/?LinkID=2119709) with yo
 
 4. Choose up to 10 languages and select **Translate**.
 
-    :::image type="content" source="media/onedrive-document-translation/3-onedrive-translation-max-languages.png" alt-text="screenshot of OneDrive document translate feature with maximum of 10 languages selected." lightbox="media/onedrive-document-translation/3-onedrive-translation-max-languages.png":::
+    :::image type="content" source="media/onedrive-document-translation/3-onedrive-translation-max-languages.png" alt-text="Screenshot of OneDrive document translate feature with maximum of 10 languages selected." lightbox="media/onedrive-document-translation/3-onedrive-translation-max-languages.png":::
 
 The translated file is saved in the same location as the file you selected to translate.
 
@@ -110,7 +110,7 @@ The maximum file size for translation is 40 MB.
 
 Translation in Syntex is available for all [supported languages and dialects](/azure/ai-services/translator/language-support#translation).
 
-:::image type="content" source="media/onedrive-document-translation/2-onedrive-translation.png" alt-text="screenshot of OneDrive document translate feature with supported languages." lightbox="media/onedrive-document-translation/2-onedrive-translation.png":::
+:::image type="content" source="media/onedrive-document-translation/2-onedrive-translation.png" alt-text="Screenshot of OneDrive document translate feature with supported languages." lightbox="media/onedrive-document-translation/2-onedrive-translation.png":::
 
 ---
 
