@@ -53,7 +53,7 @@ This feature requires Microsoft SharePoint Premium - SharePoint Advanced Managem
   
 > [!NOTE]
 >
-> - It can take up to a several hours for generated reports to be available.
+> - It can take up to several hours for generated reports to be available.
 > - Only one report is allowed per report range.
 > - Reports can be rerun after 24 hours.
 
