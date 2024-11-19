@@ -124,6 +124,10 @@ Microsoft Purview eDiscovery and Content Search are still discoverable in archiv
 
 Changes made to retention policies apply to archived accounts. For example, if the company reduces the retention policy from five years to three years, this update syncs with all archived accounts, for any accounts that fulfill the updated retention period, those accounts are moved to recycle bin, and the recycle bin process begins.
 
+## Unlicensed OneDrive accounts and education tenants
+
+An education tenant is any tenant with more than 50% education licenses. Any tenant with fewer than 50% education licenses is considered commercial. However, for any education tenant, unlicensed OneDrive accounts consume pooled storage and can pose security and compliance risks. IT admins can view the unlicensed accounts on the OneDrive accounts page to identify unlicensed accounts and take action.
+
 ## Frequently Asked Questions
 
 **1. What is an unlicensed OneDrive account?**
