@@ -1,6 +1,6 @@
 ---
 ms.date: 11/18/2024
-title: "Initiate site access reviews for data access governance reports"
+title: "Initiate site access reviews for Data access governance reports"
 ms.reviewer: pullabhk
 ms.author: mactra
 author: MachelleTranMSFT
@@ -23,7 +23,7 @@ search.appverid:
 description: "Learn about how to initiate site access reviews as a remedial action for data access governance for SharePoint sites."
 ---
 
-# Initiate site access reviews for data access governance reports
+# Initiate site access reviews for Data access governance reports
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
