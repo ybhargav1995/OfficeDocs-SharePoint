@@ -1,5 +1,5 @@
 ---
-ms.date: 11/14/2024
+ms.date: 11/18/2024
 title: "Data access governance reports for SharePoint sites"
 ms.reviewer: samust
 ms.author: mactra
@@ -18,9 +18,8 @@ ms.collection:
 - M365-sam
 - M365-collaboration
 ms.custom:
-- seo-marvel-apr2020
 - admindeeplinkSPO
-search.appverid: MET150
+search.appverid: 
 description: "In this article, you learn about reports that can help you govern access to data in SharePoint."
 ---
 
@@ -39,8 +38,8 @@ This feature requires either Microsoft 365 E5 or Microsoft SharePoint Premium - 
 
 ## Access the reports in the SharePoint admin center
 
-1. As an [administrator](sharepoint-admin-role.md), sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) for your organization.
-2. In the left pane, select **Reports** and then select **Data access governance**.
+1. Sign in to the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) with the [SharePoint administrator](sharepoint-admin-role.md) credentials for your organization.
+2. In the left pane, expand **Reports** and then select **Data access governance**.
 
     The following reports are currently available from the Data access governance landing page:
 
@@ -70,7 +69,7 @@ Sharing links reports lets you identify potential sources of oversharing by show
 To get the latest data for each report, manually run the Data access governance report. You can run all reports or select individual reports to run. It can take a few hours for reports to fully generate. To check if a report is ready or to see when it was last updated, see the **Status** column.
 
 > [!NOTE]
-> Each report can be run only once in 24 hours.
+> A report can only be run once per month.
 
 ### View the reports
 
@@ -85,7 +84,7 @@ When a report is ready, select the name of the report to view the data. Each sha
 
 ### Download the reports
 
-You can also download the reporting as a .csv file for up to 10,000 sites.
+You can also download the reporting as a CSV file for up to 10,000 sites.
 
 > [!IMPORTANT]
 > You can download reporting for up to 1 million sites if you have a SharePoint SharePoint Premium - SharePoint Advanced Management license and your tenant is a non-government cloud environment.
@@ -184,7 +183,7 @@ It's vital for SharePoint admin to understand the permissions setup in their ten
 ### Creating the oversharing baseline report
 
 > [!IMPORTANT]
-> Currently, SharePoint admins can generate the report via PowerShell only. The 1st report for the tenant will take up to 5 days. Subsequent reports will be completed in few hours.
+> Currently, SharePoint admins can generate the report via PowerShell only. The first report for the tenant can take up to 5 days.
 
 ### Run the oversharing baseline report
 
@@ -243,14 +242,3 @@ Once you run the Data access governance reports to discover potential oversharin
 If immediate action needs to be taken, you can configure [Restricted access control (RAC)](./restricted-access-control.md) and restrict access to a specified group (currently in preview). You can also use the ['Change history' report](./change-history-report.md) to identify recent changes to site properties that could lead to oversharing.
 
 You can also request the site owner review the permissions before taking necessary actions via [the Site access review feature](site-access-review.md) that is available within the Data access governance reports.
-
-## Auto-run Data access governance reports
-
-As a SharePoint admin, with this 'Auto-run' feature, you can now schedule Data access governance reports to automatically run periodically instead having to remember to manually run every time. Several salient points are mentioned as follows:
-
-1. Auto-run is currently available only from UI. Hence this supports reports present in the DAG landing page only.
-1. Auto-run runs ALL available reports in a module at the same time. For example: You can schedule to run ALL sharing link reports at once. You can't schedule a single report with a different frequency. Similar is the case with all Everyone except external user reports and all sensitivity label reports.
-1. You can still go ahead and manually run a report anytime. But the limitations with respect to time between multiple runs is still valid. For example: You can run any sharing link report only once a day. If Auto-run triggers the report at least once, you can't run it again manually within the 24 hour time period and vice-versa.
-1. Reports are run every 28 days from the day of enablement. There's no configuration yet.
-1. Reports are automatically run for the period of six months from the day of enablement. If you want the reports to continue running automatically, you need to re-enable after six months.
-1. Once a report is run automatically, all SharePoint admins are notified via an email with the final status.

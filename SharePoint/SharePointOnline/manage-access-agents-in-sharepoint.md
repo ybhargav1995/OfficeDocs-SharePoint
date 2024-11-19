@@ -1,5 +1,5 @@
 ---
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 title: Manage access to agents in SharePoint
 ms.reviewer: 
 ms.author: ruihu
@@ -20,7 +20,7 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to manage access to agents in SharePoint with built-in SharePoint premission models, SharePoint Advanced Management features such as restricted access control, and restricted content discovery."
+description: "Learn how to manage access to agents in SharePoint with built-in SharePoint permissions models, SharePoint Advanced Management features such as restricted access control, and restricted content discovery."
 ---
 # Manage access to agents in SharePoint
 
@@ -32,6 +32,9 @@ Agents in SharePoint, powered by AI, help employees quickly find information and
 ## Manage who can access the agents
 
 Currently, users with a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) can use the agents. You can use the [Microsoft 365 Copilot setup guide](https://admin.microsoft.com/Adminportal/Home?Q=learndocs#/modernonboarding/microsoft365copilotsetupguide) in the Microsoft 365 admin center to assign the required licenses to users. For more information, see [Assign licenses to users in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users) and [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements).
+
+> [!NOTE]
+> From December 1, 2024, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free Agents in SharePoint queries for unlicensed users every month as a trial. SharePoint administrators or above can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. Please see terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
 
 ## Manage what information a user can access through the agents
 
