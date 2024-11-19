@@ -1,6 +1,6 @@
 ---
-ms.date: 11/14/2024
-title: "Initiate site access reviews for data access governance reports"
+ms.date: 11/18/2024
+title: "Initiate site access reviews for Data access governance reports"
 ms.reviewer: pullabhk
 ms.author: mactra
 author: MachelleTranMSFT
@@ -18,13 +18,12 @@ ms.collection:
 - M365-sam
 - M365-collaboration
 ms.custom:
-- seo-marvel-apr2020
 - admindeeplinkSPO
-search.appverid: MET150
+search.appverid:
 description: "Learn about how to initiate site access reviews as a remedial action for data access governance for SharePoint sites."
 ---
 
-# Initiate site access reviews for data access governance reports
+# Initiate site access reviews for Data access governance reports
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
@@ -95,15 +94,24 @@ When you initiate a review, site owners receive an email for each site that requ
 - A request to review site permissions
 - A link to a detailed access review page. This page is specific for the scenario as specified in the data access governance report.
 
-    :::image type="content" source="./media/data-access-governance/email-eeeu-files-folders-lists.png" alt-text="Screenshot that shows Email received by site owners for oversharing via EEEU" lightbox="./media/data-access-governance/email-eeeu-files-folders-lists.png":::
+The following image shows the email notification regarding 'Everyone except external users' last 28 days report:
+
+:::image type="content" source="./media/data-access-governance/email-eeeu-files-folders-lists.png" alt-text="Screenshot that shows Email received by site owners for oversharing via EEEU" lightbox="./media/data-access-governance/email-eeeu-files-folders-lists.png":::
+
+The following image shows a report of shared links generated in the last 28 days:
+
+:::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the sharing links within the last 28 days report." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
+
+The following image shows the oversharing baseline report using permissions:
+:::image type="content" source="./media/site-access-review/5-detailed-permissions-report.png" alt-text="Screenshot that shows the detailed oversharing permissions reports." lightbox="./media/site-access-review/5-detailed-permissions-report.png":::
 
 #### Review 'Everyone except external users' site access review requests (for site owners)
 
 Site owners can review and manage access in two main areas:
 
 - **SharePoint groups:**
-  - View which groups contain 'Everyone except external users'
-  - See when and by whom the group was added
+  - View which groups contain 'Everyone except external users'.
+  - See when and by whom the group was added.
   - Remove 'Everyone except external users' from groups if necessary:
     1. Selecting the SharePoint group opens the group membership page that displays all members of this SharePoint group.
     2. Select **Everyone except external users** and **Actions** and choose to **remove users from group**.
@@ -111,8 +119,8 @@ Site owners can review and manage access in two main areas:
         :::image type="content" source="./media/data-access-governance/manage-sharepoint-group-membership.png" alt-text="Screenshot that shows displays sharepoint group members" lightbox="./media/data-access-governance/manage-sharepoint-group-membership.png":::
 
 - **Individual items (files/folders/lists):**
-  - See items shared with 'Everyone except external users' in the last 28 days
-  - View sharing details (who shared and when)
+  - See items shared with 'Everyone except external users' in the last 28 days.
+  - View sharing details (who shared and when).
   - Manage access and remove permissions as needed:
     1. Select **Manage access**.
     1. Under the 'Everyone except external users' group in the **Groups** tab, select the group and select **remove access**. See [Stop sharing OneDrive or SharePoint files or folders, or change permissions](https://support.microsoft.com/office/stop-sharing-onedrive-or-sharepoint-files-or-folders-or-change-permissions-0a36470f-d7fe-40a0-bd74-0ac6c1e13323) for more information.
@@ -125,13 +133,19 @@ Once the site owner selects the email, they're redirected to the site access rev
 
 The site owner gets a view of files for whom links were generated along with the exact time of generation and who generated the links. The 'Manage access' button can be used to navigate to the link section and remove it/modify the permissions.
 
+The following image shows an email notification about the sharing links report using permissions:
+:::image type="content" source="./media/site-access-review/3-email-permissions-report.png" alt-text="Screenshot that shows the sharing links report email notification." lightbox="./media/site-access-review/3-email-permissions-report.png":::
+
 #### Review 'Oversharing baseline using permission reports' site access review requests (for site owners)
 
 Once the site owner selects the email, they're redirected to the site access review detailed report generated for the site.
 
-The SharePoint admin views the unique number of permissioned users for this site in the DAG report and that number is also visible to site owner in the site access review email. This list shows how those users are distributed across the site content in terms of permissions and scopes.
+The following image shows an email notification about oversharing baseline report using permissions:
+:::image type="content" source="./media/site-access-review/2-email-permissions-report.png" alt-text="Screenshot that shows the oversharing baseline using permission reports email notification." lightbox="./media/site-access-review/2-email-permissions-report.png":::
 
-All items created in the site, by default, inherit permissions of the site and thus the 'site' acts like a parent. However, if the inherited permissions are broken due to sharing of an item by creating links, providing direct access to individuals or groups, removing users/groups etc., a unique scope is created for that item. Now this item acts as a new 'parent' and its children inherit its permissions. The site access review page is a list of such uniquely permissioned 'parents' with the appropriate scope and name. It's NOT the list of ALL items/files/folders in the site. The item with the highest number of permissioned users is shown first. Up to 100 items are shown in descending order so that site owner can focus on items with highest 'exposure' first.
+The SharePoint admin views the unique number of permissioned users for this site in the Data access governance report and that number is also visible to site owner in the site access review email. This list shows how those users are distributed across the site content in terms of permissions and scopes.
+
+All items created in the site, by default, inherit permissions of the site and thus the 'site' acts like a parent. However, if the inherited permissions are broken due to sharing of an item by creating links, providing direct access to individuals or groups, removing users/groups etc., a unique scope is created for that item. Now this item acts as a new 'parent' and its children inherit its permissions. The site access review page is a list of such uniquely permissioned 'parents' with the appropriate scope and name. It's not the list of all items/files/folders in the site. The item with the highest number of permissioned users is shown first. Up to 100 items are shown in descending order so that site owner can focus on items with highest 'exposure' first.
 
 ##### Understanding the site access review report for permission based reports
 
@@ -156,7 +170,7 @@ Once the site owner takes the necessary actions like modifying or removing permi
 2. Add any relevant comments.
 3. Submit the completed review.
 
-Comments are shared back to the IT administrator who raised the review request. The review request is then marked as completed.
+   Comments are shared back to the IT administrator who raised the review request. The review request is then marked as completed.
 
 #### Manage multiple site access review requests (for site owners)
 
@@ -167,7 +181,7 @@ A site owner can receive review requests for multiple sites, or receive multiple
 For site owners handling multiple reviews:
 
 1. Access the 'site reviews' page via:
-    - The link in the review email
+    - The link in the review email.
     - The gear icon on the site home page:
         1. Select **Site settings**.
         1. Select **Site reviews**.
