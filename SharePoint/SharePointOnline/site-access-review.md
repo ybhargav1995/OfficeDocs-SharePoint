@@ -110,8 +110,8 @@ The following image shows the oversharing baseline report using permissions:
 Site owners can review and manage access in two main areas:
 
 - **SharePoint groups:**
-  - View which groups contain 'Everyone except external users'
-  - See when and by whom the group was added
+  - View which groups contain 'Everyone except external users'.
+  - See when and by whom the group was added.
   - Remove 'Everyone except external users' from groups if necessary:
     1. Selecting the SharePoint group opens the group membership page that displays all members of this SharePoint group.
     2. Select **Everyone except external users** and **Actions** and choose to **remove users from group**.
@@ -119,8 +119,8 @@ Site owners can review and manage access in two main areas:
         :::image type="content" source="./media/data-access-governance/manage-sharepoint-group-membership.png" alt-text="Screenshot that shows displays sharepoint group members" lightbox="./media/data-access-governance/manage-sharepoint-group-membership.png":::
 
 - **Individual items (files/folders/lists):**
-  - See items shared with 'Everyone except external users' in the last 28 days
-  - View sharing details (who shared and when)
+  - See items shared with 'Everyone except external users' in the last 28 days.
+  - View sharing details (who shared and when).
   - Manage access and remove permissions as needed:
     1. Select **Manage access**.
     1. Under the 'Everyone except external users' group in the **Groups** tab, select the group and select **remove access**. See [Stop sharing OneDrive or SharePoint files or folders, or change permissions](https://support.microsoft.com/office/stop-sharing-onedrive-or-sharepoint-files-or-folders-or-change-permissions-0a36470f-d7fe-40a0-bd74-0ac6c1e13323) for more information.
@@ -170,7 +170,7 @@ Once the site owner takes the necessary actions like modifying or removing permi
 2. Add any relevant comments.
 3. Submit the completed review.
 
-Comments are shared back to the IT administrator who raised the review request. The review request is then marked as completed.
+   Comments are shared back to the IT administrator who raised the review request. The review request is then marked as completed.
 
 #### Manage multiple site access review requests (for site owners)
 
@@ -181,7 +181,7 @@ A site owner can receive review requests for multiple sites, or receive multiple
 For site owners handling multiple reviews:
 
 1. Access the 'site reviews' page via:
-    - The link in the review email
+    - The link in the review email.
     - The gear icon on the site home page:
         1. Select **Site settings**.
         1. Select **Site reviews**.
