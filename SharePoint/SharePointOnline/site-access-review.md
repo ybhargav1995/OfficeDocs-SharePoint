@@ -100,10 +100,10 @@ The following image shows the email notification regarding 'Everyone except exte
 
 The following image shows a report of shared links generated in the last 28 days:
 
-:::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the oversharing baseline using permission reports." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
+:::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the sharing links within the last 28 days report." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
 
 The following image shows the oversharing baseline report using permissions:
-:::image type="content" source="./media/site-access-review/5-detailed-permissions-report.png" alt-text="Screenshot that shows the detail permissions reports." lightbox="./media/site-access-review/5-detailed-permissions-report.png":::
+:::image type="content" source="./media/site-access-review/5-detailed-permissions-report.png" alt-text="Screenshot that shows the detailed oversharing permissions reports." lightbox="./media/site-access-review/5-detailed-permissions-report.png":::
 
 #### Review 'Everyone except external users' site access review requests (for site owners)
 
