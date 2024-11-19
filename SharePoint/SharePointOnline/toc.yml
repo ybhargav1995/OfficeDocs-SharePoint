@@ -145,6 +145,8 @@ items:
         href: block-download-from-sites.md
       - name: Generate AI insights
         href: ai-insights.md
+      - name: Generate App insights
+        href: app-insights.md
   - name: Performance
     items:
     - name: Performance
