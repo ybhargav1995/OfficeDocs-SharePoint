@@ -79,18 +79,24 @@ items:
         href: onedrive-document-translation.md
   - name: Copilot
     items:
-    - name: Microsoft 365 Copilot - best practices
-      href: sharepoint-copilot-best-practices.md
-    - name: Get ready for Copilot with SharePoint Advanced Management(SAM)
-      href: get-ready-copilot-sharepoint-advanced-management.md
-    - name: Restricted SharePoint search
-      items:
-      - name: Overview
-        href: restricted-sharepoint-search.md
-      - name: Curate allowed list
-        href: restricted-sharepoint-search-allowed-list.md
-      - name: Use PowerShell admin scripts
-        href: restricted-sharepoint-search-admin-scripts.md
+      - name: SharePoint for Copilot
+        items:
+        - name: Best practices of SharePoint for Copilot
+          href: sharepoint-copilot-best-practices.md
+        - name: Get ready for Copilot with SharePoint Advanced Management
+          href: get-ready-copilot-sharepoint-advanced-management.md
+        - name: Restricted SharePoint search
+          items:
+          - name: Overview
+            href: restricted-sharepoint-search.md
+          - name: Curate allowed list
+            href: restricted-sharepoint-search-allowed-list.md
+          - name: Use PowerShell admin scripts
+            href: restricted-sharepoint-search-admin-scripts.md
+      - name: Agents in SharePoint
+        items:
+        - name: Manage Access
+          href: manage-access-agents-in-sharepoint.md
   - name: Classic to modern
     items:
     - name: Publishing
@@ -149,6 +155,8 @@ items:
           href: limit-access.md
         - name: Restrict access to specific OneDrives
           href: onedrive-site-access-restriction.md
+        - name: Restrict discovery of SharePoint sites and content
+          href: restricted-content-discovery.md
         - name: Restrict SharePoint site access by security groups
           href: restricted-access-control.md
   - name: Performance
