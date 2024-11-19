@@ -44,7 +44,7 @@ The amount of SharePoint space your organization has is based on your number of 
     ![Storage bar on the Active sites page](media/active-sites-storage-bar.png)
 
     > [!NOTE]
-    > SharePoint storage is calculated in binary Gigabytes (GB), where 1 GB = 2<sup>30</sup>. Storage usage doesn't include changes made within the last 24-48 hours.
+    > Storage usage doesn't include changes made within the last 24-48 hours. SharePoint storage is calculated in binary Gigabytes (GB), where 1 GB = 2<sup>30</sup>.
 
 ## Set automatic or manual site storage limits
 <a name="__toc365547981"> </a>
