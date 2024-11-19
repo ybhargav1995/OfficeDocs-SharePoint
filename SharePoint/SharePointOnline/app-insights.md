@@ -154,4 +154,4 @@ Get-SPOEnterpriseAppInsightsReport -reportID $reportID -action download
 - A report can be rerun only after 24 hours since the last report generation.
 - There can only be one report for each value of **Report range**. This means that you can see a maximum of four reports in the **Enterprise Application Insights** homepage.
 - These reports are powered by Audit data and don't include all audit events.  
-- You might see App ID of the non-Microsoft app, or App name of a mid-tier app in some cases.
+- You might see App ID of a non-Microsoft app, but App name of a middle-tier app in some cases.
