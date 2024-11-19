@@ -31,7 +31,7 @@ OneDrive, powered by Microsoft Syntex, allows you to manually translate document
 ## Key features
 
 - **Request multiple languages per translation**: You can select up to 10 languages per document translation.
-- **Translation of different file types**: Translate various [file types][Supported file types](#supported-file-types), including .docx, .pdf, .pptx, and more.
+- **Translation of different file types**: Translate various file types. [Supported file types](#supported-file-types), include .docx, .pdf, .pptx, and more.
 - **Video transcripts and captions**: The translation feature also supports translating video transcripts and closed caption files. For more information, see [Transcript Translations in Stream for SharePoint](https://support.microsoft.com/office/microsoft-syntex-pay-as-you-go-transcript-translations-in-stream-for-sharepoint-2e34ad1b-e213-47ed-a806-5cc0d88751de).
 
 ---
@@ -57,7 +57,7 @@ To disable document translation for OneDrive:
 1. Sign in to Microsoft 365 admin center and select **[Setup](https://go.microsoft.com/fwlink/p/?linkid=2171997)**.
 2. Expand **Files and content** and select **Automate content processes with Syntex**.
 3. On the **Automate content processes with Syntex** page, select **Go to Syntex settings**.
-4. On the Syntex page, in the **Document & image services** section, select **Document translation**
+4. On the Syntex page, in the **Document & image services** section, select **Document translation**.
 5. In the OneDrive section, select **Edit**. On the **Where can document translation be used?** panel, clear the **Available in OneDrive** checkbox.
 
 For more information about managing document translation for SharePoint sites, see [Set up and manage document translation in Microsoft Syntex](/microsoft-365/syntex/translation-setup#manage-sites).
