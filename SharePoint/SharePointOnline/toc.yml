@@ -157,6 +157,8 @@ items:
           href: onedrive-site-access-restriction.md
         - name: Restrict discovery of SharePoint sites and content
           href: restricted-content-discovery.md
+        - name: Restrict OneDrive and SharePoint site creation
+          href: restricted-site-creation.md
         - name: Restrict SharePoint site access by security groups
           href: restricted-access-control.md
   - name: Performance

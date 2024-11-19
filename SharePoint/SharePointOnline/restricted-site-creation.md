@@ -1,6 +1,6 @@
 ---
 ms.date: 11/19/2024
-title: "Restrict OneDrive and SharePoint site creation
+title: "Restrict OneDrive and SharePoint site creation"
 ms.reviewer: vgaddam
 manager: jtremper
 recommendations: true 
@@ -19,10 +19,10 @@ ms.collection:
 - M365-collaboration
 - essentials-manage
 search.appverid:
-description: "Learn how to restrict users from creation SharePoint sites using restricted site creation."
+description: "Learn how to restrict users from creating OneDrive and SharePoint sites using restricted site creation."
 ---
 
-# Restrict SharePoint site creation
+# Restrict OneDrive and SharePoint site creation
 
 [!INCLUDE[Advanced Management](includes/advanced-management.md)]
 
