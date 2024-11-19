@@ -1,5 +1,5 @@
 ---
-ms.date: 11/18/2024
+ms.date: 11/19/2024
 title: "Initiate site access reviews for Data access governance reports"
 ms.reviewer: pullabhk
 ms.author: mactra
@@ -96,14 +96,14 @@ When you initiate a review, site owners receive an email for each site that requ
 
 The following image shows the email notification regarding 'Everyone except external users' last 28 days report:
 
-:::image type="content" source="./media/data-access-governance/email-eeeu-files-folders-lists.png" alt-text="Screenshot that shows Email received by site owners for oversharing via EEEU" lightbox="./media/data-access-governance/email-eeeu-files-folders-lists.png":::
+:::image type="content" source="./media/data-access-governance/email-eeeu-files-folders-lists.png" alt-text="Screenshot that shows email received by site owners for oversharing via EEEU" lightbox="./media/data-access-governance/email-eeeu-files-folders-lists.png":::
 
-The following image shows a report of shared links generated in the last 28 days:
+The following image shows the email received by site owners about sharing links generated in the last 28 days:
 
-:::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the sharing links within the last 28 days report." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
+:::image type="content" source="./media/site-access-review/3-email-sharing-links.png" alt-text="Screenshot that shows the detailed oversharing permissions reports email notification." lightbox="./media/site-access-review/3-email-sharing-links.png":::
 
-The following image shows the oversharing baseline report using permissions:
-:::image type="content" source="./media/site-access-review/5-detailed-permissions-report.png" alt-text="Screenshot that shows the detailed oversharing permissions reports." lightbox="./media/site-access-review/5-detailed-permissions-report.png":::
+The following image shows the email received by site owners about oversharing baseline report using permissions:
+:::image type="content" source="./media/site-access-review/2-email-permissions-report.png" alt-text="Screenshot that shows the sharing links within the last 28 days report email notification." lightbox="./media/site-access-review/2-email-permissions-report.png":::
 
 #### Review 'Everyone except external users' site access review requests (for site owners)
 
@@ -133,15 +133,15 @@ Once the site owner selects the email, they're redirected to the site access rev
 
 The site owner gets a view of files for whom links were generated along with the exact time of generation and who generated the links. The 'Manage access' button can be used to navigate to the link section and remove it/modify the permissions.
 
-The following image shows an email notification about the sharing links report using permissions:
-:::image type="content" source="./media/site-access-review/3-email-permissions-report.png" alt-text="Screenshot that shows the sharing links report email notification." lightbox="./media/site-access-review/3-email-permissions-report.png":::
+The following image shows the detailed sharing links report:
+:::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the detailed sharing links report." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
 
-#### Review 'Oversharing baseline using permission reports' site access review requests (for site owners)
+#### Review 'Oversharing baseline using permission' report site access review requests (for site owners)
 
 Once the site owner selects the email, they're redirected to the site access review detailed report generated for the site.
 
-The following image shows an email notification about oversharing baseline report using permissions:
-:::image type="content" source="./media/site-access-review/2-email-permissions-report.png" alt-text="Screenshot that shows the oversharing baseline using permission reports email notification." lightbox="./media/site-access-review/2-email-permissions-report.png":::
+The following image shows the detailed oversharing baseline using permissions report:
+:::image type="content" source="./media/site-access-review/5-detailed-permissions-report.png" alt-text="Screenshot that shows the oversharing baseline using permission reports email notification." lightbox="./media/site-access-review/5-detailed-permissions-report.png":::
 
 The SharePoint admin views the unique number of permissioned users for this site in the Data access governance report and that number is also visible to site owner in the site access review email. This list shows how those users are distributed across the site content in terms of permissions and scopes.
 
