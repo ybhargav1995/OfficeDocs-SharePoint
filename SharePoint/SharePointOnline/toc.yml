@@ -125,34 +125,40 @@ items:
       items:
       - name: Overview
         href: advanced-management.md
-      - name: Restrict discovery of SharePoint sites and content
-        href: restricted-content-discovery.md
-      - name: Review recent site actions
-        href: recent-actions-panel.md
-      - name: Create site ownership policy 
-        href: create-sharepoint-site-ownership-policy.md
-      - name: Inactive sites
-        href: site-lifecycle-management.md
-      - name: Data access governance reports
-        href: data-access-governance-reports.md
-      - name: Manage Data access governance reports using PowerShell
-        href: powershell-for-data-access-governance.md
-      - name: Initiate site access reviews for data access governance reports
-        href: site-access-review.md
-      - name: Create change history reports
-        href: change-history-report.md
-      - name: Restrict SharePoint site access by security groups
-        href: restricted-access-control.md
-      - name: Restrict access to all OneDrives by security groups
-        href: limit-access.md
-      - name: Restrict access to specific OneDrives
-        href: onedrive-site-access-restriction.md
-      - name: Block download from sites and OneDrive
-        href: block-download-from-sites.md
-      - name: Generate AI insights
-        href: ai-insights.md
-      - name: Generate App insights
-        href: app-insights.md
+      - name: Manage content sprawl
+        items:
+        - name: Create site ownership policy
+          href: create-sharepoint-site-ownership-policy.md
+        - name: Generate AI insights
+          href: ai-insights.md
+        - name: Manage inactive sites
+          href: site-lifecycle-management.md
+      - name: Manage content lifecycle
+        items:
+        - name: Create change history reports
+          href: change-history-report.md
+        - name: Review recent site actions
+          href: recent-actions-panel.md
+      - name: Manage permissions and access
+        items:
+        - name: Block download from SharePoint and OneDrive sites
+          href: block-download-from-sites.md
+        - name: Data access governance reports
+          href: data-access-governance-reports.md
+        - name: Generate App insights
+          href: app-insights.md
+        - name: Initiate site access reviews
+          href: site-access-review.md
+        - name: Manage Data access governance reports using PowerShell
+          href: powershell-for-data-access-governance.md
+        - name: Restrict access to all OneDrives by security groups
+          href: limit-access.md
+        - name: Restrict access to specific OneDrives
+          href: onedrive-site-access-restriction.md
+        - name: Restrict discovery of SharePoint sites and content
+          href: restricted-content-discovery.md
+        - name: Restrict SharePoint site access by security groups
+          href: restricted-access-control.md
   - name: Performance
     items:
     - name: Performance
