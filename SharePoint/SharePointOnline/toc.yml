@@ -75,20 +75,28 @@ items:
         href: roll-out-sharepoint-onedrive.md
       - name: Set up SharePoint and OneDrive with a wizard
         href: setup-wizard.md
+      - name: Translate documents in OneDrive
+        href: onedrive-document-translation.md
   - name: Copilot
     items:
-    - name: Microsoft 365 Copilot - best practices
-      href: sharepoint-copilot-best-practices.md
-    - name: Get ready for Copilot with SharePoint Advanced Management(SAM)
-      href: get-ready-copilot-sharepoint-advanced-management.md
-    - name: Restricted SharePoint search
-      items:
-      - name: Overview
-        href: restricted-sharepoint-search.md
-      - name: Curate allowed list
-        href: restricted-sharepoint-search-allowed-list.md
-      - name: Use PowerShell admin scripts
-        href: restricted-sharepoint-search-admin-scripts.md
+      - name: SharePoint for Copilot
+        items:
+        - name: Best practices of SharePoint for Copilot
+          href: sharepoint-copilot-best-practices.md
+        - name: Get ready for Copilot with SharePoint Advanced Management
+          href: get-ready-copilot-sharepoint-advanced-management.md
+        - name: Restricted SharePoint search
+          items:
+          - name: Overview
+            href: restricted-sharepoint-search.md
+          - name: Curate allowed list
+            href: restricted-sharepoint-search-allowed-list.md
+          - name: Use PowerShell admin scripts
+            href: restricted-sharepoint-search-admin-scripts.md
+      - name: Agents in SharePoint
+        items:
+        - name: Manage Access
+          href: manage-access-agents-in-sharepoint.md
   - name: Classic to modern
     items:
     - name: Publishing
@@ -113,6 +121,38 @@ items:
       href: customize-admin-center-site-list.md
     - name: Guidance for retiring Delve in your organization
       href: delve-retirement.md
+    - name: SharePoint Advanced Management
+      items:
+      - name: Overview
+        href: advanced-management.md
+      - name: Restrict discovery of SharePoint sites and content
+        href: restricted-content-discovery.md
+      - name: Review recent site actions
+        href: recent-actions-panel.md
+      - name: Create site ownership policy 
+        href: create-sharepoint-site-ownership-policy.md
+      - name: Inactive sites
+        href: site-lifecycle-management.md
+      - name: Data access governance reports
+        href: data-access-governance-reports.md
+      - name: Manage Data access governance reports using PowerShell
+        href: powershell-for-data-access-governance.md
+      - name: Initiate site access reviews for data access governance reports
+        href: site-access-review.md
+      - name: Create change history reports
+        href: change-history-report.md
+      - name: Restrict SharePoint site access by security groups
+        href: restricted-access-control.md
+      - name: Restrict access to all OneDrives by security groups
+        href: limit-access.md
+      - name: Restrict access to specific OneDrives
+        href: onedrive-site-access-restriction.md
+      - name: Block download from sites and OneDrive
+        href: block-download-from-sites.md
+      - name: Generate AI insights
+        href: ai-insights.md
+      - name: Generate App insights
+        href: app-insights.md
   - name: Performance
     items:
     - name: Performance
@@ -256,14 +296,8 @@ items:
       href: delete-site-collection.md
     - name: Restore deleted sites
       href: restore-deleted-site-collection.md
-    - name: Manage inactive sites
-      href: site-lifecycle-management.md
     - name: Manage site admins
       href: manage-site-collection-administrators.md
-    - name: Review recent site actions
-      href: recent-actions-panel.md
-    - name: Create site ownership policy
-      href: create-sharepoint-site-ownership-policy.md
     - name: Manage site creation
       href: manage-site-creation.md
     - name: Restrict site creation
@@ -276,14 +310,10 @@ items:
       href: manage-site-redirects.md
     - name: Lock and unlock sites
       href: manage-lock-status.md
-    - name: Create change history reports
-      href: change-history-report.md
     - name: Root site
       href: modern-root-site.md
     - name: Plan, build, and launch a home site
       href: home-site-plan.md
-    - name: Advanced management
-      href: advanced-management.md
     - name: Change your domain name
       href: change-your-sharepoint-domain-name.md
     - name: Enable and set up global navigation
@@ -428,16 +458,8 @@ items:
       href: control-access-from-unmanaged-devices.md
     - name: Control access based on network location
       href: control-access-based-on-network-location.md
-    - name: Restrict OneDrive access
-      href: limit-access.md
-    - name: Restrict OneDrive content access
-      href: onedrive-site-access-restriction.md
-    - name: Restrict SharePoint site access
-      href: restricted-access-control.md
     - name: Enable conditional access (OneDrive)
       href: enable-conditional-access.md
-    - name: Block download from sites and OneDrive
-      href: block-download-from-sites.md
     - name: Block meeting recording download
       href: /MicrosoftTeams/block-download-meeting-recording?bc=%2FSharePoint%2Ftoc.json&toc=%2FSharePoint%2Ftoc.json
     - name: Sign out inactive users
@@ -484,12 +506,6 @@ items:
       href: sensitive-by-default.md
     - name: Manage site access based on sensitivity label
       href: authentication-context-example.md
-    - name: Data access governance reports
-      href: data-access-governance-reports.md
-    - name: Generate AI insights
-      href: ai-insights.md
-    - name: Initiate site access reviews for data access governance reports
-      href: site-access-review.md
     - name: Privacy, security, and compliance in Microsoft OneDrive
       href: onedrive-privacy-security-overview.md
     - name: Manage unlicensed OneDrive accounts
