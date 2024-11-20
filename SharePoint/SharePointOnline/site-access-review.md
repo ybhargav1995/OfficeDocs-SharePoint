@@ -75,7 +75,7 @@ Site access reviews are available for the following reports:
 
 For reports that are only available via PowerShell (such as the Oversharing baseline report using permissions), site access reviews can also be initiated using [PowerShell commands](powershell-for-data-access-governance.md#initiate-site-access-review-using-powershell).
 
-### Track site access reviews
+## Track site access reviews
 
 To track all initiated site access reviews, go to the **My review requests** tab on the Data access governance landing page.
 
@@ -85,7 +85,7 @@ Once a review is initiated, its status remains "pending" until the site owner co
 
 For reports available via PowerShell, such as the Oversharing baseline report, you can track reviews using this [PowerShell command](powershell-for-data-access-governance.md#track-site-access-reviews-using-powershell).
 
-### Site access review process for site owners
+## Site access review process for site owners
 
 When you initiate a review, site owners receive an email containing:
 
@@ -107,7 +107,7 @@ Here are examples of the different emails a site owner might receive:
 - Oversharing baseline report using permissions:
   :::image type="content" source="./media/site-access-review/2-email-permissions-report.png" alt-text="Screenshot that shows the sharing links within the last 28 days report email notification." lightbox="./media/site-access-review/2-email-permissions-report.png":::
 
-#### Review 'Everyone Except External Users' site access requests
+### Review 'Everyone Except External Users' site access requests
 
 Site owners can review and manage access in two main areas:
 
@@ -129,7 +129,7 @@ Site owners can review and manage access in two main areas:
 
         :::image type="content" source="./media/data-access-governance/site-owner-view-foreeeu-files.png" alt-text="Screenshot that shows view for site owner regarding items shared with eeeu" lightbox="./media/data-access-governance/site-owner-view-foreeeu-files.png":::
 
-#### Review 'Sharing link' reports
+### Review 'Sharing link' reports
 
 Once the site owner opens the email, they're redirected to a detailed sharing links report. This report shows:
 
@@ -140,7 +140,7 @@ The following screenshot shows the detailed sharing links report:
 
 :::image type="content" source="./media/site-access-review/6-detailed-sharing-links.png" alt-text="Screenshot that shows the detailed sharing links report." lightbox="./media/site-access-review/6-detailed-sharing-links.png":::
 
-#### Review 'Oversharing baseline using permissions' reports
+### Review 'Oversharing baseline using permissions' reports
 
 When site owners select the email, they're redirected to the site access review page, where they can see the oversharing baseline using permissions report. This report helps site owners identify items with excessive permissions and take necessary actions.
 
@@ -148,9 +148,11 @@ When site owners select the email, they're redirected to the site access review 
 
 The SharePoint admin views the number of users with permissions to a site in the Data access governance report. Site owners can see this number, along with how permissions are distributed across different site items. Items with the highest number of permissioned users are shown first, allowing the site owner to address the most exposed items.
 
-#### Understanding the permissions report
+### Understanding the permissions report
 
-**Number of permissioned users**: This column shows the total number of users who have permissions to a specific scope (Site, List, Folder, or File). It reflects the exposure of that item compared to others. However, it's important to note that this number isn't unique—if the same user has both direct and indirect permissions, they're counted multiple times.
+#### Number of permissioned users
+
+This column shows the total number of users who have permissions to a specific scope (Site, List, Folder, or File). It reflects the exposure of that item compared to others. However, it's important to note that this number isn't unique—if the same user has both direct and indirect permissions, they're counted multiple times.
 
 **Example**:
 
@@ -164,11 +166,13 @@ The total number of permissioned users for folder "F" would be 80 (40 from Group
 
 Additionally, the total number of permissioned users across all scopes might exceed the number of users shown in the email or Data Access Governance report. This happens because users can have permissions on multiple items. While a user might be counted once at the site level, they're counted separately for each item they have access to.
 
-**Number of groups**: This column shows how many groups have permissions to a specific item or scope. Often, a large portion of exposure comes from permissions granted to groups, especially those with many members. Reducing exposure can be achieved by adjusting group memberships or removing unnecessary groups from permissions.
+#### Number of groups
+
+This column shows how many groups have permissions to a specific item or scope. Often, a large portion of exposure comes from permissions granted to groups, especially those with many members. Reducing exposure can be achieved by adjusting group memberships or removing unnecessary groups from permissions.
 
 Select on the **Group number** to see the membership count of each group. This helps you identify which groups to target for reducing permissions.
 
-**Links and EEEU/Everyone**:
+#### Links and EEEU/Everyone
 
 This section displays:
 
@@ -177,7 +181,7 @@ This section displays:
 
 If the number of links is high or the EEEU/Everyone column says "Yes," this is an immediate indicator that the item has broad exposure, and the site owner should focus on reducing permissions for that item.
 
-**Manage Access**:
+#### Manage Access
 
 The Manage Access button provides a way for the site owner to take action by:
 
@@ -188,7 +192,7 @@ The Manage Access button provides a way for the site owner to take action by:
 
 For a SharePoint site, selecting this button redirects to the **SharePoint group management** page. For individual items, it opens the **Manage Access** interface, allowing for more granular control over permissions.
 
-#### Complete site access reviews
+### Complete site access reviews
 
 Once the site owner makes necessary changes (like modifying or removing permissions), they should:
 
@@ -198,7 +202,7 @@ Once the site owner makes necessary changes (like modifying or removing permissi
 
 Comments are sent back to the IT administrator, and the review will be marked as completed.
 
-#### Manage multiple site access reviews
+### Manage multiple site access reviews
 
 Site owners can receive and handle multiple site access review requests simultaneously. To track all review requests:
 
