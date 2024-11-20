@@ -56,7 +56,7 @@ Reports that don't require SharePoint Advanced Management are:
 - Basic Permissions Reports: These reports provide a snapshot of the current state of permissions without the advanced features like site access reviews or automated scheduling.
 - Activity Reports: These reports offer insights into activities within the past 28 days, helping to manage and review access to content that might be at risk of being overshared.  
 
-**Q: **What is the difference between SharePoint Premium and SharePoint Advanced Management?**
+**What is the difference between SharePoint Premium and SharePoint Advanced Management?**
 
 SharePoint Premium is an advanced content management platform that builds on the familiar SharePoint experience. It brings AI, automation, and added security to content experiences, processing, and governance. It's designed to enhance content management and experiences in Microsoft 365 as an expansion and rebranding of Microsoft Syntex.
 
