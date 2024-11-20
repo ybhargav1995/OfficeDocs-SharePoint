@@ -42,7 +42,7 @@ If your organization is going through a rebranding, merger, or acquisition and n
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RWOnwY]
 
 >[!IMPORTANT]
-> - The standard version of this feature is currently available to organizations that have no more than 10,000 total SharePoint sites and OneDrive accounts combined.
+> - The standard version of this feature is currently available to organizations that have no more than 10,000 total sites, which includes SharePoint sites, OneDrive accounts and SharePoint Embedded containers combined. 
 > - Advanced Tenant Rename is available to organizations that have less than 100,000 total sites, available with SharePoint Advanced Management. See [Advanced Tenant Rename](change-your-sharepoint-domain-name.md#advanced-tenant-rename).
 > - This change affects only SharePoint and OneDrive URLs. It doesn't impact email addresses.
 > - For info about changing a site address, for example, from `https://contoso.sharepoint.com/sites/sample1` to  `https://contoso.sharepoint.com/sites/sample2`, see [Change a site address](change-site-address.md). 
