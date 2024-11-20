@@ -172,6 +172,8 @@ This column shows how many groups have permissions to a specific item or scope. 
 
 Select on the **Group number** to see the membership count of each group. This helps you identify which groups to target for reducing permissions.
 
+:::image type="content" source="./media/site-access-review/4-group-membership-details.png" alt-text="Screenshot that shows a specific group and its member count." lightbox="./media/site-access-review/4-group-membership-details.png":::
+
 #### Links and EEEU/Everyone
 
 This section displays:
