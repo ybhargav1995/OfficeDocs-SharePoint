@@ -162,7 +162,7 @@ Each EEEU report includes data as shown in the following screenshot:
 - Primary admin for each site.
 
 > [!NOTE]
-> The reports don't include OneDrive data
+> Support for OneDrive data is now [available via PowerShell](powershell-for-data-access-governance.md).
 
 ### Download Everyone except external users reports
 
