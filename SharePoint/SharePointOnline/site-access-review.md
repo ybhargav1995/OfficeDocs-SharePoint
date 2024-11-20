@@ -127,7 +127,7 @@ Site owners can review and manage access in two main areas:
     1. Select **Manage access**.
     1. Under the 'Everyone except external users' group in the **Groups** tab, select the group and select **Remove access**. See [Stop sharing OneDrive or SharePoint files or folders, or change permissions](https://support.microsoft.com/office/stop-sharing-onedrive-or-sharepoint-files-or-folders-or-change-permissions-0a36470f-d7fe-40a0-bd74-0ac6c1e13323) for more information.
 
-        :::image type="content" source="./media/data-access-governance/site-owner-view-foreeeu-files.png" alt-text="Screenshot that shows view for site owner regarding items shared with eeeu" lightbox="./media/data-access-governance/site-owner-view-foreeeu-files.png":::
+        :::image type="content" source="./media/data-access-governance/site-owner-view-foreeeu-files.png" alt-text="Screenshot that shows view for site owner regarding items shared with eeeu." lightbox="./media/data-access-governance/site-owner-view-foreeeu-files.png":::
 
 ### Review 'Sharing link' reports
 
@@ -208,16 +208,17 @@ Comments are sent back to the IT administrator, and the review will be marked as
 
 Site owners can receive and handle multiple site access review requests simultaneously. To track all review requests:
 
- :::image type="content" source="./media/data-access-governance/site-review-master-page.png" alt-text="Screenshot that shows Master page to track all site review for a site" lightbox="./media/data-access-governance/site-review-master-page.png":::
+ :::image type="content" source="./media/data-access-governance/site-review-master-page.png" alt-text="Screenshot that shows Master page to track all site review for a site." lightbox="./media/data-access-governance/site-review-master-page.png":::
 
 1. Go to the **Site reviews** page via:
     - The link in the review email.
     - The gear icon on the site home page:
-        1. Select **Site settings**.
-        1. Select **Site reviews**.
-        :::image type="content" source="./media/data-access-governance/site-review-from-gear-icon.png" alt-text="Screenshot that shows path to site review page from site home page under gear icon" lightbox="./media/data-access-governance/site-review-from-gear-icon.png":::
-        1. View all pending site access reviews.
-        1. Complete reviews as necessary.
+    1. Select **Site settings**.
+    1. Select **Site reviews**.
+   
+       :::image type="content" source="./media/data-access-governance/site-review-from-gear-icon.png" alt-text="Screenshot that shows path to site review page from site home page under gear icon." lightbox="./media/data-access-governance/site-review-from-gear-icon.png":::
+    1. View all pending site access reviews.
+    1. Complete reviews as necessary.
 
 ## Related topics
 
