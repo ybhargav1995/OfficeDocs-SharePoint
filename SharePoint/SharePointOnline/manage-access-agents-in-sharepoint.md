@@ -66,9 +66,9 @@ You as a SharePoint Admin can turn off all agent-related features on individual 
 
 ## More resources
 
-[SharePoint site roles and permissions](/sharepoint/site-permissions)
-[Permission levels in SharePoint](/sharepoint/understanding-permission-levels)
-[SharePoint and Microsoft 365 Groups integration](/microsoft-365/solutions/groups-sharepoint-governance)
-[Microsoft Teams, SharePoint, and Microsoft 365 Groups integration](/microsoft-365/solutions/groups-sharepoint-teams-governance)
-[Get ready for Microsoft 365 Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management)
-[Learn about data loss prevention](/purview/dlp-learn-about-dlp)
+- [SharePoint site roles and permissions](/sharepoint/site-permissions)
+- [Permission levels in SharePoint](/sharepoint/understanding-permission-levels)
+- [SharePoint and Microsoft 365 Groups integration](/microsoft-365/solutions/groups-sharepoint-governance)
+- [Microsoft Teams, SharePoint, and Microsoft 365 Groups integration](/microsoft-365/solutions/groups-sharepoint-teams-governance)
+- [Get ready for Microsoft 365 Copilot with SharePoint Advanced Management](/sharepoint/get-ready-copilot-sharepoint-advanced-management)
+- [Learn about data loss prevention](/purview/dlp-learn-about-dlp)
