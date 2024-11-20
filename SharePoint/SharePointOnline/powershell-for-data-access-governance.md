@@ -1,5 +1,5 @@
 ---
-ms.date: 11/14/2024
+ms.date: 11/19/2024
 title: "Manage Data access governance reports using SharePoint Online PowerShell"
 ms.reviewer: pullabhk
 ms.author: mactra

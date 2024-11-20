@@ -1,7 +1,7 @@
 ---
 ms.date: 11/19/2024
 title: "Data access governance reports for SharePoint sites"
-ms.reviewer: samust
+ms.reviewer: pullabhk
 ms.author: mactra
 author: MachelleTranMSFT
 manager: jtremper
@@ -176,7 +176,7 @@ After running the report, select the report to download the data. In the report:
 - Reports work if you have nonpseudonymized report data selected for your organization. To change this setting, you must be a Global Administrator. Go to the [Reports setting in the Microsoft 365 admin center](https://admin.microsoft.com/#/Settings/Services/:/Settings/L1/Reports) and clear **Display concealed user, group, and site names in all reports**.
 - Report data can be delayed for up to 48 hours. In new tenants, it can take a few days for data to be generated successfully and available for viewing.
 
-## Setting up oversharing baseline with Permissions based report
+## Setting up oversharing baseline with permissions based report
 
 It's vital for SharePoint admin to understand the permissions setup in their tenant, particularly in the wake of Copilot adoption, as it respects user and content permissions. Copilot's data exposure risk increases with the number of users having access. Hence, SharePoint admins need to evaluate sensitive data 'exposure' by checking permissions to items or sites.  Data access governance (DAG) can help establish oversharing thresholds by identifying sites with ‘too many’ permissioned users.
 
@@ -184,6 +184,9 @@ It's vital for SharePoint admin to understand the permissions setup in their ten
 
 > [!IMPORTANT]
 > Currently, SharePoint admins can generate the report via PowerShell only. The first report for the tenant can take up to 5 days.
+
+> [!NOTE]
+> This report can only be run once a month.
 
 ### Run the oversharing baseline report
 
