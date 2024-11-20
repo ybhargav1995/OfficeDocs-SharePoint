@@ -42,7 +42,7 @@ Agents in SharePoint use SharePoint sites, pages, and document libraries as know
 - Make a site private to ensure only the people who have explicit permission to access the site.
 - Control access to a site that is associated with a Microsoft 365 group by setting the site as private and controlling group membership.
 - Control access to a site that isn't associated with a group using site permissions.
-- Use access governance policies available in the SharePoint admin center and PowerShell to control access based on other criteria.
+- Control access with access governance policies available in the SharePoint admin center and PowerShell.
 
 Learn more about using SharePoint built-in features to control access [here](/sharepoint/sharepoint-copilot-best-practices#step-2---prevent-oversharing-and-control-access-with-sharepoint-and-onedrive).
 
@@ -53,10 +53,10 @@ Learn more about more features to prevent oversharing, control access, and enhan
 
 ## With Microsoft Purview Data Loss Prevention (DLP)
 
-You can prevent selected files from being used by agents by using sensitivity labels along with [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp). You [do this](/purview/dlp-create-deploy-policy#scenario-2-block-sharing-of-sensitive-items-via-sharepoint-and-onedrive-in-microsoft-365-with-external-users) by creating a DLP custom policy with the **Content contains** > **Sensitivity labels** condition to exclude items from being processed. Identified items will still be available in the citations of the response, but the content of the item won't be used in the response.
-We don’t yet support adding a sensitivity label directly to the [.agent file](https://support.microsoft.com/office/create-and-edit-an-agent-d16c6ca1-a8e3-4096-af49-67e1cfdddd42#where-agent-file). If you want to govern your .agent file with DLP, instead of using the Sensitivity labels as the condition, you can use conditions based on the *.agent* extension. We will support the ability of adding a sensitivity label directly to a . agent file in the future.
+You can prevent selected files from being used by agents by using sensitivity labels along with [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp). You [do this](/purview/dlp-create-deploy-policy#scenario-2-block-sharing-of-sensitive-items-via-sharepoint-and-onedrive-in-microsoft-365-with-external-users) by creating a DLP custom policy with the **Content contains** > **Sensitivity labels** condition to exclude items from being processed. Identified items are available in the citations of the response, but the content of the item aren't used in the response.
+We don’t yet support adding a sensitivity label directly to the [.agent file](https://support.microsoft.com/office/create-and-edit-an-agent-d16c6ca1-a8e3-4096-af49-67e1cfdddd42#where-agent-file). If you want to govern your *.agent* file with DLP, instead of using the Sensitivity labels as the condition, you can use conditions based on the *.agent* extension. We'll support the ability of adding a sensitivity label directly to a *.agent* file in the future.
 
 ## Manage where agents are available in SharePoint with restricted content discovery
 
-You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users.  
+You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
 
