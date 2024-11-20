@@ -146,6 +146,18 @@ If a site is identified as not meeting the ownership criteria for three consecut
 
 - If option is chosen and no one can be notified during the three months, the site continues to have its access set to read-only.
 
+## Read-only mode
+
+A site ownership policy configured with the read-only enforcement action sends additional notifications to inform recipients when there's no response.
+
+A notification is sent when the site goes into read-only mode.
+
+Once the site is in read-only mode, a banner is added to the site for users to identify this has happened.
+
+To remove a site from read-only mode in the **SharePoint admin center**, go to the **Active sites** page, select the site, and then select **Unlock** from the site page panel.
+
+Site owners can't remove a site from read-only mode and must contact the tenant admin to remove read-only mode.
+
 ## Related topics
 
 - [SharePoint Advanced Management overview](advanced-management.md)
