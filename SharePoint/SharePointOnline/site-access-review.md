@@ -213,12 +213,12 @@ Site owners can receive and handle multiple site access review requests simultan
 1. Go to the **Site reviews** page via:
     - The link in the review email.
     - The gear icon on the site home page:
-    1. Select **Site settings**.
-    1. Select **Site reviews**.
+      1. Select **Site settings**.
+      1. Select **Site reviews**.
    
-       :::image type="content" source="./media/data-access-governance/site-review-from-gear-icon.png" alt-text="Screenshot that shows path to site review page from site home page under gear icon." lightbox="./media/data-access-governance/site-review-from-gear-icon.png":::
-    1. View all pending site access reviews.
-    1. Complete reviews as necessary.
+          :::image type="content" source="./media/data-access-governance/site-review-from-gear-icon.png" alt-text="Screenshot that shows path to site review page from site home page under gear icon." lightbox="./media/data-access-governance/site-review-from-gear-icon.png":::
+      1. View all pending site access reviews.
+      1. Complete reviews as necessary.
 
 ## Related topics
 
