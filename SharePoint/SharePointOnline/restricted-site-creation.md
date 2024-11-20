@@ -137,6 +137,8 @@ When a user creates a team site from the web, the user sees the message "We're s
 
 When creating sites through the SharePoint Online Management Shell, the cmdlet fails with the exception "Due to organizational policies, you can't create this type of site."
 
+:::image type="content" source="media/restricted-site-creation/4-restricted-site-creation-spac-error.png" alt-text="screenshot of failed OneDrive site creation if created from SharePoint admin center." lightbox="media/restricted-site-creation/4-restricted-site-creation-spac-error.png":::
+
 ## Related topics
 
 [Microsoft SharePoint Premium – SharePoint Advanced Management overview](advanced-management.md)
