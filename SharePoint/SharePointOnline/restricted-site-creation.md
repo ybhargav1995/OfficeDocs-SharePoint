@@ -125,19 +125,19 @@ When a user is blocked from creating a site by a restricted site creation policy
 
 When a user creates a communication site from the web, they see the error message "Due to organizational policies, you can't create this type of site."
 
-:::image type="content" source="media/restricted-site-creation/1-restricted-site-creation-sharepoint.png" alt-text="screenshot of failed communication site creation." lightbox="media/restricted-site-creation/1-restricted-site-creation-sharepoint.png":::
+:::image type="content" source="media/restricted-site-creation/1-restricted-site-creation-sharepoint.png" alt-text="Screenshot of failed communication site creation." lightbox="media/restricted-site-creation/1-restricted-site-creation-sharepoint.png":::
 
 When first signing in to their OneDrive from the web, the user sees the error message "You can't make a OneDrive. If you need one, contact your administrator or help desk."
 
-:::image type="content" source="media/restricted-site-creation/2-restricted-site-creation-onedrive.png" alt-text="screenshot of failed OneDrive site creation." lightbox="media/restricted-site-creation/2-restricted-site-creation-onedrive.png":::
+:::image type="content" source="media/restricted-site-creation/2-restricted-site-creation-onedrive.png" alt-text="Screenshot of failed OneDrive site creation." lightbox="media/restricted-site-creation/2-restricted-site-creation-onedrive.png":::
 
 When a user creates a team site from the web, the user sees the message "We're still setting up the site for this group," but the site isn't created.
 
-:::image type="content" source="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png" alt-text="screenshot of failed OneDrive site creation if created from admin UI." lightbox="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png":::
+:::image type="content" source="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png" alt-text="Screenshot of failed OneDrive site creation if created from admin UI." lightbox="media/restricted-site-creation/3-restricted-site-creation-onedrive-created-admin-ui.png":::
 
 When creating sites through the SharePoint Online Management Shell, the cmdlet fails with the exception "Due to organizational policies, you can't create this type of site."
 
-:::image type="content" source="media/restricted-site-creation/4-restricted-site-creation-spac-error.png" alt-text="screenshot of failed OneDrive site creation if created from SharePoint admin center." lightbox="media/restricted-site-creation/4-restricted-site-creation-spac-error.png":::
+:::image type="content" source="media/restricted-site-creation/4-restricted-site-creation-spac-error.png" alt-text="Screenshot of failed OneDrive site creation if created from SharePoint admin center." lightbox="media/restricted-site-creation/4-restricted-site-creation-spac-error.png":::
 
 ## Related topics
 
