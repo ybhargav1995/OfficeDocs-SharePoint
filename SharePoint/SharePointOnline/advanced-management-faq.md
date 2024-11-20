@@ -27,11 +27,11 @@ description: "Learn about Microsoft SharePoint Premium - SharePoint Advanced Man
 
 Here's a list of frequently asked questions regarding [Microsoft SharePoint Premium - SharePoint Advanced Management](advanced-management.md):
 
-**My site owners did their site access review and reduced the number of Anyone and other links. Why does my report still show the same number of shared links as before?**
+## My site owners did their site access review and reduced the number of Anyone and other links. Why does my report still show the same number of shared links as before?
 
 Site access review is linked to the Data access governance report from which it's generated. If you want to see the effects of the latest status of site owner actions, run the Data access governance permission report again.
 
-**I made sure to install the latest SharePoint Online Management Shell, but the SharePoint Advanced Management commands I want aren’t present! How do I get the latest commands?**
+## I made sure to install the latest SharePoint Online Management Shell, but the SharePoint Advanced Management commands I want aren’t present! How do I get the latest commands?
 
 You have more than one SharePoint Online Management Shell module installed on the machine you're using to run the commands. Admins would need to run the following to clean up all the modules, and then update to the latest.  
 
@@ -39,11 +39,11 @@ Uninstall-Module Microsoft.Online.SharePoint.PowerShell -Force -AllVersions 
 
 Then, uninstall from the SharePoint Online Management Shell from the Control Panel and reinstall the [latest version] (<https://www.microsoft.com/download/details.aspx?id=35588>).
 
-**Do I need to manually assign SharePoint Advanced Management licenses to users?**
+## Do I need to manually assign SharePoint Advanced Management licenses to users?
 
 No.
 
-**Which specific reports in Data access governance require SharePoint Advanced Management?**
+## Which specific reports in Data access governance require SharePoint Advanced Management?
 
 1. Permissions report: This report lists sites where the count of users that can access is greater than a specified number. It helps identify sites with potentially excessive access.
 2. Site access review for Permissions Report: This allows tenant admins to initiate a site access review for any site within the permissions report via PowerShell. The site owner can then view the details in the site UI and take necessary actions.
@@ -56,13 +56,13 @@ Reports that don't require SharePoint Advanced Management are:
 - Basic Permissions Reports: These reports provide a snapshot of the current state of permissions without the advanced features like site access reviews or automated scheduling.
 - Activity Reports: These reports offer insights into activities within the past 28 days, helping to manage and review access to content that might be at risk of being overshared.  
 
-**What is the difference between SharePoint Premium and SharePoint Advanced Management?**
+## What is the difference between SharePoint Premium and SharePoint Advanced Management?
 
 SharePoint Premium is an advanced content management platform that builds on the familiar SharePoint experience. It brings AI, automation, and added security to content experiences, processing, and governance. It's designed to enhance content management and experiences in Microsoft 365 as an expansion and rebranding of Microsoft Syntex.
 
 SharePoint Advanced Management, on the other hand, focuses on security and content governance. It includes features like manually applying sensitivity labels and policies, as well as automatically applying sensitivity labels and dynamic policies with Microsoft 365 E5. SharePoint Advanced Management is available as an add-on license and is administered by SharePoint administrators in the SharePoint admin center.
 
-**Do organizations really require the entire company to be licensed to take advantage of specific features or can a subset of licenses be purchased and targeted to only users impacted by SharePoint Advanced Management solutions?**
+## Do organizations really require the entire company to be licensed to take advantage of specific features or can a subset of licenses be purchased and targeted to only users impacted by SharePoint Advanced Management solutions?
 
 To use SharePoint Advanced Management, organizations must have a license for each user in the organization who will be using or benefiting from the features.
 
@@ -82,7 +82,7 @@ However, not all features require the entire company to be licensed. Here are so
 
 - Review recent changes: Only admins need to be licensed.
 
-**If I get the SharePoint Advanced Management trial can I run Data access governance reports for my entire organization or does that go beyond licensing requirements?**
+## If I get the SharePoint Advanced Management trial can I run Data access governance reports for my entire organization or does that go beyond licensing requirements?
 
 Yes, you can run Data Access Governance reports for your entire organization with a SharePoint Advanced Management trial license. However, there are some important considerations to keep in mind:
 
@@ -92,7 +92,7 @@ Yes, you can run Data Access Governance reports for your entire organization wit
 
 - Post-trial access: Any reports or data generated during the trial will remain available to you after the trial ends. However, the features stop working, and no new data are generated if SharePoint Advanced Management isn't purchased.
 
-**Are there any impacts to SharePoint Advanced Management in a multi-geo environment?**
+## Are there any impacts to SharePoint Advanced Management in a multi-geo environment?
 
 SharePoint Advanced Management in a multi-geo environment has several considerations to keep in mind:
 
@@ -104,23 +104,23 @@ SharePoint Advanced Management in a multi-geo environment has several considerat
 
 - User experience: Users get a seamless experience when using Microsoft 365 services, including Office applications, OneDrive, and Search. SharePoint Hub sites enhance the discovery and engagement with content for employees, while creating a complete and consistent representation of projects, departments, or regions. In a Multi-Geo environment, sites from satellite locations can easily be associated with a hub site regardless of the hub site's geography location.
 
-**Can I initiate a Site access review manually on a site without running a Data access governance report?**
+## Can I initiate a Site access review manually on a site without running a Data access governance report?
 
 Initiating a Site access review manually on a site without running a Data Access Governance report isn't supported. The Site access review feature is designed to work with Data access governance reports to identify overshared sites and delegate the review process to site owner. This ensures that the review is context-specific and addresses the concerns identified in the Data access governance reports.
 
-**How many Site access reviews can I start at once?**
+## How many Site access reviews can I start at once?
 
 In SharePoint Advanced Management, you can initiate Site Access Reviews for up to 100 sites at once.  
 
-**What defines a site owner in a Site access review in a non-group connected site?**
+## What defines a site owner in a Site access review in a non-group connected site?
 
 In a Site access review for a nongroup connected site, a site owner is defined as the user who has full control of that particular SharePoint Online site. This means that the site owner is responsible for creating and managing lists, libraries, and pages within the site, as well as managing user access and permissions. Site owners are best positioned to review and address oversharing issues for their own sites, as they have the necessary permissions and understanding of the site's content and sharing settings.
 
-**If there are many site owners, which site owners are picked for a Site access review?**
+## If there are many site owners, which site owners are picked for a Site access review?
 
 When there are multiple site owners for a SharePoint site, the Site access review process sends review requests to all site owners. This ensures that all individuals with full control over the site are involved in the review process and can address any oversharing issues identified in the Data access governance reports.
 
-**What SharePoint objects with granted permissions are reviewed for Site access reviews?**
+## What SharePoint objects with granted permissions are reviewed for Site access reviews?
 
 In SharePoint Advanced Management, Site access reviews focus on reviewing permissions for various SharePoint objects to ensure that access is appropriately managed. The objects reviewed include:
 
@@ -132,7 +132,7 @@ In SharePoint Advanced Management, Site access reviews focus on reviewing permis
 
 These reviews help identify and address any oversharing issues, ensuring that sensitive information is protected and access is appropriately managed.
 
-**What is the difference between Inactive sites policy and M365 Group Expiration policies in Microsoft Entra?**
+## What is the difference between Inactive sites policy and M365 Group Expiration policies in Microsoft Entra?
 
 The Inactive sites policy and Microsoft 365 Group Expiration policies in Microsoft Entra serve different purposes and have distinct functionalities:
 
@@ -140,7 +140,7 @@ The Inactive sites policy and Microsoft 365 Group Expiration policies in
 
 - Microsoft 365 Group Expiration Policy: This policy focuses on the lifecycle management of Microsoft 365 groups. It automatically renews groups based on user activity, such as sending an email to the group, uploading a document to SharePoint, or visiting a Teams channel. If a group is inactive for a specified period, the group owners are notified to renew the group. If the group isn't renewed, it's deleted but can be restored within 30 days. This policy helps manage the proliferation of unused groups and ensures that only active groups remain in the environment.
 
-**What if I have Inactive sites policies and Microsoft 365 Group Expiration policies running at the same time?**
+## What if I have Inactive sites policies and Microsoft 365 Group Expiration policies running at the same time?
 
 When both policies are active, they operate independently but can complement each other in managing site and group lifecycles. Here are some key points:
 
