@@ -20,7 +20,7 @@ ms.collection:
 ms.localizationpriority: medium
 search.appverid:
 - MET150
-description: "Learn how to manage access to agents in SharePoint with built-in SharePoint permission models, SharePoint Advanced Management features such as restricted access control, restricted content discovery and Microsoft Purview Data Loss Prevention (DLP)."
+description: "Learn how to manage access to agents in SharePoint with built-in SharePoint permission models, SharePoint Advanced Management features such as restricted access control, restricted content discovery, and Microsoft Purview Data Loss Prevention (DLP)."
 ---
 # Manage access to agents in SharePoint
 
@@ -35,7 +35,7 @@ Agents in SharePoint, powered by AI, help users quickly find information and ins
 Currently, users with a [Microsoft 365 Copilot license](/copilot/microsoft-365/microsoft-365-copilot-licensing) can use the agents. You can use the [Microsoft 365 Copilot setup guide](https://admin.microsoft.com/Adminportal/Home?Q=learndocs#/modernonboarding/microsoft365copilotsetupguide) in the Microsoft 365 admin center to assign the required licenses to users. For more information, see [Assign licenses to users in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users) and [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements).
 
 > [!NOTE]
-> From December 1, 2024, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free Agents in SharePoint queries for unlicensed users every month as a trial. SharePoint administrators or above can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. Please see terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
+> From December 1, 2024, to June 30, 2025, enterprise tenants with 50 or more Microsoft 365 Copilot licenses will receive 10,000 free Agents in SharePoint queries for unlicensed users every month as a trial. Users with a role SharePoint administrators or higher can [check the trial promotion status](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) and [set trial promotion](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus) using PowerShell cmdlets. Please see terms of trial usage [here](/legal/microsoft-365/in-app-trials-terms-of-service). 
 
 ## Manage what information a user can access through the agents
 
@@ -56,7 +56,7 @@ Learn more about more features to prevent oversharing, control access, and enhan
 
 ### With Microsoft Purview Data Loss Prevention (DLP)
 
-You can prevent selected files from being used by agents by using sensitivity labels along with [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp). You [do this](/purview/dlp-create-deploy-policy#scenario-2-block-sharing-of-sensitive-items-via-sharepoint-and-onedrive-in-microsoft-365-with-external-users) by creating a DLP custom policy with the **Content contains** > **Sensitivity labels** condition to exclude items from being processed. Identified items are available in the citations of the response, but the content of the item aren't used in the response.
+You can prevent selected files from being used by agents by using sensitivity labels along with [Microsoft Purview Data Loss Prevention (DLP)](/purview/dlp-learn-about-dlp). You [do this](/purview/dlp-create-deploy-policy#scenario-2-block-sharing-of-sensitive-items-via-sharepoint-and-onedrive-in-microsoft-365-with-external-users) by creating a DLP custom policy with the **Content contains** > **Sensitivity labels** condition to exclude items from being processed. Identified items are available in the citations of the response, but the content of the item isn't used in the response.
 We don’t yet support adding a sensitivity label directly to the [.agent file](https://support.microsoft.com/office/create-and-edit-an-agent-d16c6ca1-a8e3-4096-af49-67e1cfdddd42#where-agent-file). If you want to govern your *.agent* file with DLP, instead of using the Sensitivity labels as the condition, you can use conditions based on the *.agent* extension. We'll support the ability of adding a sensitivity label directly to a *.agent* file in the future.
 
 ## Manage where agents are available in SharePoint with restricted content discovery
@@ -64,7 +64,7 @@ We don’t yet support adding a sensitivity label directly to the [.agent file](
 You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
 You as a SharePoint Admin can turn off all agent-related features on individual sites with the [restricted content discovery](/sharepoint/restricted-access-control). Once a site is flagged with restricted content discovery, users can't see the Copilot icon on the upper right of the site. Therefore, they don’t have access to use the ready-made agent, create new agents, or add content from that site to any other agents. The restricted content discovery policy leaves site access unchanged but prevents the site's content from being surfaced in Microsoft 365 Copilot or organization-wide Search for all users. 
 
-## Additional resources
+## More resources
 
 [SharePoint site roles and permissions](/sharepoint/site-permissions)
 [Permission levels in SharePoint](/sharepoint/understanding-permission-levels)
