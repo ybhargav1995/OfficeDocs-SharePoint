@@ -37,7 +37,7 @@ You have more than one SharePoint Online Management Shell module installed on th
 
 Uninstall-Module Microsoft.Online.SharePoint.PowerShell -Force -AllVersions  
 
-Then, uninstall from the SharePoint Online Management Shell from the Control Panel and reinstall the [latest version] (<https://www.microsoft.com/download/details.aspx?id=35588>).
+Then, uninstall the SharePoint Online Management Shell via the Control Panel and reinstall the [latest version](<https://www.microsoft.com/download/details.aspx?id=35588>).
 
 ## Do I need to manually assign SharePoint Advanced Management licenses to users?
 
