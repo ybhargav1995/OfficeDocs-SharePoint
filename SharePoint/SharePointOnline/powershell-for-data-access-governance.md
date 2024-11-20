@@ -234,7 +234,7 @@ AdminComment            : Check for org wide access
 SiteName                : All Company
 ```
 
-This triggers emails to site owner as described [here](site-access-review.md#initiate-a-site-access-review).
+This triggers emails to site owner as described [here](site-access-review.md#how-to-initiate-a-site-access-review).
 
 ### Track Site access reviews using PowerShell
 

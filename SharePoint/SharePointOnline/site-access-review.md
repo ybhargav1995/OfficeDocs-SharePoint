@@ -83,7 +83,7 @@ To track all initiated site access reviews, go to the **My review requests** tab
 
 Once a review is initiated, its status remains "pending" until the site owner completes it. After completion, the review status and comments will be updated with the reviewer's name and the date and time of completion. If a review fails (for example, due to an invalid email for the site owner), it's marked as failed.
 
-For reports available via PowerShell, such as the Oversharing baseline report, you can track reviews using this [PowerShell command](/powershell-for-data-access-governance.md#track-site-access-reviews-using-powershell).
+For reports available via PowerShell, such as the Oversharing baseline report, you can track reviews using this [PowerShell command](powershell-for-data-access-governance.md#track-site-access-reviews-using-powershell).
 
 ### Site access review process for site owners
 
