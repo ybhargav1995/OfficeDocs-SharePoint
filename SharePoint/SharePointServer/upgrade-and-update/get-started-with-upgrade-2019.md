@@ -23,7 +23,7 @@ description: "Complete your SharePoint upgrade. Find information on upgrading da
 [!INCLUDE[appliesto-xxx-2016-2019-xxx-xxx-md](../includes/appliesto-xxx-2016-2019-xxx-xxx-md.md)]
 
 > [!IMPORTANT]
-> When considering upgrading to SharePoint Server 2019 from SharePoint 2016, keep in mind that both products reach the end of their lifecycle on the same date, that is, July 24th, 2026. We recommend that you strongly consider upgrading SharePoint Server 2016 directly to SharePoint Server Subscription Edition.  
+> When you are upgrading to SharePoint Server 2019 from SharePoint 2016, note that both products reach the end of their lifecycle on the same date, that is, July 24th, 2026. It's recommended that you upgrade directly from SharePoint Server 2016 to SharePoint Server Subscription Edition.  
   
 The first step in any upgrade process is to learn about the process itself so that you can plan and prepare appropriately. These articles help you understand how the SharePoint upgrade process works. These articles also include overviews of how to upgrade service applications.
   
