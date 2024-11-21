@@ -58,7 +58,7 @@ To allow 'MigApp' to move content into all SharePoint sites, grant ‘Sites.Full
 
   - 'Sites.FullControl.All': Required for full control of all site collections.
   
-Grant additional permissions
+Grant more permissions
 
 - Microsoft Graph API:
 
@@ -78,19 +78,19 @@ Grant additional permissions
   
 ### 3. Upload certificate
 
- Go to **Certificates & secrets** page, select **Certificates** tab.
+ Go to **Certificates & secrets** page, and select **Certificates** tab.
 
 - Upload the public key of your X.509 certificate that is issued by the Enterprise Public Key Infrastructure (PKI).
 
-- After uploading the certificate, copy the value in 'Thumbprint' for future use.
+- Copy the value in 'Thumbprint' for future use.
 
 ## Grant destination site access permission
 
-If you set the SharePoint Sites.Selected permission for 'MigApp', you need to grant the application  **FullControl** permissions for all the migration destination sites before the migration starts. 
+If you set the SharePoint **Sites.Selected** permission for 'MigApp', you need to grant the application  **FullControl** permissions for all the migration destination sites before the migration starts. 
 
 You can use either the Microsoft Graph API or PowerShell PnP to grant these permissions:
 
-- Microsoft Graph API: Grant the **Owner** permission role on the sites. You can find detailed instructions on how to do this in [Create permission - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/site-post-permissions?view=graph-rest-1.0&tabs=http).
+- Microsoft Graph API: Grant the **Owner** permission role on the sites. You can find detailed instructions in [Create permission - Microsoft Graph v1.0 | Microsoft Learn](/graph/api/site-post-permissions?view=graph-rest-1.0&tabs=http).
 
 - PowerShell PnP: Use “Grant-PnPAzureADAppSitePermission” command to set the **FullControl** permission. Detailed instructions are available on the [Grant-PnPAzureADAppSitePermission page](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html).
 
@@ -115,11 +115,13 @@ Copy **CertificateConfig.json** under %appdata%\Microsoft\MigrationToolStorage. 
 
 - If the file isn't provided, SPMT will prompt you to enter SharePoint admin credentials.
 
-Additionally, if 'MigApp' doesn't have sufficient permissions, all migrations will fail with error messages such as "Sorry, you can’t create this site. Please enter a different SharePoint Online site URL or contact your administrator" if the target site hasn't been created, or "Invalid site URL" if the target site already exists.
+Additionally, if 'MigApp' doesn't have sufficient permissions, all migrations will fail with error messages:
+- "Sorry, you can’t create this site. Please enter a different SharePoint Online site URL or contact your administrator" if the target site doesn't exist.
+- "Invalid site URL" if the target site already exists.
 
-## Additional setup for Workflow migration
+## Setup for Workflow migration
 
-To enable 'MigApp' to migrate SharePoint workflows to Power Automate, you need to perform additional configuration.
+To enable 'MigApp' to migrate SharePoint workflows to Power Automate, you need to perform extra configuration.
 
 **Make 'MigApp' a Service Principal for the Power Platform**
 
