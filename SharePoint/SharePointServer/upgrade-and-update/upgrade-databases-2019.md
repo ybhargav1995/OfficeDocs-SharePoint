@@ -24,7 +24,7 @@ description: "Find resources to help you perform the steps to upgrade databases 
 [!INCLUDE[appliesto-xxx-2016-2019-xxx-xxx-md](../includes/appliesto-xxx-2016-2019-xxx-xxx-md.md)]
 
 > [!IMPORTANT]
-> When you are upgrading to SharePoint Server 2019 from SharePoint 2016, note that both products reach the end of their lifecycle on the same date, that is, July 24th, 2026. It's recommended that you upgrade directly from SharePoint Server 2016 to SharePoint Server Subscription Edition.
+> If you are upgrading from SharePoint Server 2016 to SharePoint Server 2019, note that both products reach the end of their lifecycle on the same date, that is, July 24th, 2026. Therefore, it's recommended that you upgrade directly from SharePoint Server 2016 to SharePoint Server Subscription Edition.
   
 The following articles provide information about upgrading databases to SharePoint Server 2019.
   
