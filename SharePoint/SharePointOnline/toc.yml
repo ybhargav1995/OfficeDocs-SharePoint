@@ -125,6 +125,7 @@ items:
       items:
       - name: Overview
         href: advanced-management.md
+      - name: advanced-management-faq.md
       - name: Manage content sprawl
         items:
         - name: Create site ownership policy
@@ -157,6 +158,8 @@ items:
           href: onedrive-site-access-restriction.md
         - name: Restrict discovery of SharePoint sites and content
           href: restricted-content-discovery.md
+        - name: Restrict OneDrive and SharePoint site creation
+          href: restricted-site-creation.md
         - name: Restrict SharePoint site access by security groups
           href: restricted-access-control.md
   - name: Performance
@@ -306,6 +309,8 @@ items:
       href: manage-site-collection-administrators.md
     - name: Manage site creation
       href: manage-site-creation.md
+    - name: Restrict site creation
+      href: restricted-site-creation.md
     - name: Manage site storage limits
       href: manage-site-collection-storage-limits.md
     - name: Change site addresses
