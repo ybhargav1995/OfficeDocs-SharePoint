@@ -109,13 +109,13 @@ Prepare a configuration file named **CertificateConfig.json** with following con
 
 Copy **CertificateConfig.json** under %appdata%\Microsoft\MigrationToolStorage. If the folder doesn't exist, create it manually. Then, launch SPMT.
 
-- If the **CertificateConfig.json** file contains the correct attributes, SPMT will start without prompting for SharePoint admin credentials. 
+- If the **CertificateConfig.json** file contains the correct attributes, SPMT starts without prompting for SharePoint admin credentials. 
 
-- If the file is incorrectly formatted or contains incorrect attribute values, SPMT will display the message "The application will exit because of sign-in failure," followed by an error message explaining the reason for the failure.
+- If the file is incorrectly formatted or contains incorrect attribute values, SPMT displays the message "The application will exit because of sign-in failure," followed by an error message explaining the reason for the failure.
 
-- If the file isn't provided, SPMT will prompt you to enter SharePoint admin credentials.
+- If the file isn't provided, SPMT prompts you to enter SharePoint admin credentials.
 
-Additionally, if 'MigApp' doesn't have sufficient permissions, all migrations will fail with error messages:
+Additionally, if 'MigApp' doesn't have sufficient permissions, all migrations fail with error messages:
 - "Sorry, you can’t create this site. Please enter a different SharePoint Online site URL or contact your administrator" if the target site doesn't exist.
 - "Invalid site URL" if the target site already exists.
 
