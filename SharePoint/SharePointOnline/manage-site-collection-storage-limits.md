@@ -41,7 +41,7 @@ The amount of SharePoint space your organization has is based on the number of l
 
 2. In the upper right of the page, see the amount of storage available and the total storage for your subscription. (If your organization has configured Multi-Geo in Microsoft 365, you can point to the bar to see the amount of storage used in the current geo location and all other geo locations.) 
 
-    ![Storage bar on the Active sites page](media/active-sites-storage-bar.png)
+    :::image type="content" source="media/active-sites-storage-bar.png" alt-text="Storage bar on the Active sites page showing total and available storage space." lightbox="media/active-sites-storage-bar.png":::
 
     > [!NOTE]
     > Storage usage doesn't include changes made within the last 24-48 hours. SharePoint storage is calculated in binary Gigabytes (GB), where 1 GB = 2<sup>30</sup>.
@@ -60,7 +60,7 @@ If you prefer to fine-tune the storage space allocated to each site, you can set
 
 2. Select **Site storage limits**.
 
-    ![Managing site storage limits](media/site-storage-limits.png)
+    :::image type="content" source="media/site-storage-limits.png" alt-text="Managing site storage limits in the SharePoint admin center." lightbox="media/site-storage-limits.png":::
      
 3. Select **Automatic** or **Manual**, and then select **Save**.
     
@@ -75,7 +75,7 @@ Follow these steps to specify individual site storage limits *when your storage 
 
 3. On the **General** tab, under **Storage limit**, select **Edit** to open the edit storage limit panel.
 
-    ![Changing the storage limit for a site](media/site-storage-limit.png)
+    :::image type="content" source="media/site-storage-limit.png" alt-text="Changing the storage limit for a site in the SharePoint admin center." lightbox="media/site-storage-limit.png":::
     
 4. Enter the maximum storage in GB for the site. 
 
