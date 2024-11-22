@@ -27,7 +27,7 @@ description: "Introduces articles that describe software and other requirements 
 SharePoint Server Subscription Edition supports database servers deployed on the following operating systems:
 - [Windows Server 2019](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) Standard or Datacenter
 - [Windows Server 2022](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) Standard or Datacenter
-- Windows Server 2025 Standard or Datacenter
+- [Windows Server 2025](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025) Standard or Datacenter
 
 SharePoint Server Subscription Edition supports database servers deployed with the following Windows Server installation options:
 - Server with Desktop Experience
