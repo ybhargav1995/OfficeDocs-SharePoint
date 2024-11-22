@@ -30,13 +30,15 @@ You can create a CSV file of every unique file, user, permission and link on a g
 
 When you run the report, the CSV file is saved to a location of your choosing on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
 
-To run the report (SharePoint)
+To run the report (SharePoint):
+
 1. Open the site where you want to run the report
 2. On the **Settings** menu, click **Site usage**.
 3. In the **Shared with external users** section, click **Run report**.
 4. Choose a location to save the report, and then click **Save**.
 
-To run the report (OneDrive)
+To run the report (OneDrive):
+
 1. From the Microsoft 365 app launcher, select the OneDrive tile.
 2. On the **Settings** menu, click **OneDrive settings**.
 3. Click **More settings**, and then click **Run sharing report**.
@@ -69,5 +71,3 @@ The report contains the following columns:
 ## Related articles
 
 [Overview of Microsoft Graph Data Connect](/graph/data-connect-concept-overview)
-
-

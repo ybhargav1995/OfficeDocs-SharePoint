@@ -53,7 +53,7 @@ The technical implementation options that you choose for file collaboration in M
 
 - Creating a smooth user experience
 
-**Protecting your intellectual property**
+### Protecting your intellectual property
 
 There are several options discussed later in this article for protecting your intellectual property. These include limiting who files can be shared with, applying governance policies by using sensitivity labels, and managing the devices that users use to access content.
 
