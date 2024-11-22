@@ -1,7 +1,7 @@
 ---
 ms.date: 11/19/2024
 title: Manage access to agents in SharePoint
-ms.reviewer: 
+ms.reviewer:
 ms.author: ruihu
 author: maggierui
 manager: jtremper
