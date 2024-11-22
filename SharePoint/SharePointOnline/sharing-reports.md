@@ -2,9 +2,9 @@
 ms.date: 01/25/2024
 title: Report on file and folder sharing in a SharePoint site
 ms.reviewer: srice
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:

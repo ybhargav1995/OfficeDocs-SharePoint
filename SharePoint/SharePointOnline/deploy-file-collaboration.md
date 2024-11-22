@@ -2,9 +2,9 @@
 ms.date: 08/07/2023
 title: Plan and deploy a file collaboration environment - SharePoint
 ms.reviewer: 
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords: NOCSH
