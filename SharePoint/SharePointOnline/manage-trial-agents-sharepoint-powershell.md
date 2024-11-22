@@ -45,34 +45,34 @@ You can manage the trial access to agents in SharePoint by following these steps
 
 | Action                                      | Command                              |
 |---------------------------------------------|--------------------------------------|
-| [Opt out and disable access to the trial](https://powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus`     |
-| [Confirm trial settings to the trial](https://powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) | `Get-SPOCopilotPromoOptInStatus`     |
-| [Re-enable access](https://powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus`     |
+| [Opt out and disable access to the trial](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus`     |
+| [Confirm trial settings to the trial](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) | `Get-SPOCopilotPromoOptInStatus`     |
+| [Re-enable access](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus`     |
 
 > [!IMPORTANT]
 > Ensure that you have the latest version of SharePoint PowerShell installed to run these cmdlets effectively.
 
 ## How the trial access affects your organization
 
-<div style="display: flex; flex-wrap: wrap;">
-  <div style="flex: 50%; padding: 10px;">
+<div >
+  <div >
 Once the trial promotion is available, your unlicensed users are able to view and interact directly with agents in SharePoint. They'll receive a notification about their promotional access and be encouraged to start exploring the feature.
     </div>
-      <div style="flex: 50%; padding: 10px;">
+      <div>
 
 ![screenshots of the trial access message in chat pane](media/agents-sharepoint/promo-message-to-users.png)
         </div>
-    <div style="flex: 50%; padding: 10px;">
+    <div >
       <br>Anytime these users interact with agents, their usage counts toward your organization’s monthly trial use of 10,000 queries. Once the maximum number of queries is reached, users are notified that the service is temporarily unavailable and prompted to try again next month.</br>
         <br>
         Unused queries won't roll over to the following month. If you need more queries, you can get them by adding more Microsoft 365 Copilot licenses. After the trial ends on June 30, 2025, users without a Microsoft 365 Copilot License will no longer be able to create or use the agents. However, agents created and used during the trial promotion remain available, and no historical data are lost.</br>
         </div>
-    <div style="flex: 50%; padding: 10px;">
-      ![screenshots of the trial access message in chat pane](media/agents-sharepoint/reached-limit-message.png)
+    <div >
+      ![screenshots of reaching query limit message](media/agents-sharepoint/reached-limit-message.png)
     </div>
 </div>
 
 ## Additional information
 
 - Learn more about the agents in SharePoint promotion Agents Promo Blog
-- Learn more about [Copilot in SharePoint](https://support.microsoft.com/en-us/office/copilot-in-sharepoint-help-learning)
+- Learn more about [Copilot in SharePoint](https://support.microsoft.com/topic/44e981e7-dcef-4422-977d-967f3dcfe796)
