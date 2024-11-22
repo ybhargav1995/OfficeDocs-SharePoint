@@ -21,7 +21,10 @@ description: "Learn how to plan, prepare, and perform an upgrade to SharePoint S
 
 # Upgrade to SharePoint Server 2019
 
-[!INCLUDE[appliesto-xxx-2016-2019-xxx-xxx-md](../includes/appliesto-xxx-2016-2019-xxx-xxx-md.md)]  
+[!INCLUDE[appliesto-xxx-2016-2019-xxx-xxx-md](../includes/appliesto-xxx-2016-2019-xxx-xxx-md.md)]
+
+> [!IMPORTANT]
+> When planning to upgrade from an older SharePoint Server to SharePoint Server 2019, note that it will reach its end-of-life (EOL) stage on [July 14th, 2026](/lifecycle/products/sharepoint-server-2019). It's advisable to upgrade directly to SharePoint Server Subscription Edition.  
   
 The following articles provide information about performing an upgrade to SharePoint Server 2019.
 
