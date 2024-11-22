@@ -1244,6 +1244,11 @@
       "source_path": "sharepoint/sharepointonline/onedrive-in-citrix-virtual-apps-deployment-guide.md",
       "redirect_url": "/sharepoint/sync-vdi-support",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "sharepoint/sharepointonline/advanced-management-faq.md",
+      "redirect_url": "/sharepoint/advanced-management",
+      "redirect_document_id": false
     }
   ]
 }

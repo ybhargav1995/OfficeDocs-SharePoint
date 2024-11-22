@@ -125,7 +125,6 @@ items:
       items:
       - name: Overview
         href: advanced-management.md
-      - name: advanced-management-faq.md
       - name: Manage content sprawl
         items:
         - name: Create site ownership policy
