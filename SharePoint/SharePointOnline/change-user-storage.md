@@ -57,11 +57,11 @@ As an IT administrator, you can adjust a user's OneDrive storage space using the
 
     ![OneDrive storage settings screenshot](media/edit-user-storage-limit.png)
 
-When users need more storage beyond the initial 5 TB, Microsoft increases their storage as follows:
+When users need more storage beyond the initial 5 TB, you can increase their storage limit up to 25 TB by performing the following steps:
 
-- When a user reaches 90% of their 5 TB capacity, Microsoft increases their storage to up to 25 TB. Admins can set a lower limit if desired.
-- If usage drops below 90%, storage limit resets to 5 TB.
-- For users reaching 90% of their 25 TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.<sup>1</sup>    
+- When a user reaches 90% of their 5 TB capacity, [check whether the tenant is configured for an increase in the user's OneDrive quota beyond 5 TB](/sharepoint/troubleshoot/storage/check-storage-increase-eligibility). After verifying that the tenant is configured for the increase, admins can set the user-specific limit to greater than 5 TB.
+- If usage drops below 4.5 TB (90% of 5 TB), the storage limit resets to 5 TB.
+- For users reaching 90% of their 25 TB capacity, more storage is provided via SharePoint team sites. Contact [Microsoft Support](https://go.microsoft.com/fwlink/?linkid=869559) for assistance.<sup>1</sup>
 
     > [!NOTE]
     > For Office 365 A1 users, storage is limited to 100 GB. For more information, see [Office 365 Education service descriptions](/office365/servicedescriptions/office-365-platform-service-description/office-365-education).
@@ -88,7 +88,7 @@ When users need more storage beyond the initial 5 TB, Microsoft increases their 
     Write-Host "Done"
     ```
 
-3. Open the SharePoint Online Management Shell and run the script:
+3. Open the SharePoint Online Management Shell and run the following script:
 
     ```PowerShell
     PS C:\>.\UpdateOneDriveStorage.ps1
@@ -118,12 +118,12 @@ Here's a reference table for MB to TB conversions:
 
 ## Troubleshooting OneDrive storage issues
 
-If you encounter issues when adjusting storage or if the storage amount reverts to its original value, a Microsoft 365 administrator can run diagnostics in the admin center.
+If you encounter issues when adjusting storage or if the storage amount reverts to its original value, a Microsoft 365 administrator can run diagnostics in the Microsoft 365 admin center.
 
 1. In the Microsoft 365 admin center, select **Run Tests** to launch the OneDrive storage quota diagnostic.
 
     > [!NOTE]
-    > Diagnostics are unavailable for GCC High, DoD, Microsoft 365 operated by 21Vianet, or Microsoft 365 Education.
+    > Diagnostics are unavailable for GCC High, DoD, Microsoft 365 operated by 21Vianet, and Microsoft 365 Education.
 
 2. Follow the recommendations provided by the diagnostic.
 
