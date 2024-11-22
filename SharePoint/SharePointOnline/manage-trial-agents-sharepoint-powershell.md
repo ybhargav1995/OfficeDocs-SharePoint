@@ -54,8 +54,8 @@ You can manage the trial access to agents in SharePoint by following these steps
 
 ## How the trial access affects your organization
 
-<div >
-  <div >
+<div>
+  <div>
 Once the trial promotion is available, your unlicensed users are able to view and interact directly with agents in SharePoint. They'll receive a notification about their promotional access and be encouraged to start exploring the feature.
     </div>
       <div>
