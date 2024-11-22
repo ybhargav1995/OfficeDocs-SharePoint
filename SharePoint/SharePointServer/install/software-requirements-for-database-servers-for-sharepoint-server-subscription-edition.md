@@ -42,7 +42,7 @@ SharePoint Server Subscription Edition supports the following database versions:
 - Microsoft Azure SQL Managed Instance (MI). This is only supported if your SharePoint Server farm is hosted in Microsoft Azure. For more information, see [Deploy SharePoint Server with Azure SQL Managed Instance](/sharepoint/administration/deploy-azure-sql-managed-instance-with-sharepoint-servers).
 
 > [!NOTE]
-> SQL Server products and all future SQL Server Cumulative Updates are supported through the SQL Server product lifecycle.
+> SQL Server products and all future SQL Server Cumulative Updates (CUs) are supported through the SQL Server product lifecycle.
 
 > [!NOTE]
-> SQL Server Express is not supported. Azure SQL Database (the non-Managed Instance DBaaS service) is also not supported for any SharePoint databases.
+> SQL Server Express isn't supported. Azure SQL Database (the non-Managed Instance DBaaS service) is also not supported for any SharePoint databases.
