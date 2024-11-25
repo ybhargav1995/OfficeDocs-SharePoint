@@ -101,7 +101,7 @@ amsiscantest:x5opap4pzx54p7cc7$eicar-standard-antivirus-test-fileh+h*
 
 **For example**: send a request to https://servername/sites/sitename?amsiscantest:x5opap4pzx54p7cc7$eicar-standard-antivirus-test-fileh+h*
 
-```
+```powershell
 Invoke-WebRequest -Uri "https://servername/sites/sitename?amsiscantest:x5opap4pzx54p7cc7$eicar-standard-antivirus-test-fileh+h*" -Method GET
 ```
 
