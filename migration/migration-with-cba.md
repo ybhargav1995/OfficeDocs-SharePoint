@@ -1,5 +1,5 @@
 ---
-ms.date:     10/16/2024
+ms.date:     11/25/2024
 title:       Use Certificate Based Authentication in migration
 description: Describing how to use Certificate Based Authentication in migration.
 author:      zacsun-ms
@@ -24,38 +24,81 @@ search.appverid: MET150
 
 Certificate Based Authentication (CBA) is supported in SPMT (SharePoint Migration Tool) builds newer than v4.1.125.11.
 
-CBA with SPMT allows customers to use Azure App Registrations with certificate authentication as the identity model to migrate on-premises content to SharePoint and OneDrive.
+SPMT allows customers to use Azure App Registrations with certificate authentication as the identity model to migrate on-premises content to SharePoint and OneDrive.
 
 ## Preparation Steps
 
 ### 1. Register an application
 
-Follow [the instructions](https://learn.microsoft.com/entra/identity-platform/quickstart-register-app?tabs=certificate) to register an application in the Microsoft Entra admin center.
+Follow [the instructions](/entra/identity-platform/quickstart-register-app?tabs=certificate) to register an application in the Microsoft Entra admin center. Let's name this application 'MigApp'.
 
 ### 2. Grant permissions
 
-Under this registered application, choose different levels of API permissions as needed.
+In the Entra admin center, go to **Application > App registrations** and select 'MigApp' from the **All applications** tab.
 
-If you want to limit the registered application to specific SharePoint sites, add the following API permissions.
+Next, grant the necessary API permissions under **API Permissions** page.
 
-- 'Sites.Selected' under SharePoint API for accessing REST and CSOM (SharePoint Client-Side Object Model) calls.
-- 'Sites.Selected' under Microsoft Graph API for sites-related oerations.
-- 'Sites.Read.All' under Microsoft Graph API for searching sites and looking up the root site.
-- 'User.Read.All' and Group.Read.All under Microsoft Graph API for resolving the user mapping.
-- 'Organization.Read.All' under Microsoft Graph API for sending telemetry to the right Geo location.
+To limit 'MigApp' to move content into specific SharePoint sites, grant 'Sites.Selected' permission under the SharePoint and Microsoft Graph API.
 
-Granting SharePoint the 'AllSites.FullControl' permission under the SharePoint and Microsoft Graph API to the application lets the application move content into all your tenant sites.
+- SharePoint API:
+
+  - 'Sites.Selected': Required for REST and CSOM (Client-Side Object Model) calls.
+
+- Microsoft Graph API:
+
+  - 'Sites.Selected': Required for site-related operations.
+
+To allow 'MigApp' to move content into all SharePoint sites, grant ‘Sites.FullControl.All’ permission under the SharePoint and Microsoft Graph API.
+
+- SharePoint API:
+
+  - 'Sites.FullControl.All': Required for full control of all site collections.
+
+- Microsoft Graph API:
+
+  - 'Sites.FullControl.All': Required for full control of all site collections.
+
+Grant more permissions
+
+- Microsoft Graph API:
+
+  - 'User.Read.All': Required for resolving user mapping.
+
+  - 'Group.Read.All': Required for resolving user mapping.
+
+  - 'Organization.Read.All': Required for sending telemetry to the correct Geo location.
+
+- SharePoint API:
+
+  - 'TermStore.ReadWrite.All': Required for reading and writing managed metadata (necessary for SharePoint term store migration).
+
+- Dynamic CRM API:
+
+  - 'user_impersonation': Required for accessing Common Data Service as organization users (necessary for migrating SharePoint workflows to Power Automate).
 
 ### 3. Upload certificate
 
-- Upload the public key of your X.509 certificate, issued by the Enterprise Public Key Infrastructure (PKI), to the registered application as an application credential.
-- After uploading the certificate, copy the value in 'Thumbprint' for future use.
+ Go to **Certificates & secrets** page, and select **Certificates** tab.
 
-### 4. Create configuration file
+- Upload the public key of your X.509 certificate that is issued by the Enterprise Public Key Infrastructure (PKI).
 
-Prepare a config file named "CertificateConfig.json" with following content:
+- Copy the value in 'Thumbprint' for future use.
 
-```
+## Grant destination site access permission
+
+If you set the SharePoint **Sites.Selected** permission for 'MigApp', you need to grant the application  **FullControl** permissions for all the migration destination sites before the migration starts.
+
+You can use either the Microsoft Graph API or PowerShell PnP to grant these permissions:
+
+- Microsoft Graph API: Grant the **Owner** permission role on the sites. You can find detailed instructions in [Create permission - Microsoft Graph v1.0](/graph/api/site-post-permissions?view=graph-rest-1.0&tabs=http).
+
+- PowerShell PnP: Use “Grant-PnPAzureADAppSitePermission” command to set the **FullControl** permission. Detailed instructions are available on the [Grant-PnPAzureADAppSitePermission page](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html).
+
+## Using CBA with SPMT
+
+Prepare a configuration file named **CertificateConfig.json** with following content:
+
+```json
 {
     "Thumbprint":"thumbprint for the cert",
     "TenantId":"Tenant ID",
@@ -63,21 +106,36 @@ Prepare a config file named "CertificateConfig.json" with following content:
 }
 ```
 
-Copy "CertificateConfig.json" under %appdata%\Microsoft\MigrationToolStorage. If the folder doesn't exist, create it manually.
+Copy **CertificateConfig.json** under %appdata%\Microsoft\MigrationToolStorage. If the folder doesn't exist, create it manually. Then, launch SPMT.
 
-## Grant destination site access permission
+- If the **CertificateConfig.json** file contains the correct attributes, SPMT starts without prompting for SharePoint admin credentials.
 
-If you set the SharePoint Sites.Selected permission for the registered application, you need to grant access permissions of the destination sites to the application. **FullControl** permission is required for SPMT to create a destination document library.
+- If the file is incorrectly formatted or contains incorrect attribute values, SPMT displays the message "The application will exit because of sign-in failure," followed by an error message explaining the reason for the failure.
 
-Both Microsoft Graph API and PowerShell PnP support granting the application permission.
+- If the file isn't provided, SPMT prompts you to enter SharePoint admin credentials.
 
-- Use Microsoft Graph API to grant the **Owner** permission role on the sites. [Create permission - Microsoft Graph v1.0 | Microsoft Learn](https://learn.microsoft.com/graph/api/site-post-permissions?view=graph-rest-1.0&tabs=http)
-- Use PowerShell PnP command “Grant-PnPAzureADAppSitePermission” to set the **FullControl** permission needed for the application.
+Additionally, if 'MigApp' doesn't have sufficient permissions, all migrations fail with one of the following error messages:
+- "Sorry, you can’t create this site. Please enter a different SharePoint Online site URL or contact your administrator" if the target site doesn't exist.
+- "Invalid site URL" if the target site already exists.
 
-[https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html](https://pnp.github.io/powershell/cmdlets/Grant-PnPAzureADAppSitePermission.html)
+## Setup for Workflow migration
 
-## Using CBA with SPMT
+To enable 'MigApp' to migrate SharePoint workflows to Power Automate, you need to do extra configuration.
 
-If the "CertificateConfig.json" file contains the correct attributes, SPMT starts without prompting users to enter SharePoint admin credentials. However, if the file is incorrectly formatted, an error message appears "The application will exit because of sign-in failure. Please double-check and try again." after SPMT is launched. If wrong attribute values are provided in the "CertificateConfig.json" file, all migrations fail with errors in the migration report indicating insufficient permissions.
+**Make 'MigApp' a Service Principal for the Power Platform**
 
-If the "CertificateConfig.json" file isn't provided, SPMT asks users to enter SharePoint admin credentials.
+Use PowerShell to register 'MigApp' with Microsoft Power Platform ([learn more](/power-platform/admin/powershell-create-service-principal)).
+
+```powershell
+Install-Module -Name Microsoft.PowerApps.Administration.PowerShell
+Import-Module -Name Microsoft.PowerApps.Administration.PowerShell
+Add-PowerAppsAccount [-Endpoint 
+New-PowerAppManagementApp -ApplicationId $appId]
+```
+
+For a detailed explanation of `Add-PowerAppsAccount`, refer to [link](/powershell/module/microsoft.powerapps.administration.powershell/add-powerappsaccount?view=pa-ps-latest).
+
+**Grant 'MigApp' Access to the Power Platform Environment**
+
+Follow [the instruction](/power-platform/admin/manage-application-users) to create an application user. Make sure you select 'MigApp' after you select **'+ Add an app'** in step 6. Assign the 'System Administrator' role to the new application user.
+
