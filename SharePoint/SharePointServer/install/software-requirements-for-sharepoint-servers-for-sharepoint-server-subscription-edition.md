@@ -15,7 +15,7 @@ ms.collection:
 - IT_Sharepoint_Server
 - IT_Sharepoint_Server_Top
 ms.assetid: 
-description: "This article introduces the article that describes software requirements for SharePoint Server."
+description: "This article describes the software requirements for SharePoint Server."
 ---
 
 # Software requirements for SharePoint Servers for SharePoint Server Subscription Edition
@@ -28,6 +28,7 @@ SharePoint Server supports the following operating systems:
 
 - [Windows Server 2019](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) Standard or Datacenter
 - [Windows Server 2022](https://www.microsoft.com/evalcenter/evaluate-windows-server-2022) Standard or Datacenter
+- [Windows Server 2025](https://www.microsoft.com/evalcenter/evaluate-windows-server-2025) Standard or Datacenter
 
 SharePoint Server Subscription Edition supports the following Windows Server installation options:
 
@@ -35,7 +36,7 @@ SharePoint Server Subscription Edition supports the following Windows Server ins
 - Server Core
 
 > [!NOTE]
-> Microsoft does not support installing Microsoft Office and SharePoint Server Subscription Edition on the same computer.
+> Microsoft doesn't support installing Microsoft Office and SharePoint Server Subscription Edition on the same computer.
 
 > [!NOTE]
 > The minimum Microsoft Office version supported with SharePoint Server Subscription Edition is Microsoft Office 2013.
@@ -46,7 +47,7 @@ SharePoint Server Subscription Edition requires additional software prerequisite
 
 ### Software prerequisites
 
-The SharePoint Server Subscription Edition prerequisite installer (`prerequisiteinstaller.exe`) installs the following software if they haven't already been installed on the target server. The software is installed in the following order:
+The SharePoint Server Subscription Edition prerequisite installer (`prerequisiteinstaller.exe`) installs the following softwares in the order as listed if they haven't already been installed on the target server:
 
 1. Web Server (IIS) Role
 
@@ -55,31 +56,42 @@ The SharePoint Server Subscription Edition prerequisite installer (`prerequisite
 3. [Visual C++ Redistributable Package for Visual Studio 2015-2019](https://go.microsoft.com/fwlink/?LinkId=2130438)
 
     > [!NOTE]
-    > SharePoint Server Subscription Edition will require the Visual C++ 2015-2022 Redistributable (x64) as a software prerequisite starting with SharePoint Server Subscription Edition Version 23H1. This new software prerequisite replaces the Visual C++ Redistributable Package for Visual Studio 2015-2019. This new software prerequisite will not be installed by the prerequisiteinstaller.exe tool, but will be installed by the SharePoint Server Subscription Edition Version 23H1 feature update if it isn't already installed. To download and install it separately, see [Visual C++ 2015-2022 Redistributable (x64)](https://go.microsoft.com/fwlink/?LinkId=2224881).
+    > SharePoint Server Subscription Edition will require the Visual C++ 2015-2022 Redistributable (x64) as a software prerequisite starting with SharePoint Server Subscription Edition Version 23H1. This new software prerequisite replaces the Visual C++ Redistributable Package for Visual Studio 2015-2019. This new software prerequisite won't be installed by the prerequisiteinstaller.exe tool but by the SharePoint Server Subscription Edition Version 23H1 feature update if it isn't already installed. For information on how to download and install it separately, see [Visual C++ 2015-2022 Redistributable (x64)](https://go.microsoft.com/fwlink/?LinkId=2224881).
 
 ### Prerequisite installer operation and command-line options
 
-You can run `prerequisiteinstaller.exe` with no parameters or at a command prompt with the following optional parameters. When you run `prerequisiteinstaller.exe`, you might be asked to restart the server one or more times during the software installation process. If you're running it at a command prompt, you should continue the prerequisite installation by running `prerequisiteinstaller.exe` with the **/continue** parameter after restarting.
+You can run `prerequisiteinstaller.exe` with no parameters or at a command prompt with the following optional parameters: 
 
-- **/?** This displays command-line options.
+- **/?**: This displays command-line options.
 
-- **/continue** This is used to tell the installer that it is continuing from a restart.
+- **/continue**: This is used to tell the installer that it's continuing from a restart.
 
-- **/unattended** This indicates the installer should run with no user interaction. This is typically used when scripting the installation.
+- **/unattended**: This indicates that the installer should run with no user interaction. This is typically used when scripting the installation.
 
-The prerequisite installer installs software from the file that you specify in the command-line options described in the following list. In this list, **\<_file_\>** signifies the file from which you want to install and **\<_path_\>** signifies the directory from which you want to install. If you do not specify the **\<_file_\>** or **\<_path_\>** options, the installer downloads the file from the Internet and installs it. If the option does not apply to the current operating system, it is ignored.
+When you run `prerequisiteinstaller.exe`, you might be asked to restart the server one or more times during the software installation process. If you're running it at a command prompt, you should continue the prerequisite installation by running `prerequisiteinstaller.exe` with the **/continue** parameter after restarting.
+
+The prerequisite installer installs software from the file that you specify in the command-line options described in the following list:
 
 - **/WindowsSource:<_path_>** Install any "Features on Demand (FOD)" Windows features from <_path_> instead of downloading them from Windows Update. Use this parameter if the computer doesn't have access to Windows Update. The <_path_> is typically the **\sources\sxs** folder on the Windows Server installation media.
 
+  > [!NOTE]
+  > **\<_path_\>** signifies the directory from which you want to install.
+
 - **/DotNet48:<_file_>** Install Microsoft .NET Framework 4.8 from <_file_>.
 
+  > [!NOTE]
+  > **\<_file_\>** signifies the file from which you want to install.
+
 - **/MSVCRT142:<_file_>** Install Visual C++ Redistributable Package for Visual Studio 2015-2019 from <_file_>.
+
+  > [!IMPORTANT]
+  > If you don't specify the **\<_file_\>** or **\<_path_\>** options, the installer downloads the file from the Internet and installs it. If the option doesn't apply to the current operating system, it's ignored.
 
 The prerequisite installer creates log files at **%TEMP%\prerequisiteinstaller.\<date>.\<time>.log**. You can check these log files for specific details about all changes the installer makes to the target computer.
 
 ### Manually configure Windows Server Roles and Features
 
-To manually configure the required Windows Server Roles and Features, you can use one of two methods:
+To manually configure the required Windows Server Roles and Features, you can use one of the following two methods:
 
 1. Server Manager
 

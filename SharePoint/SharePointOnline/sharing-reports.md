@@ -2,9 +2,9 @@
 ms.date: 01/25/2024
 title: Report on file and folder sharing in a SharePoint site
 ms.reviewer: srice
-ms.author: jtremper
-author: jacktremper
-manager: pamgreen
+ms.author: ruihu
+author: maggierui
+manager: jtremper
 recommendations: true
 audience: Admin
 f1.keywords:
@@ -26,25 +26,27 @@ description: Learn how to create a report on file and folder sharing on a ShareP
 
 # Report on file and folder sharing in a SharePoint site
 
-You can create a CSV file of every unique file, user, permission and link on a given SharePoint site or OneDrive. This can help you understand how sharing is being used and if any files or folders are being shared with guests. You must be a site admin to run the report. Note that additional reporting options are available with [Microsoft Graph Data Connect](/graph/data-connect-datasets#onedrive-and-sharepoint-online).
+You can create a CSV file of every unique file, user, permission, and link on a given SharePoint site or OneDrive. This can help you understand how sharing is being used and if any files or folders are being shared with guests. You must be a site admin to run the report. Additional reporting options are available with [Microsoft Graph Data Connect](/graph/data-connect-datasets#onedrive-and-sharepoint-online).
 
 When you run the report, the CSV file is saved to a location of your choosing on the site. If you don't want site members to see the report, consider creating a folder with different permissions where only site owners can access the report.
 
-To run the report (SharePoint)
-1. Open the site where you want to run the report
-2. On the **Settings** menu, click **Site usage**.
-3. In the **Shared with external users** section, click **Run report**.
-4. Choose a location to save the report, and then click **Save**.
+To run the report (SharePoint):
 
-To run the report (OneDrive)
+1. Open the site where you want to run the report
+2. On the **Settings** menu, select **Site usage**.
+3. In the **Shared with external users** section, select **Run report**.
+4. Choose a location to save the report, and then select **Save**.
+
+To run the report (OneDrive):
+
 1. From the Microsoft 365 app launcher, select the OneDrive tile.
-2. On the **Settings** menu, click **OneDrive settings**.
-3. Click **More settings**, and then click **Run sharing report**.
-4. Choose a location to save the report, and then click **Save**.
+2. On the **Settings** menu, select **OneDrive settings**.
+3. Select **More settings**, and then select **Run sharing report**.
+4. Choose a location to save the report, and then select **Save**.
 
 The report may take some time to run depending on the size of the site.
 
-When the report is finished running you'll receive an email with a link to the report.
+When the report is finished running, you receive an email with a link to the report.
 
 ## CSV format
 
@@ -61,7 +63,7 @@ The report contains the following columns:
 |Permission|The permission level the user has on this item|
 |User Name|Friendly name of the user or group that has access to this item. If this is a sharing link, the user name is *SharingLink*|
 |User E-mail|The email address of the user who has access to this item. This is blank for SharePoint groups.|
-|User or Group Type|The type of user or group: Member (internal), Guest (external), SharePoint group, Security group or Microsoft 365 group. (Note that *Member* refers to a member in the directory, not a member of the site.)|
+|User or Group Type|The type of user or group: Member (internal), Guest (external), SharePoint group, Security group or Microsoft 365 group. (*Member* refers to a member in the directory, not a member of the site.)|
 |Link ID|The GUID of the sharing link if user name is *Sharing Link*|
 |Link Type|The type of link (Anonymous, Organization, Specific People) if user name is *Sharing Link*|
 |AccessViaLinkID|The **Link ID** used to access the item if a user's permission to an item is via a link.
@@ -69,5 +71,3 @@ The report contains the following columns:
 ## Related articles
 
 [Overview of Microsoft Graph Data Connect](/graph/data-connect-concept-overview)
-
-

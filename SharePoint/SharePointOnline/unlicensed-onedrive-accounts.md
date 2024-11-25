@@ -1,5 +1,5 @@
 ---
-ms.date: 10/10/2024
+ms.date: 11/18/2024
 title: "Manage unlicensed OneDrive user accounts"
 ms.author: mactra
 author: MachelleTranMSFT
@@ -28,7 +28,11 @@ In this article, you learn how to identify, monitor, and manage unlicensed OneDr
 ## Changes to storage policies for unlicensed OneDrive accounts
 
 > [!IMPORTANT]
-> Beginning January 27, 2025, any OneDrive user account that has been unlicensed for longer than 93 days becomes inaccessible to admins and end users. The unlicensed account is automatically archived, viewable via admin tools, but remains inaccessible until administrators take action on them. These changes do not apply to EDU, GCC, or DoD customers.
+>
+> Beginning January 27, 2025, any OneDrive user account that has been unlicensed for more than 93 days will undergo the following actions:
+>
+> - Unlicensed accounts will be automatically archived. This means they will still be visible to admins through admin tools, but both admins and end users will no longer have access. Access will remain restricted until administrators take action. (Note: These changes do not apply to EDU, GCC, or DoD customers.)
+> - Unlicensed accounts tied to active users (users who are not assigned a license but are still considered active in the system) will be deleted instead of archived.
 
 ## Reporting
 
@@ -54,10 +58,10 @@ The following table provides more information on data shown in the unlicensed On
 |---|---|
 | Unlicensed accounts | Total number of OneDrive accounts that aren't licensed as of the date the report is generated.|
 | Storage used | Total storage consumed by these unlicensed OneDrive accounts as of the report's date.|
-| Retention period | Unlicensed accounts with a [set retention period](set-retention.md) during the process of license removal or user account deletion. The retention period is honored, and the content will remain in an archived state until the period expires.|
-| Retention policy | Unlicensed accounts subject to a [retention policy](/purview/retention) set up in Microsoft Purview. The retention policy is honored, and the content will remain in an archived state until the policy expires.|
-| Active user with no license | Unlicensed accounts where the user's license was removed, but the account wasn't deleted as part of the [user deletion process](/microsoft-365/admin/add-users/delete-a-user) Starting in January 2025, unlicensed OneDrive accounts in this category will be moved to the recycle bin for 93 days before being permanently deleted. |
-| Duplicate account | Unlicensed accounts created when an employee transfers to a different country, region, or firm within the organization. If these duplicate accounts are unnecessary, it's recommended to use the downloadable CSV from the SharePoint admin center to identify and delete them. If no action is taken, the accounts are automatically archived starting in January 2025 and will incur archive charges.|
+| Retention period | Unlicensed accounts with a [set retention period](set-retention.md) during the process of license removal or user account deletion. The retention period is honored, and the content remains in an archived state until the period expires.|
+| Retention policy | Unlicensed accounts subject to a [retention policy](/purview/retention) set up in Microsoft Purview. The retention policy is honored, and the content remains in an archived state until the policy expires.|
+| Active user with no license | Accounts where the user's license was removed, but the account wasn't deleted as part of the [user deletion process](/microsoft-365/admin/add-users/delete-a-user). Starting in January 2025, users who aren't assigned a license but are still considered active in the system are deleted instead of archived. |
+| Duplicate account | Unlicensed accounts created when an employee transfers to a different country/region, or firm within the organization. If these duplicate accounts are unnecessary, we recommend using the downloadable CSV from the SharePoint admin center to identify and delete them. If no action is taken, the accounts are automatically archived starting in January 2025 and incurs archive charges.|
 
 ## Unlicensed OneDrive account management options
 
@@ -72,7 +76,7 @@ You can also bulk assign licenses using either of the following methods:
 - [Assign licenses to user accounts in the Microsoft 365 admin center](/microsoft-365/admin/manage/assign-licenses-to-users)
 - [Assign licenses to user accounts with PowerShell](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell)
 
-**After the unlicensed OneDrive account archival** - The account must be reactivated from the archived state before a license can be assigned. If the archived account has an associated user, the IT admin can give the user a valid license and the account will automatically get reactivated within 24 hours. If the archived account doesn't have an associated user (for example, if the identity was deleted), then we recommend admins move any actively needed content to a SharePoint site or an active and licensed OneDrive account.
+**After the unlicensed OneDrive account archival** - The account must be reactivated from the archived state before a license can be assigned. If the archived account has an associated user, the IT admin can give the user a valid license and the account is automatically reactivated within 24 hours. If the archived account doesn't have an associated user (for example, if the identity was deleted), then we recommend admins move any actively needed content to a SharePoint site or an active and licensed OneDrive account.
 
 ### Delete unlicensed OneDrive account
 
@@ -80,7 +84,7 @@ You can also bulk assign licenses using either of the following methods:
 
 Once you delete the unlicensed account, both the OneDrive account and its files are moved to the recycle bin. After 93 days, it will be permanently deleted, and the user is no longer able to sign in to their work or school account.
 
-**After the unlicensed OneDrive account archival** - An account can be deleted from the archived state without reactivation. However, if the account is subject to a retention policy, the unlicensed account can't be deleted, and the administrator will receive an error message.
+**After the unlicensed OneDrive account archival** - An account can be deleted from the archived state without reactivation. However, if the account is subject to a retention policy, the unlicensed account can't be deleted, and the administrator receives an error message.
 
 ### Archive unlicensed OneDrive account
 
@@ -94,9 +98,9 @@ If you want to access the data of the now inaccessible unlicensed OneDrive accou
 
 1. Set up and link Azure subscription in [Syntex pay-as-you-go](/microsoft-365/syntex/syntex-azure-billing).
 2. Must have Global admin or SharePoint admin permissions.
-3. [Enable Microsoft 365 Archive](/microsoft-365/syntex/syntex-azure-billing) Unlicensed Account billing (billing is available starting April 2025).
+3. [Enable Microsoft 365 Archive](/microsoft-365/syntex/syntex-azure-billing) Unlicensed Account billing (billing is available starting December 2024).
 
-After the setup is completed and reactivation is triggered, it may take up to 24 hours for the account to become accessible. Once reactivated, the account remains active for 30 days before being automatically archived again.
+After the setup is completed and reactivation is triggered, it might take up to 24 hours for the account to become accessible. Once reactivated, the account remains active for 30 days before being automatically archived again.
 
 > [!NOTE]
 > These changes do not apply to EDU, GCC, or DoD customers.
@@ -105,7 +109,7 @@ After the setup is completed and reactivation is triggered, it may take up to 24
 
 Microsoft 365 Archive charges for both storage and account reactivation. For more information about Microsoft 365 Archive pricing, see [Pricing model for Microsoft 365 Archive (Preview)](/microsoft-365/syntex/archive/archive-pricing).
 
-Once a payment method is provided, billing follows the routine cycle for archived content. If the billing is put down to reactivate one particular unlicensed account, the reactivation fee is applied for $0.60/GB for that account, and from that month onward, the storing fee of $0.05/GB/Month will also be applied for all unlicensed accounts within the organization that's longer than 90 days.
+Once a payment method is provided, billing follows the routine cycle for archived content. If the billing is put down to reactivate one particular unlicensed account, the reactivation fee is applied for $0.60/GB for that account, and from that month onward, the storing fee of $0.05/GB/Month is applicable for all unlicensed accounts within the organization that's longer than 90 days.
 
 For example, if an organization has 100 unlicensed OneDrive accounts, each consuming 1 TB for a total of 100 TB, and enforcement occurs between January and March 2025, the 100 unlicensed accounts are automatically archived. If the organization needs to reactivate a specific account in October 2025 and set up billing, they incur the following costs:
 
@@ -116,9 +120,13 @@ For example, if an organization has 100 unlicensed OneDrive accounts, each consu
 
 Archived OneDrive accounts fully honor retention policies, settings, and litigation hold and eDiscovery hold. For example, if your company has a five-year retention policy, it remains unchanged whether the OneDrive account is active or archived. Archiving doesn't reset the timeline of the retention policy or holds.
 
-Microsoft Purview eDiscovery and Content Search are still discoverable in archived content. Exporting the content that's supporting the search results won't require manual reactivation of the archived account, and it takes up to 24 hours to complete.
+Microsoft Purview eDiscovery and Content Search are still discoverable in archived content. Exporting the content that's supporting the search results doesn't require manual reactivation of the archived account, and it takes up to 24 hours to complete.
 
-When a change is made to retention policies, it's applied to archived accounts. For example, if the company reduces the retention policy from five years to three years, this update syncs with all archived accounts, for any accounts that have fulfilled the updated retention period, those accounts are moved to recycle bin, and the recycle bin process will begin.
+Changes made to retention policies apply to archived accounts. For example, if the company reduces the retention policy from five years to three years, this update syncs with all archived accounts, for any accounts that fulfill the updated retention period, those accounts are moved to recycle bin, and the recycle bin process begins.
+
+## Unlicensed OneDrive accounts and education tenants
+
+An education tenant is any tenant with more than 50% education licenses. Any tenant with fewer than 50% education licenses is considered commercial. However, for any education tenant, unlicensed OneDrive accounts consume pooled storage and can pose security and compliance risks. IT admins can view the unlicensed accounts on the OneDrive accounts page to identify unlicensed accounts and take action.
 
 ## Frequently Asked Questions
 
@@ -153,7 +161,7 @@ For more information on deleting users, see [Delete a user from your organizatio
 
 **5. How does it impact eDiscovery in Microsoft Purview?**
 
-**Answer:** Microsoft Purview eDiscovery and Content Search are still discoverable in archived content. Exporting the content that's supporting the search results won't require manual reactivation of the archived account, and it takes up to 24 hours to complete.
+**Answer:** Microsoft Purview eDiscovery and Content Search are still discoverable in archived content. Exporting the content that's supporting the search results doesn't require manual reactivation of the archived account, and it takes up to 24 hours to complete.
 
 **6. How does it impact Retention Policy, Retention Setting, or Litigation Hold?**
 
@@ -170,7 +178,7 @@ For more information on deleting users, see [Delete a user from your organizatio
 
 **Answer:** Once a payment method is provided, billing follows the routine cycle for archived content. If there's no retention policy and billing stops, your content is deleted within a 93-day period. If a retention policy is still active, the policy is honored regardless of billing status. If the account has no retention and billing, the 93-day content deletion lifecycle begins.
 
-As an example, if the billing is put down to reactivate one particular unlicensed account, the reactivation fee is applied for $0.60/GB for that account, and from that month onward, the storing fee of $0.05/GB/Month will also be applied for all unlicensed accounts within the organization that's longer than 90 days.
+As an example, if the billing is put down to reactivate one particular unlicensed account, the reactivation fee is applied for $0.60/GB for that account, and from that month onward, the storing fee of $0.05/GB/Month is applied for all unlicensed accounts within the organization that's longer than 90 days.
 
 **9. What's the guidance on 'duplicate accounts'?**
 
@@ -185,11 +193,11 @@ As an example, if the billing is put down to reactivate one particular unlicense
 
 **12. What's the process to relicense an account once it's archived?**
 
-**Answer:** If the archived account has an associated user, the IT admin can give the user a valid license and the account will automatically get reactivated within 24 hours. If the archived account doesn't have an associated user (for example, if the identity was deleted), then we recommend admins move any actively needed content to a SharePoint site or an active and licensed OneDrive account.
+**Answer:** If the archived account has an associated user, the IT admin can give the user a valid license and the account automatically reactivates within 24 hours. If the archived account doesn't have an associated user (for example, if the identity was deleted), then we recommend admins move any actively needed content to a SharePoint site or an active and licensed OneDrive account.
 
 **13. If a change is made to retention policies, will that change sync down to the archived sites?**
 
-**Answer:** Yes. As an example, if the company retention policy is shortened from five years to three years, this change is synced with all archived accounts, and the recycle bin process will start for accounts that have completed the retention policy.
+**Answer:** Yes. As an example, if the company retention policy is shortened from five years to three years, this change is synced with all archived accounts, and the recycle bin process begins for accounts that completed the retention policy.
 
 ## Related topics
 
