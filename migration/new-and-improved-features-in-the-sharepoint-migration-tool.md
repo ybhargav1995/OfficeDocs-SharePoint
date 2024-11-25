@@ -30,7 +30,15 @@ Download and install SPMT using one of the links listed in the table.
 
 | Release |Public preview|First release|Rolling out|Full General Availability|
 |:-----|:-----|:-----|:-----|:-----|
-|Last released build|[4.1.125.10](https://aka.ms/spmt-beta-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|
+|Last released build|[4.1.127.1](https://aka.ms/spmt-beta-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|[4.1.125.8](https://aka.ms/spmt-ga-page)|
+
+## SPMT 4.1.127.1
+
+**New features**
+
+|Feature| Description |
+| -------- | -------- |
+|Certificate Based Authentication|SPMT allows users to use Azure App Registrations with certificate authentication as the identity model to migrate on-premises content, including network file share and SharePoint Server content, to SharePoint Online and OneDrive. [Learn more](/sharepointmigration/migration-with-cba).|
 
 ## SPMT 4.1
 
