@@ -71,7 +71,7 @@ Below are all the URLs that will redirect to modern search profile pages on Micr
 `https://apc.delve.office.com`<br/>
 `https://gbr.dele.office.com`<br/>
 `https://can.delve.office.com`<br/>
-`https://lam.delveoffice.com`<br/>
+`https://lam.delve.office.com`<br/>
 `https://sfeur.delve.office.com`<br/>
 `https://sfnam.delve.office.com`
 
