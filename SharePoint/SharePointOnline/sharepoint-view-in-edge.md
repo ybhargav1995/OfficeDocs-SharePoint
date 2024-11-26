@@ -42,9 +42,9 @@ Follow the steps below to use View in File Explorer in Microsoft Edge:
 
 3. Enable the [ConfigureViewInFileExplorer](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) policy for Microsoft Edge that allows URLs with the viewinfileexplorer: scheme to open WebDAV URLs in Windows File Explorer.
 
-Use the options below to enable View in File Explorer using group policy or Intune:
+   Use the options below to enable View in File Explorer using group policy or Intune:
 
-- **To enable by using group policy**:
+   - **To enable by using group policy**:
 
      1. Configure Microsoft Edge policy settings by following the steps at [Configure Microsoft Edge policy settings on Windows](/deployedge/configure-microsoft-edge).
 
@@ -62,7 +62,7 @@ Use the options below to enable View in File Explorer using group policy or Intu
 
         For more examples, see [ConfigureViewInFileExplorer](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) on Microsoft Edge policy reference.
 
-- **To enable by using Intune**:
+   - **To enable by using Intune**:
 
      Configure Microsoft Edge policy settings by following the steps at [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
 
