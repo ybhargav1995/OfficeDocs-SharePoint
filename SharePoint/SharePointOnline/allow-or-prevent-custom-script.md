@@ -175,12 +175,12 @@ The following site settings are unavailable when users are prevented from runnin
 |Uploading Documents to Content Types  |Access denied message when attempting to attach a document template to a Content Type. |We recommend using Document Library document templates. |
 |Publishing of SharePoint 2010 Workflows |Access denied message when attempting to publish a SharePoint 2010 Workflow. | |
 
-Upodating Site property bag is by default not allowed when users are prevneted from runnning custom script. Tenant Administrators can change that behavior by running the following command
+Updating Site property bag is by default not allowed when users are prevented from running custom script. Tenant Administrators can change that behavior by running the following command
 
 ```PowerShell
     Set-SPOTenant -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled $True
 ```
-For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
+For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabeld option](/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
    
 The following web parts and features are unavailable to site admins and owners when you prevent them from running custom script.
 
