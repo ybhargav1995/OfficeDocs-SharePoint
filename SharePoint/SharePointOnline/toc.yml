@@ -29,6 +29,8 @@ items:
       items:
       - name: SharePoint storage
         href: sharepoint-storage-planning.md
+      - name: Set up view in File Explorer with Microsoft Edge
+        href: sharepoint-view-in-edge.md
       - name: Business requirements
         href: business-requirements.md
       - name: Hybrid
