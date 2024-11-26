@@ -180,9 +180,10 @@ Upodating Site property bag is by default not allowed when users are prevneted f
 ```PowerShell
     Set-SPOTenant -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled $True
 ```
-For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
+For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
    
 The following web parts and features are unavailable to site admins and owners when you prevent them from running custom script.
+
 | Web part category | Web part |
 |:-----|:-----|
 |Business Data  |Business Data Actions  <br/> Business Data Item  <br/> Business Data Item Builder  <br/> Business Data List  <br/> Business Data Related List  <br/> Excel Web Access  <br/> Indicator Details  <br/> Status List  <br/> Visio Web Access  |
