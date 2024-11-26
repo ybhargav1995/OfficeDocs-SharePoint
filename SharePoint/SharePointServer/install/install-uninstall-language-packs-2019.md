@@ -28,7 +28,7 @@ Language packs enable site owners and site collection administrators to create S
 Word breakers and stemmers enable you to search efficiently and effectively across content on SharePoint sites and site collections in multiple languages without requiring separate installations of SharePoint Server. Word breakers and stemmers are automatically installed on SharePoint servers by Setup.
 
 > [!IMPORTANT]
-> If you are uninstalling SharePoint Server, you must uninstall all language packs before you uninstall SharePoint Server.
+> If you're uninstalling SharePoint Server, you must uninstall all language packs before you uninstall SharePoint Server.
 
 ## About language IDs and language packs
 <a name="section1"> </a>
@@ -37,7 +37,7 @@ Site owners or site collection administrators who create sites or site collectio
 
 The language that they select has a language identifier (ID). The language ID determines the language that is used to display and interpret text that is on the site or site collection. For example, when a site owner creates a site in French, the site's toolbars, navigation bars, lists, and column headings appear in French. Similarly, if a site owner creates a site in Arabic, the site's toolbars, navigation bars, lists, and column headings appear in Arabic. In addition, the default left-to-right orientation of the site changes to a right-to-left orientation to correctly display Arabic text.
 
-The language packs that are installed on the SharePoint servers determine the list of available languages that you can use to create a site or site collection. By default, sites and site collections are created in the language in which SharePoint Server was installed. For example, if you install the Spanish version of SharePoint Server, the default language for sites, site collections, and web pages is Spanish. If someone has to create sites, site collections, or web pages in a language other than the default SharePoint Server language, you must install the language pack for that language on the SharePoint servers. For example, if you are running the French version of SharePoint Server, and a site owner wants to create sites in French, English, and Spanish, you must install the English and Spanish language packs on the SharePoint servers.
+The language packs that are installed on the SharePoint servers determine the list of available languages that you can use to create a site or site collection. By default, sites and site collections are created in the language in which SharePoint Server was installed. For example, if you install the Spanish version of SharePoint Server, the default language for sites, site collections, and web pages is Spanish. If someone has to create sites, site collections, or web pages in a language other than the default SharePoint Server language, you must install the language pack for that language on the SharePoint servers. For example, if you're running the French version of SharePoint Server, and a site owner wants to create sites in French, English, and Spanish, you must install the English and Spanish language packs on the SharePoint servers.
 
 By default, when a site owner creates a new web page in a site, the site displays text in the language that is specified by the language ID.
 
@@ -65,7 +65,7 @@ You can download language packs from the Microsoft Download Center for [SharePoi
 ## Installing language packs on the SharePoint servers
 <a name="section4"> </a>
 
-Language packs are available as individual downloads (one download for each supported language). If you have a server farm environment and you are installing language packs to support multiple languages, you must install the language packs on each SharePoint server.
+Language packs are available as individual downloads (one download for each supported language). If you have a server farm environment and you're installing language packs to support multiple languages, you must install the language packs on each SharePoint server.
 
 > [!IMPORTANT]
 > The language pack is installed in its native language. The procedure that follows is for the English language pack.
@@ -104,14 +104,14 @@ Verify that the user account that is performing this procedure is the Setup user
 
 8. After you install a new language pack and rerun the **SharePoint Products Configuration Wizard**, you must deactivate and then reactivate any language-specific features before you use the new language pack.
 
-When you install language packs, the language-specific site templates are installed in the %COMMONPROGRAMFILES%\Microsoft Shared\Web Server Extensions\16\TEMPLATE\ _LanguageID_ directory, where  _LanguageID_ is the Language ID number for the language that you are installing. For example, the United States English language pack installs to the %COMMONPROGRAMFILES%\Microsoft Shared\Web Server Extensions\16\TEMPLATE\1033 directory. After you install a language pack, site owners and site collection administrators can create sites and site collections based on the language-specific site templates by specifying a language when they are creating a new SharePoint site or site collection.
+When you install language packs, the language-specific site templates are installed in the %COMMONPROGRAMFILES%\Microsoft Shared\Web Server Extensions\16\TEMPLATE\ _LanguageID_ directory, where  _LanguageID_ is the Language ID number for the language that you're installing. For example, the United States English language pack installs to the %COMMONPROGRAMFILES%\Microsoft Shared\Web Server Extensions\16\TEMPLATE\1033 directory. After you install a language pack, site owners and site collection administrators can create sites and site collections based on the language-specific site templates by specifying a language when they are creating a new SharePoint site or site collection.
 
 ## Uninstalling language packs
 <a name="section5"> </a>
 
 If you no longer have to support a language for which you have installed a language pack, you can remove the language pack by using the Control Panel. Removing a language pack removes the language-specific site templates from the computer. All sites that were created that have those language-specific site templates will no longer work (the URL will produce a HTTP 500 - Internal server error page). Reinstalling the language pack will make the site functional again.
 
-You cannot remove the language pack for the version of SharePoint Server that you have installed on the server. For example, if you are running the Japanese version of SharePoint Server, you cannot uninstall the Japanese language support for SharePoint Server.
+You cannot remove the language pack for the version of SharePoint Server that you have installed on the server. For example, if you're running the Japanese version of SharePoint Server, you cannot uninstall the Japanese language support for SharePoint Server.
 
 ## List of Languages
 
