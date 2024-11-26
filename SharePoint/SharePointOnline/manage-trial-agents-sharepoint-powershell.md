@@ -26,7 +26,7 @@ description: "Learn how to manage trial access to agents in SharePoint with Powe
 
 ## What is the trial access to agents in SharePoint
 
-During a promotional trial period running starting from December 1, 2024, through June 30, 2025, organizations with 50 or more Microsoft 365 Copilot licenses automatically receive 10,000 queries per month for agents in SharePoint. This trial gives users without Copilot licenses access to create and use agents. As a SharePoint admin, you can disable this trial access using the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell). View the [Trial Agreement details](/legal/microsoft-365/in-app-trials-terms-of-service).
+During a promotional trial period starting from December 1, 2024, through June 30, 2025, organizations with 50 or more Microsoft 365 Copilot licenses automatically receive 10,000 queries per month for agents in SharePoint. This trial gives users without Copilot licenses access to create and use agents. As a SharePoint admin, you can disable this trial access using the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell). View the [Trial Agreement details](/legal/microsoft-365/in-app-trials-terms-of-service).
 
 ## When will the trial access become available
 
