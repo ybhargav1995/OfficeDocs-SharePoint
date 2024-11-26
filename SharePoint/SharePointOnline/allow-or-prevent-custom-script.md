@@ -201,8 +201,8 @@ The following web parts and features are unavailable to site admins and owners w
 
 Furthermore, SharePoint Framework web parts that have the _requiresCustomScript_ value set to **true**, will behave as following:   
 
-- the web part is not available in the web part picker
-- every instance of the web part that was added to the page while custom scripts that were allowed to run, will no longer surface in those pages. Author will still be able to remove them while editing the page 
+- The web part is not available in the web part picker
+- Every instance of the web part that was added to the page while custom scripts that were allowed to run, will no longer surface in those pages. Author will still be able to remove them while editing the page 
 
 ## Best practice for communicating script setting changes to users
 
