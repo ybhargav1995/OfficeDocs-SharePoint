@@ -154,7 +154,7 @@ SharePoint Servers 2016 and 2019 support the following languages:
 |Korean|ko-kr|1042|
 |Latvian|lv-lv|1062|
 |Lithuanian|lt-lt|1063|
-|Macedonian (FYROM)|mk-mk|1071|
+|Macedonian (North Macedonia)|mk-mk|1071|
 |Malay (Malaysia)|ms-my|1086|
 |Norwegian (Bokmål)|nb-no|1044|
 |Polish|pl-pl|1045|
