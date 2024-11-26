@@ -5,7 +5,7 @@ ms.author: ruihu
 author: maggierui
 manager: jtremper
 recommendations: true
-ms.date: 07/10/2024
+ms.date: 11/26/2024
 audience: Admin
 f1.keywords:
 - CSH
@@ -161,13 +161,11 @@ To prevent SharePoint in resetting custom script settings to its original value 
 When users are prevented from running custom script on OneDrive or the classic team sites they create, site admins and owners won't be able to create new items such as templates, solutions, themes, and help file collections. If you allowed custom script in the past, items that were already created will still work.
   
 The following site settings are unavailable when users are prevented from running custom script:
-  
 | Site feature | Behavior | Notes |
 |:-----|:-----|:-----|
 |Save Site as Template |No longer available in Site Settings |Users can still build sites from templates created before custom script was blocked. |
 |Save document library as template |No longer available in Library Settings  |Users can still build document libraries from templates created before custom script was blocked.  |
 |Save list as template  |	No longer available in List Settings  |Users can still build lists from templates created before custom script was blocked.  |
-|Solution Gallery  |No longer available in Site Settings  |Users can still use solutions created before custom script was blocked.  |
 |Theme Gallery  |No longer available in Site Settings  |Users can still use themes created before custom script was blocked.  |
 |Help Settings  |No longer available in Site Settings  |Users can still access help file collections available before custom script was blocked.  |
 |Sandbox solutions  |Solution Gallery is no longer available in Site Settings  |Users can't add, manage, or upgrade sandbox solutions. They can still run sandbox solutions that were deployed before custom script was blocked.  |
@@ -175,9 +173,15 @@ The following site settings are unavailable when users are prevented from runnin
 |Uploading files that potentially include script  |The following file types cannot open from a library  <br/> .asmx  <br/> .ascx  <br/> .aspx  <br/> .htc  <br/> .jar  <br/> .master  <br/> .swf  <br/> .xap  <br/> .xsf  |Existing files in the library are not impacted.  |
 |Uploading Documents to Content Types  |Access denied message when attempting to attach a document template to a Content Type. |We recommend using Document Library document templates. |
 |Publishing of SharePoint 2010 Workflows |Access denied message when attempting to publish a SharePoint 2010 Workflow. | |
+
+Upodating Site property bag is by default not allowed when users are prevneted from runnning custom script. Tenant Administrators can change that behavior by running the following command
+
+```PowerShell
+    Set-SPOTenant -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled $True
+```
+For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
    
 The following web parts and features are unavailable to site admins and owners when you prevent them from running custom script.
-  
 | Web part category | Web part |
 |:-----|:-----|
 |Business Data  |Business Data Actions  <br/> Business Data Item  <br/> Business Data Item Builder  <br/> Business Data List  <br/> Business Data Related List  <br/> Excel Web Access  <br/> Indicator Details  <br/> Status List  <br/> Visio Web Access  |
