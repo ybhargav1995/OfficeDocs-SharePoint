@@ -60,22 +60,18 @@ Use the options below to enable View in File Explorer using group policy or Intu
 
         `[{"cookies": ["rtFa", "FedAuth"], "domain": "sharepoint.com"}]`
 
-        :::image type="content" source="media/edgepolicy-adeejoseph.png" alt-text="Enable Configure the View in File Explorer feature for SharePoint pages in Microsoft Edge":::
-
         For more examples, see [ConfigureViewInFileExplorer](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) on Microsoft Edge policy reference.
 
 - **To enable by using Intune**:
 
      Configure Microsoft Edge policy settings by following the steps at [Configure Microsoft Edge policy settings with Microsoft Intune](/deployedge/configure-edge-with-intune).
 
-5. Verify the policy has been enabled by opening Microsoft Edge and navigating to **Microsoft Edge://policy/**.
-
-    :::image type="content" source="media/microsoft-edge-policy.png" alt-text="Screenshot of Microsoft Edge Policies page. ":::
+4. Verify the policy has been enabled by opening Microsoft Edge and navigating to **Microsoft Edge://policy/**.
 
     > [!TIP]
     > You may need to close and re-open Microsoft Edge for the policy to appear.
 
-6. As a tenant administrator, update your SharePoint Online tenant configuration via SharePoint Online Management Shell to allow the "View in File Explorer" option to be visible in the Microsoft Edge Browser interface with these steps:
+5. As a tenant administrator, update your SharePoint Online tenant configuration via SharePoint Online Management Shell to allow the "View in File Explorer" option to be visible in the Microsoft Edge Browser interface with these steps:
 
     1. Connect to SharePoint Online Management Shell by running:
 
@@ -92,11 +88,11 @@ Use the options below to enable View in File Explorer using group policy or Intu
         > [!NOTE]
         > Ensure the management shell version is 16.0.21610.12000 or higher or the ViewInFileExplorerEnabled option will not be available.
 
-7. **(Required)** _View in File Explorer_ requires persistent cookies to operate correctly; when you sign in, select **Yes** when the **Stay signed in?** prompt appears.
+6. **(Required)** _View in File Explorer_ requires persistent cookies to operate correctly; when you sign in, select **Yes** when the **Stay signed in?** prompt appears.
 
     You can locate the View in Explorer button by navigating to the **Library** >  select the **Library View Menu** on the right-hand side > select **View In File Explorer**.
 
-  :::image type="content" source="media/view-in-file-explorer.png" alt-text="Screenshot of the menu for View in File Explorer.":::
+          :::image type="content" source="media/view-in-file-explorer.png" alt-text="Screenshot of the menu for View in File Explorer.":::
 
 > [!NOTE]
 > Once the tenant setting has been enabled, it may take up to 15 minutes for the View in Explorer button to appear in the SharePoint interface.
