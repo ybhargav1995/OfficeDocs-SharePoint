@@ -56,7 +56,7 @@ Use the options below to enable View in File Explorer using group policy or Intu
 
      5. Enabling the group policy may require a refresh of client group policy settings. After changing the group policy settings, refresh the settings. From a Command Prompt, enter **GPUpdate.exe /force**.
 
-        Example below with the Group Policy value:
+        Following is an example of the Group Policy value:
 
         `[{"cookies": ["rtFa", "FedAuth"], "domain": "sharepoint.com"}]`
 
@@ -94,7 +94,7 @@ Use the options below to enable View in File Explorer using group policy or Intu
 
 7. **(Required)** _View in File Explorer_ requires persistent cookies to operate correctly; when you sign in, select **Yes** when the **Stay signed in?** prompt appears.
 
-    You can locate the View in Explorer button by navigating to the **Library** >  Select the **Library View Menu** on the right-hand side > Select **View In File Explorer**.
+    You can locate the View in Explorer button by navigating to the **Library** >  select the **Library View Menu** on the right-hand side > select **View In File Explorer**.
 
   :::image type="content" source="media/view-in-file-explorer.png" alt-text="Screenshot of the menu for View in File Explorer.":::
 
