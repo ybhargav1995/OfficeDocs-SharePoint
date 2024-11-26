@@ -1,5 +1,5 @@
 ---
-ms.date: 09/08/2021
+ms.date: 11/25/2024
 title: "View SharePoint files with File Explorer in Microsoft Edge"
 ms.reviewer:
 ms.author: ruihu
