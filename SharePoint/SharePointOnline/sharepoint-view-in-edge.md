@@ -98,8 +98,8 @@ Use the options below to enable View in File Explorer using group policy or Intu
 
   :::image type="content" source="media/view-in-file-explorer.png" alt-text="Screenshot of the menu for View in File Explorer.":::
 
-    > [!NOTE]
-    > Once the tenant setting has been enabled, it may take up to 15 minutes for the View in Explorer button to appear in the SharePoint interface.
+> [!NOTE]
+> Once the tenant setting has been enabled, it may take up to 15 minutes for the View in Explorer button to appear in the SharePoint interface.
 
 ### Troubleshooting
 
