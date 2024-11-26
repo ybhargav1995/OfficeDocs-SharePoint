@@ -161,6 +161,7 @@ To prevent SharePoint in resetting custom script settings to its original value 
 When users are prevented from running custom script on OneDrive or the classic team sites they create, site admins and owners won't be able to create new items such as templates, solutions, themes, and help file collections. If you allowed custom script in the past, items that were already created will still work.
   
 The following site settings are unavailable when users are prevented from running custom script:
+
 | Site feature | Behavior | Notes |
 |:-----|:-----|:-----|
 |Save Site as Template |No longer available in Site Settings |Users can still build sites from templates created before custom script was blocked. |
@@ -179,7 +180,7 @@ Upodating Site property bag is by default not allowed when users are prevneted f
 ```PowerShell
     Set-SPOTenant -AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEnabled $True
 ```
-For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
+For more information see [AllowWebPropertyBagUpdateWhenDenyAddAndCustomizePagesIsEanbeld option](https://learn.microsoft.com/powershell/module/sharepoint-online/set-spotenant#-allowwebpropertybagupdatewhendenyaddandcustomizepagesisenabled)
    
 The following web parts and features are unavailable to site admins and owners when you prevent them from running custom script.
 | Web part category | Web part |
