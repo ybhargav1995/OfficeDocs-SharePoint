@@ -99,6 +99,8 @@ items:
         items:
         - name: Manage Access
           href: manage-access-agents-in-sharepoint.md
+        - name: Manage trial access to agents in SharePoint
+          href: manage-trial-agents-sharepoint-powershell.md
   - name: Classic to modern
     items:
     - name: Publishing
