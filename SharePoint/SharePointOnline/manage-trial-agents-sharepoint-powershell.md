@@ -36,7 +36,7 @@ The promotion trial goes into effect January 6, 2025, and remains active until J
 
 ## What you need to prepare for the trial access
 
-Beginning in December 2024, as a SharePoint admin you can use the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to manage access to the trial for users without Copilot licenses.
+Beginning in December 2024, you, as a SharePoint admin, can use the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to manage access to the trial for users without Copilot licenses.
 
 You can manage the trial access to agents in SharePoint by following these steps:
 
