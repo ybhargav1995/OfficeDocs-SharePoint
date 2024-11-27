@@ -26,17 +26,17 @@ description: "Learn how to manage trial access to agents in SharePoint with Powe
 
 ## What is the trial access to agents in SharePoint
 
-During a promotional trial period starting from December 1, 2024, through June 30, 2025, organizations with 50 or more Microsoft 365 Copilot licenses automatically receive 10,000 queries per month for agents in SharePoint. This trial gives users without Copilot licenses access to create and use agents. As a SharePoint admin, you can disable this trial access using the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell). View the [Trial Agreement details](/legal/microsoft-365/in-app-trials-terms-of-service).
+During a promotional trial period starting from January 6, 2025, through June 30, 2025, organizations with 50 or more Microsoft 365 Copilot licenses automatically receive 10,000 queries per month for agents in SharePoint. This trial gives users without Copilot licenses access to create and use agents. As a SharePoint admin, you can disable this trial access using the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell). View the [Trial Agreement details](/legal/microsoft-365/in-app-trials-terms-of-service).
 
 ## When will the trial access become available
 
-The promotion trial goes into effect December 1, 2024, and remains active until June 30, 2025. As agents in SharePoint roll out, tenants will be eligible for this promotion. You as a [SharePoint Administrator](/sharepoint/sharepoint-admin-role) or [more](/microsoft-365/admin/add-users/about-admin-roles) can disable trial access at any point during the promotional period. Tenants that are eligible for the promotion see a message bar on the Copilot Admin page in the Admin Center.
+The promotion trial goes into effect January 6, 2025, and remains active until June 30, 2025. As agents in SharePoint roll out, tenants will be eligible for this promotion. You as a [SharePoint Administrator](/sharepoint/sharepoint-admin-role) or [more](/microsoft-365/admin/add-users/about-admin-roles) can disable trial access at any point during the promotional period. Tenants that are eligible for the promotion see a message bar on the Copilot Admin page in the Admin Center.
 
 ![Screenshot of the Copilot Admin page in the Admin Center](media/agents-sharepoint/admin-center-promo-message.png)
 
 ## What you need to prepare for the trial access
 
-Starting December 1, as a SharePoint admin you can use the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to manage access to the trial for users without Copilot licenses.
+Beginning in December 2024, as a SharePoint admin you can use the [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell) to manage access to the trial for users without Copilot licenses.
 
 You can manage the trial access to agents in SharePoint by following these steps:
 
