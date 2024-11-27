@@ -43,14 +43,14 @@ You can manage the trial access to agents in SharePoint by following these steps
 1. If you haven’t, update to the latest version of the SharePoint Online Management Shell
 1. Run the following commands:
 
-| Action                                      | Command                              |
-|---------------------------------------------|--------------------------------------|
-| [Opt out and disable access to the trial](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $false`     |
-| [Confirm trial settings to the trial](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) | `Get-SPOCopilotPromoOptInStatus`     |
-| [Re-enable access](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $true`     |
+  | Action                                      | Command                              |
+  |---------------------------------------------|--------------------------------------|
+  | [Opt out and disable access to the trial](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $false`     |
+  | [Confirm trial settings to the trial](/powershell/module/sharepoint-online/get-spocopilotpromooptinstatus) | `Get-SPOCopilotPromoOptInStatus`     |
+  | [Re-enable access](/powershell/module/sharepoint-online/set-spocopilotpromooptinstatus)  | `Set-SPOCopilotPromoOptInStatus -IsCopilotPromoStatusEnabled $true`     |
 
-> [!IMPORTANT]
-> Ensure that you have the latest version of SharePoint PowerShell installed to run these cmdlets effectively.
+  > [!IMPORTANT]
+  > Ensure that you have the latest version of SharePoint PowerShell installed to run these cmdlets effectively.
 
 ## How the trial access affects your organization
 
