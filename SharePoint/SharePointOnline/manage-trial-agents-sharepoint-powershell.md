@@ -60,7 +60,7 @@ Once the trial promotion is available, your unlicensed users are able to view an
     </div>
       <div>
 
-![screenshots of the trial access message in chat pane.](media/agents-sharepoint/promo-message-to-users.png)
+![Screenshot of the trial access message in chat pane.](media/agents-sharepoint/promo-message-to-users.png)
         </div>
     <div >
       <br>Anytime these users interact with agents, their usage counts toward your organization’s monthly trial use of 10,000 queries. Once the maximum number of queries is reached, users are notified that the service is temporarily unavailable and prompted to try again next month.</br>
@@ -68,7 +68,7 @@ Once the trial promotion is available, your unlicensed users are able to view an
         Unused queries won't roll over to the following month. If you need more queries, you can get them by adding more Microsoft 365 Copilot licenses. After the trial ends on June 30, 2025, users without a Microsoft 365 Copilot License will no longer be able to create or use the agents. However, agents created and used during the trial promotion remain available, and no historical data are lost.</br>
         </div>
     <div >
-      ![screenshots of reaching query limit message.](media/agents-sharepoint/reached-limit-message.png)
+      ![Screenshot of reaching query limit message.](media/agents-sharepoint/reached-limit-message.png)
     </div>
 </div>
 
